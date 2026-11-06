@@ -5,7 +5,8 @@ import { cdn } from "./config.js";
 const root = fileURLToPath(new URL("..", import.meta.url));
 const types = {
     css: "text/css",
-    js: "text/javascript"
+    js: "text/javascript",
+    woff2: "font/woff2"
 };
 
 export async function serveTheme(context) {

@@ -86,7 +86,8 @@ function snapshot({ map, overlay }) {
         bodyStyle: document.body.getAttribute("style") ?? "",
         hash: location.hash,
         time: video ? video.currentTime : null,
-        focus: active && active !== document.body ? pathOf(active) : null
+        focus: active && active !== document.body ? pathOf(active) : null,
+        custom: [...document.querySelectorAll("style")].some((style) => (style.textContent ?? "").includes("palatina"))
     };
     if (overlay) {
         const persistent = (element) => element.id === "reactRoot" || ["appfooter", "docspinner", "tmla-mask", "MuiModal-hidden"].some((name) => element.classList.contains(name)) || element.tagName === "SCRIPT";

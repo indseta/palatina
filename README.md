@@ -22,6 +22,7 @@ Each release is a git tag (`v0`, `v1`, ...). Change the number in both places to
 ## Layout
 
 - `css/palatina.css` imports one file per section. All button styling lives in `css/buttons.css`.
+- `css/fonts.css` points the `Noto Sans` family that Jellyfin uses everywhere at Source Sans 3 (`fonts/source-sans-3`, OFL) for Latin, Greek, Cyrillic and Vietnamese. Other scripts keep Noto. `css/base.css` sets the same stack on `html` for TV clients that skip Noto.
 - `js/palatina.js` starts the router; sections register with `onView(pageId, handler)`.
 
 ## Demo

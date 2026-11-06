@@ -178,4 +178,5 @@ for (const file of ["index.html", "sample.js", "sample.css"]) {
 }
 await cp("css", out + "/css", { recursive: true });
 await cp("js", out + "/js", { recursive: true });
+await cp("fonts", out + "/fonts", { recursive: true });
 console.log(out + "/index.html");

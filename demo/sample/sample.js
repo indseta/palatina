@@ -5,6 +5,7 @@ let current = null;
 let layer = null;
 
 const sheets = [...document.body.querySelectorAll("link, style")];
+const theme = sheets.find((sheet) => sheet.getAttribute("href") === "css/palatina.css");
 document.head.append(...sheets);
 await Promise.all(sheets.filter((sheet) => sheet.tagName === "LINK" && !sheet.sheet).map((sheet) => new Promise((resolve) => {
     sheet.addEventListener("load", resolve, { once: true });
@@ -117,6 +118,7 @@ function show(name) {
     document.body.setAttribute("data-theme", screen.theme);
     document.body.className = screen.bodyClass;
     document.body.setAttribute("style", screen.bodyStyle);
+    theme.disabled = !screen.custom;
     document.body.replaceChildren(...parse(screen.html).childNodes);
     window.scrollTo(0, 0);
     window.palatinaReady = true;
