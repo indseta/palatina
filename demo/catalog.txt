@@ -1,0 +1,9 @@
+movie|The Quiet Meridian|2023|#0f2027|#2c5364|Drama|A lighthouse keeper on a remote island receives letters from a sender who should not exist.
+movie|Saltwater Kings|2021|#3a1c71|#d76d77|Adventure|Three siblings inherit a failing fishing fleet and one last impossible season.
+movie|Northbound|2024|#1e3c72|#2a5298|Thriller|A night train, a missing passenger, and nine hours until the border.
+movie|Ember and Ash|2022|#870000|#190a05|Fantasy|The last firekeeper of a dying city must choose who gets to stay warm.
+movie|Glass Harbor|2020|#134e5e|#71b280|Mystery|A coastal town where every window shows a different year.
+movie|The Last Orchard|2019|#5a3f37|#2c7744|Drama|Four generations, one farm, and the summer it all comes due.
+movie|Paper Satellites|2025|#232526|#414345|Science Fiction|A teenage radio amateur picks up a signal from a satellite launched in 1962.
+movie|Low Tide|2018|#2b5876|#4e4376|Romance|Two strangers stranded on a tidal island until the water goes out again.
+series|Harbor Lights|2024|#000428|#004e92|Drama|A harbor master and a smuggler share a town too small for secrets.

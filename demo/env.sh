@@ -1,0 +1,9 @@
+JELLYFIN_VERSION=12.4
+INJECTOR_VERSION=12.0.0
+DEMO_NAME=palatina-demo
+DEMO_PORT=8096
+DEMO_URL=http://localhost:$DEMO_PORT
+DEMO_USER=demo
+DEMO_PASSWORD=demo
+DEMO_DIR=.cache/demo
+CDN=https://cdn.jsdelivr.net/gh/indseta/palatina@demo

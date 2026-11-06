@@ -1,0 +1,21 @@
+{
+    "name": "palatina",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "check": "eslint --max-warnings 0 . && stylelint --max-warnings 0 \"css/**/*.css\"",
+        "demo:source": "sh demo/source.sh",
+        "demo:up": "sh demo/up.sh",
+        "demo:down": "docker rm -f palatina-demo",
+        "screen": "node demo/screen.js",
+        "demo:page": "node demo/page.js"
+    },
+    "devDependencies": {
+        "@eslint/js": "10.0.1",
+        "eslint": "10.14.0",
+        "globals": "17.14.0",
+        "playwright": "1.63.0",
+        "stylelint": "18.0.0",
+        "stylelint-config-standard": "41.0.0"
+    }
+}
