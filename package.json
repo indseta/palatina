@@ -8,7 +8,8 @@
         "demo:up": "sh demo/up.sh",
         "demo:down": "docker rm -f palatina-demo",
         "screen": "node demo/screen.js",
-        "demo:page": "node demo/page.js"
+        "demo:page": "node demo/page.js",
+        "demo:verify": "node demo/verify.js"
     },
     "devDependencies": {
         "@eslint/js": "10.0.1",

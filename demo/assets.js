@@ -15,6 +15,13 @@ const extensions = {
     "application/font-woff2": "woff2"
 };
 
+function clean(body, extension) {
+    if (extension !== "svg") {
+        return body;
+    }
+    return Buffer.from(body.toString("utf8").replace(/<!DOCTYPE[^>[]*(\[[^\]]*\])?\s*>/i, ""), "utf8");
+}
+
 export function createAssets(request, dir) {
     const saved = new Map();
     async function save(url) {
@@ -30,7 +37,7 @@ export function createAssets(request, dir) {
         const extension = extensions[type] ?? url.split("?")[0].split(".").pop();
         const name = "assets/" + createHash("sha1").update(url).digest("hex").slice(0, 16) + "." + extension;
         await mkdir(dir + "/assets", { recursive: true });
-        await writeFile(dir + "/" + name, body);
+        await writeFile(dir + "/" + name, clean(body, extension));
         return name;
     }
     async function css(text, base) {

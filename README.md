@@ -34,8 +34,9 @@ npm run demo:source
 npm run demo:up
 npm run screen -- player
 npm run demo:page
+npm run demo:verify
 ```
 
-`demo:up` runs Jellyfin 12.4 with a generated sample library (`demo/catalog.txt`), a `demo` / `demo` user, the JS Injector plugin and the Palatina import lines. `screen` serves the local theme files in place of jsDelivr and writes `.cache/shots/<screen>.png`. Screens: `home`, `details`, `player`.
+`demo:up` runs Jellyfin 12.4 with a generated sample library (`demo/catalog.txt`), a `demo` / `demo` user, the JS Injector plugin and the Palatina import lines. `screen` serves the local theme files in place of jsDelivr and writes `.cache/shots/<screen>.png`. `npm run screen` with no name lists every screen (home, library views, each item, search, settings, dashboard, player).
 
-`demo:page` snapshots every screen of the demo server into `.cache/page/`, a static, clickable copy of the 12.4 client with the theme files loaded next to it.
+`demo:page` snapshots every screen of the demo server into `.cache/page/`, a static, clickable copy of the 12.4 client with the theme files loaded next to it, including menus, dialogs and the header scroll state. `demo:verify` screenshots every sample view and compares it with the real server's screenshot from the same run, writing `.cache/verify/report.txt`.
