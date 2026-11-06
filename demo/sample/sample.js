@@ -5,6 +5,7 @@ const sections = {
     tv: "tvshows"
 };
 let classes = [];
+let current = null;
 
 document.head.append(...document.body.querySelectorAll("link, style"));
 
@@ -19,6 +20,7 @@ function screenFor(hash) {
 
 function show(name) {
     const screen = data.screens[name] ?? data.screens.home;
+    current = screen;
     document.documentElement.classList.remove(...classes);
     classes = screen.htmlClass.split(" ").filter(Boolean);
     document.documentElement.classList.add(...classes);
@@ -29,6 +31,17 @@ function show(name) {
     document.body.innerHTML = screen.html;
     window.scrollTo(0, 0);
     document.querySelector(".page:not(.hide)")?.dispatchEvent(new CustomEvent("viewshow", { bubbles: true, detail: {} }));
+    return;
+}
+
+function scrolled() {
+    const bar = document.querySelector(".MuiAppBar-root");
+    const states = current?.appBar ?? data.screens.home.appBar;
+    if (bar && states) {
+        const state = window.scrollY > 0 ? states.scrolled : states.top;
+        bar.className = state.className;
+        bar.setAttribute("style", state.style);
+    }
     return;
 }
 
@@ -81,5 +94,6 @@ function click(event) {
 }
 
 document.addEventListener("click", click, true);
+window.addEventListener("scroll", scrolled, { passive: true });
 window.addEventListener("hashchange", () => show(location.hash.slice(1) || "home"));
 show(location.hash.slice(1) || "home");

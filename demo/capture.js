@@ -46,21 +46,29 @@ function snapshot(map) {
         }
         return;
     });
-    const sheets = [...document.styleSheets].filter((sheet) => !(sheet.ownerNode.textContent ?? "").includes("palatina")).map((sheet) => {
-        if (sheet.href) {
-            return { href: sheet.href };
-        }
-        return { text: [...sheet.cssRules].map((rule) => rule.cssText).join("\n"), base: document.baseURI };
-    });
     return {
         urls: [...new Set(urls)].filter((url) => !url.startsWith("data:")),
         html: clone.innerHTML,
         htmlClass: document.documentElement.className,
         dir: document.documentElement.getAttribute("dir") ?? "ltr",
         theme: document.documentElement.getAttribute("data-theme") ?? "dark",
-        bodyClass: document.body.className,
-        sheets: sheets
+        bodyClass: document.body.className
     };
+}
+
+function styles() {
+    const sheets = [...document.styleSheets].filter((sheet) => !(sheet.ownerNode.textContent ?? "").includes("palatina")).map((sheet) => {
+        if (sheet.href) {
+            return { href: sheet.href };
+        }
+        return { text: [...sheet.cssRules].map((rule) => rule.cssText).join("\n"), base: document.baseURI };
+    });
+    return sheets;
+}
+
+function appBar() {
+    const bar = document.querySelector(".MuiAppBar-root");
+    return bar ? { className: bar.className, style: bar.getAttribute("style") ?? "" } : null;
 }
 
 export async function capture(page, assets) {
@@ -68,5 +76,12 @@ export async function capture(page, assets) {
     const names = await Promise.all(first.urls.map((url) => assets.save(url)));
     const map = Object.fromEntries(first.urls.map((url, index) => [url, names[index]]));
     const result = await page.evaluate(snapshot, map);
+    const top = await page.evaluate(appBar);
+    await page.evaluate(() => window.scrollTo(0, 200));
+    await page.waitForTimeout(300);
+    const scrolled = await page.evaluate(appBar);
+    result.sheets = await page.evaluate(styles);
+    await page.evaluate(() => window.scrollTo(0, 0));
+    result.appBar = top && scrolled && top.className !== scrolled.className ? { top: top, scrolled: scrolled } : null;
     return result;
 }

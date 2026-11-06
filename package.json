@@ -3,7 +3,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "check": "eslint --max-warnings 0 . && stylelint --max-warnings 0 \"css/**/*.css\"",
+        "check": "eslint --max-warnings 0 . && stylelint --max-warnings 0 \"css/**/*.css\" \"demo/**/*.css\"",
         "demo:source": "sh demo/source.sh",
         "demo:up": "sh demo/up.sh",
         "demo:down": "docker rm -f palatina-demo",
