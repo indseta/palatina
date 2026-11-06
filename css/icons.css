@@ -18,6 +18,18 @@
     visibility: hidden;
 }
 
+.material-icons.airplay,
+.material-icons.cast,
+.material-icons.cast_connected,
+.MuiSvgIcon-root[data-testid="CastIcon"],
+.MuiSvgIcon-root[data-testid="CastConnectedIcon"] {
+    --palatina-icon: url("../icons/custom/cast.svg");
+}
+
+.material-icons.picture_in_picture_alt {
+    --palatina-icon: url("../icons/custom/picture_in_picture.svg");
+}
+
 .material-icons.radio,
 .MuiSvgIcon-root[data-testid="LanIcon"] {
     --palatina-icon: url("../icons/framework7/antenna_radiowaves_left_right.svg");
@@ -120,10 +132,6 @@
     --palatina-icon: url("../icons/framework7/arrow_uturn_right.svg");
 }
 
-.MuiSvgIcon-root[data-testid="ArrowDropDownIcon"] {
-    --palatina-icon: url("../icons/framework7/arrowtriangle_down_fill.svg");
-}
-
 .material-icons.skip_previous,
 .MuiSvgIcon-root[data-testid="FirstPageIcon"] {
     --palatina-icon: url("../icons/framework7/backward_end_fill.svg");
@@ -169,7 +177,7 @@
 .material-icons.check,
 .MuiSvgIcon-root[data-testid="CheckIcon"],
 .MuiSvgIcon-root[data-testid="DownloadDoneIcon"] {
-    --palatina-icon: url("../icons/framework7/checkmark.svg");
+    --palatina-icon: url("../icons/framework7/checkmark_alt.svg");
 }
 
 .material-icons.library_add_check {
@@ -183,6 +191,7 @@
 
 .material-icons.expand_more,
 .material-icons.keyboard_arrow_down,
+.MuiSvgIcon-root[data-testid="ArrowDropDownIcon"],
 .MuiSvgIcon-root[data-testid="ExpandMoreIcon"] {
     --palatina-icon: url("../icons/framework7/chevron_down.svg");
 }
@@ -211,9 +220,12 @@
     --palatina-icon: url("../icons/framework7/chevron_up.svg");
 }
 
-.material-icons.fiber_manual_record,
-.MuiSvgIcon-root[data-testid="FiberManualRecordIcon"],
 .MuiSvgIcon-root[data-testid="RadioButtonUncheckedIcon"] {
+    --palatina-icon: url("../icons/framework7/circle.svg");
+}
+
+.material-icons.fiber_manual_record,
+.MuiSvgIcon-root[data-testid="FiberManualRecordIcon"] {
     --palatina-icon: url("../icons/framework7/circle_fill.svg");
 }
 
@@ -277,14 +289,6 @@
 
 .MuiSvgIcon-root[data-testid="ArticleIcon"] {
     --palatina-icon: url("../icons/framework7/doc_text_fill.svg");
-}
-
-.material-icons.airplay,
-.material-icons.cast,
-.material-icons.cast_connected,
-.MuiSvgIcon-root[data-testid="CastIcon"],
-.MuiSvgIcon-root[data-testid="CastConnectedIcon"] {
-    --palatina-icon: url("../icons/framework7/dot_radiowaves_right.svg");
 }
 
 .material-icons.more {
@@ -592,10 +596,6 @@
     --palatina-icon: url("../icons/framework7/recordingtape.svg");
 }
 
-.material-icons.picture_in_picture_alt {
-    --palatina-icon: url("../icons/framework7/rectangle_on_rectangle.svg");
-}
-
 .MuiSvgIcon-root[data-testid="ViewColumnIcon"] {
     --palatina-icon: url("../icons/framework7/rectangle_split_3x1_fill.svg");
 }
@@ -655,14 +655,19 @@
     --palatina-icon: url("../icons/framework7/sportscourt_fill.svg");
 }
 
-.material-icons.login {
-    --palatina-icon: url("../icons/framework7/square_arrow_left_fill.svg");
+.material-icons.check_box_outline_blank,
+.MuiSvgIcon-root[data-testid="CheckBoxOutlineBlankIcon"] {
+    --palatina-icon: url("../icons/framework7/square.svg");
 }
 
 .material-icons.exit_to_app,
 .material-icons.logout,
 .material-icons.meeting_room,
 .MuiSvgIcon-root[data-testid="LogoutIcon"] {
+    --palatina-icon: url("../icons/framework7/square_arrow_left_fill.svg");
+}
+
+.material-icons.login {
     --palatina-icon: url("../icons/framework7/square_arrow_right_fill.svg");
 }
 
@@ -670,9 +675,7 @@
     --palatina-icon: url("../icons/framework7/square_arrow_up_fill.svg");
 }
 
-.material-icons.check_box_outline_blank,
-.material-icons.square,
-.MuiSvgIcon-root[data-testid="CheckBoxOutlineBlankIcon"] {
+.material-icons.square {
     --palatina-icon: url("../icons/framework7/square_fill.svg");
 }
 
