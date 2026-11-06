@@ -1,3 +1,7 @@
 html {
     font-family: "Noto Sans", "Noto Sans HK", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", sans-serif;
 }
+
+:is(h1, h2, h3, h4, h5, h6, .sectionTitle, .pageTitle, .itemName):not(a *, button *, :has(a, button)) {
+    font-family: var(--palatina-font-title);
+}
