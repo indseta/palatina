@@ -39,3 +39,26 @@
 .card:focus :is(.cardBox.visualCardBox, .cardBox:not(.visualCardBox) .cardScalable) {
     border-color: transparent !important;
 }
+
+.listItemImage {
+    overflow: hidden;
+    border-radius: var(--palatina-radius);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .listItemImage:has(> .listItemImageButton)::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background-color: rgb(var(--palatina-color-background-channel) / 50%);
+        opacity: 0;
+        transition: opacity 0.2s;
+        backdrop-filter: blur(8px);
+        pointer-events: none;
+    }
+
+    .listItemImage:has(> .listItemImageButton):hover::after {
+        opacity: 1;
+    }
+}
+

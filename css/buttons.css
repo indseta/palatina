@@ -31,7 +31,6 @@ a.button-link[style]:not(:hover, :active) {
 
 .paper-icon-button-light:not(:disabled):is(:hover, :active),
 .selectionCommandsPanel .paper-icon-button-light:not(:disabled):is(:hover, :focus),
-.listItemImageButton:hover,
 .MuiButtonBase-root:is(.MuiIconButton-root, .MuiButton-text):is(:hover, .Mui-focusVisible) {
     background-color: transparent;
 }
@@ -83,6 +82,33 @@ a.button-link[style]:not(:hover, :active) {
 
 .buttonActive {
     color: var(--palatina-color-highlight) !important;
+}
+
+.playstatebutton-icon-played,
+.ratingbutton-icon-withrating {
+    color: var(--palatina-color-highlight);
+}
+
+.listItemImageButton {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.listItemImageButton:hover {
+    background-color: transparent;
+    transform: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .listItemImageButton {
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+
+    .listItemImage:hover .listItemImageButton {
+        opacity: 1;
+    }
 }
 
 .cardOverlayContainer .cardOverlayButton:not(.cardOverlayFab-primary),
