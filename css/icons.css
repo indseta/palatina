@@ -861,3 +861,15 @@
 .MuiSvgIcon-root[data-testid="WarningIcon"] {
     --palatina-icon: url("../icons/fluent/warning_24_filled.svg");
 }
+
+:is(.material-icons, .MuiSvgIcon-root):not(.cardImageIcon, .MuiAvatar-fallback, .selectArrow) {
+    font-size: var(--palatina-icon-size) !important;
+}
+
+:is(.material-icons:is(.chevron_left, .chevron_right, .expand_more, .keyboard_arrow_down, .keyboard_arrow_left, .keyboard_arrow_right, .keyboard_arrow_up, .navigate_before, .navigate_next):not(.selectArrow), .MuiSvgIcon-root:is([data-testid="ArrowDropDownIcon"], [data-testid="ArrowForwardIosSharpIcon"], [data-testid="ChevronLeftIcon"], [data-testid="ChevronRightIcon"], [data-testid="ExpandLessIcon"], [data-testid="ExpandMoreIcon"], [data-testid="KeyboardArrowLeftIcon"], [data-testid="KeyboardArrowRightIcon"], [data-testid="NavigateBeforeIcon"], [data-testid="NavigateNextIcon"])) {
+    font-size: var(--palatina-icon-arrow-size) !important;
+}
+
+.material-icons.selectArrow::before {
+    mask-size: var(--palatina-icon-arrow-size);
+}

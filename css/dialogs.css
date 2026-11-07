@@ -76,5 +76,5 @@
 }
 
 .MuiPopover-paper .MuiAccordionDetails-root .MuiCheckbox-root .MuiSvgIcon-root {
-    font-size: var(--palatina-menu-icon);
+    font-size: var(--palatina-icon-size);
 }

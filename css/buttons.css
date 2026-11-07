@@ -71,10 +71,6 @@ a.button-link[style]:not(:hover, :active) {
     transform: none;
 }
 
-.cardOverlayFab-primary > .MuiSvgIcon-root {
-    font-size: 1.6696em;
-}
-
 :is(.cardOverlayContainer > .cardOverlayFab-primary, .listItemImageButton):not(:hover, :active) {
     color: var(--palatina-color-translucent);
 }
@@ -167,20 +163,16 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
     font-size: 0.875rem;
 }
 
-.MuiAppBar-root .MuiSvgIcon-root:not(.MuiAvatar-fallback) {
-    font-size: var(--palatina-header-icon);
+:is(.MuiAppBar-root, .osdHeader) .MuiSvgIcon-root:not(.MuiAvatar-fallback) {
+    font-size: var(--palatina-header-icon) !important;
 }
 
-.MuiAppBar-root .MuiSvgIcon-root:is([data-testid="NavigateBeforeIcon"], [data-testid="NavigateNextIcon"], [data-testid="ArrowDropDownIcon"]) {
-    font-size: var(--palatina-header-arrow);
+:is(.MuiAppBar-root, .osdHeader) .MuiSvgIcon-root:is([data-testid="ArrowDropDownIcon"], [data-testid="ArrowForwardIosSharpIcon"], [data-testid="ChevronLeftIcon"], [data-testid="ChevronRightIcon"], [data-testid="ExpandLessIcon"], [data-testid="ExpandMoreIcon"], [data-testid="KeyboardArrowLeftIcon"], [data-testid="KeyboardArrowRightIcon"], [data-testid="NavigateBeforeIcon"], [data-testid="NavigateNextIcon"]) {
+    font-size: var(--palatina-header-arrow) !important;
 }
 
 .MuiPaper-root.MuiPopover-paper .MuiMenuItem-root .MuiListItemText-root {
     margin: 0;
-}
-
-.MuiMenuItem-root .MuiListItemIcon-root .MuiSvgIcon-root {
-    font-size: var(--palatina-menu-icon);
 }
 
 .MuiMenuItem-root .MuiListItemText-root ~ .MuiListItemIcon-root {
@@ -189,7 +181,7 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 }
 
 .MuiMenuItem-root .MuiListItemText-root ~ .MuiListItemIcon-root .MuiSvgIcon-root {
-    font-size: 0.9rem;
+    font-size: var(--palatina-icon-arrow-size) !important;
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] {
@@ -241,7 +233,7 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 .actionSheet .actionSheetMenuItem .actionsheetMenuItemIcon {
     margin: 0 !important;
     margin-inline-end: var(--palatina-menu-icon-gap) !important;
-    font-size: var(--palatina-menu-icon);
+    font-size: var(--palatina-icon-size);
 }
 
 .actionSheet .actionSheetMenuItem .actionsheetListItemBody {

@@ -15,11 +15,11 @@
     z-index: 1;
     margin: 0;
     color: var(--palatina-color-muted);
-    font-size: 1.25rem;
+    font-size: var(--palatina-icon-size);
     transform: translateY(-50%);
     pointer-events: none;
 }
 
 .searchFieldsInner .searchfields-txtSearch {
-    padding-left: calc(1em + 1.25rem);
+    padding-left: calc(1em + var(--palatina-icon-size));
 }
