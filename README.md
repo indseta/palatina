@@ -7,12 +7,12 @@ A Jellyfin 12.4 theme.
 Dashboard > General > Custom CSS, as the first line:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/indseta/palatina@0.2.7/css/palatina.css");
+@import url("https://cdn.jsdelivr.net/gh/indseta/palatina@0.2.8/css/palatina.css");
 ```
 
 JS Injector > Add Script:
 
-- Script URL: `https://cdn.jsdelivr.net/gh/indseta/palatina@0.2.7/js/palatina.js`
+- Script URL: `https://cdn.jsdelivr.net/gh/indseta/palatina@0.2.8/js/palatina.js`
 - Load as module: on
 - Enabled: on
 - Plugin setting "Allow external script URLs": on
