@@ -11,3 +11,12 @@
         border-radius: 0;
     }
 }
+
+.MuiPaper-root.MuiPopover-paper {
+    background-color: var(--palatina-color-background);
+    background-image: none;
+}
+
+.MuiPopover-paper :is(.MuiAccordion-root, .MuiAccordionSummary-root) {
+    background-color: transparent;
+}

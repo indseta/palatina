@@ -137,3 +137,13 @@ body:has(#indexPage:not(.hide) #homeTab.is-active) .MuiToolbar-root a.MuiButton-
 .videoOsdBottom :is(.btnPreviousChapter, .btnNextChapter, .btnPreviousTrack, .btnNextTrack) {
     display: none;
 }
+
+.MuiToolbar-root .MuiButtonGroup-grouped:has(> :is([data-testid="ViewModuleIcon"], [data-testid="ViewListIcon"])) {
+    display: none;
+}
+
+.MuiToolbar-root .MuiButtonGroup-grouped:has(+ .MuiButtonGroup-grouped > :is([data-testid="ViewModuleIcon"], [data-testid="ViewListIcon"])) {
+    border-right: 0;
+    border-top-right-radius: var(--palatina-radius);
+    border-bottom-right-radius: var(--palatina-radius);
+}
