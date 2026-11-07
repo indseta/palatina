@@ -100,3 +100,13 @@ a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *
     width: 1.25rem;
     height: 1.25rem;
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .MuiIconButton-root:hover > .MuiAvatar-root.MuiAvatar-colorDefault {
+        background-color: var(--palatina-color-text);
+    }
+}
+
+.MuiIconButton-root:is(:active, :focus-visible:not(.palatina-pointer *)) > .MuiAvatar-root.MuiAvatar-colorDefault {
+    background-color: var(--palatina-color-text);
+}
