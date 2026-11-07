@@ -1,7 +1,7 @@
 import { enableKeyboardDragging, setBufferedRanges, setSliderValue } from "./slider.js";
 
 const skipBack = 10;
-const skipForward = 30;
+const skipForward = 10;
 
 function runningTime(seconds) {
     const total = Math.max(Math.floor(seconds), 0);
