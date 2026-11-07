@@ -17,11 +17,11 @@
     }
 }
 
-:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *):is(:active, :focus-visible, .show-focus:focus, .emby-tab-button-active, .alphaPickerButton-selected, .MuiButton-textPrimary, .Mui-selected) {
+:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *):is(:active, :focus-visible:not(.palatina-pointer *), .show-focus:focus, .emby-tab-button-active, .alphaPickerButton-selected, .MuiButton-textPrimary, .Mui-selected) {
     color: var(--palatina-color-text);
 }
 
-a.button-link[style]:not(:hover, :active, :focus-visible) {
+a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *)) {
     color: var(--palatina-color-interactive) !important;
 }
 

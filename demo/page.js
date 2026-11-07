@@ -173,7 +173,7 @@ const css = await stylesheet(context.request, assets);
 await browser.close();
 await writeFile(out + "/jellyfin.css", "@charset \"UTF-8\";\n" + onlyTheme(css, screens.home.theme));
 await writeFile(out + "/screens.json", JSON.stringify({ start: "home", screens: screens, overlays: layers }));
-for (const file of ["index.html", "sample.js", "sample.css"]) {
+for (const file of ["index.html", "sample.js", "slider.js", "player.js", "sample.css"]) {
     await cp("demo/sample/" + file, out + "/" + file);
 }
 await cp("css", out + "/css", { recursive: true });

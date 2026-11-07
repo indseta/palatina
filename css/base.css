@@ -85,7 +85,7 @@ html {
     }
 }
 
-.mdl-slider-container:has(.mdl-slider:is(:active, :focus-visible)) .mdl-slider-background-lower {
+.mdl-slider-container:has(.mdl-slider:is(:active, :focus-visible:not(.palatina-pointer *))) .mdl-slider-background-lower {
     background-color: var(--palatina-color-text);
 }
 

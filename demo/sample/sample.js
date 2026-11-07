@@ -1,8 +1,15 @@
+import { bindSliders } from "./slider.js";
+import { startPlayer } from "./player.js";
+
 const data = await (await fetch("screens.json")).json();
 const names = Object.keys(data.screens);
+const trail = [];
 let classes = [];
 let current = null;
 let layer = null;
+let stopPlayer = () => null;
+let autoplay = false;
+let pending = null;
 
 const sheets = [...document.body.querySelectorAll("link, style")];
 const theme = sheets.find((sheet) => sheet.getAttribute("href") === "css/palatina.css");
@@ -104,8 +111,24 @@ function openLayer(overlay, trigger) {
     return;
 }
 
+function begin(screen) {
+    if (current !== screen) {
+        return;
+    }
+    if (screen.kind === "player") {
+        stopPlayer = startPlayer(back);
+        if (autoplay) {
+            document.querySelector("video")?.play().catch(() => null);
+        }
+    }
+    autoplay = false;
+    return;
+}
+
 function show(name) {
     closeLayer();
+    stopPlayer();
+    stopPlayer = () => null;
     const screen = data.screens[name] ?? data.screens[data.start];
     current = screen;
     document.documentElement.classList.remove(...classes);
@@ -120,6 +143,7 @@ function show(name) {
     document.body.setAttribute("style", screen.bodyStyle);
     theme.disabled = !screen.custom;
     document.body.replaceChildren(...parse(screen.html).childNodes);
+    bindSliders(document.body);
     window.scrollTo(0, 0);
     window.palatinaReady = true;
     const video = document.querySelector("video");
@@ -132,9 +156,12 @@ function show(name) {
         }, { once: true });
         video.addEventListener("seeked", () => {
             window.palatinaReady = true;
+            begin(screen);
             return;
         }, { once: true });
         video.load();
+    } else {
+        begin(screen);
     }
     focus(screen.focus);
     document.querySelector(".page:not(.hide)")?.dispatchEvent(new CustomEvent("viewshow", { bubbles: true, detail: {} }));
@@ -151,8 +178,51 @@ function guard() {
 function go(name) {
     if (location.hash.slice(1) === name) {
         show(name);
+        return;
+    }
+    trail.push(name);
+    pending = name;
+    location.hash = name;
+    return;
+}
+
+function changed() {
+    const name = location.hash.slice(1) || data.start;
+    if (name === pending) {
+        pending = null;
+    } else if (trail.at(-2) === name) {
+        trail.pop();
     } else {
-        location.hash = name;
+        trail.push(name);
+    }
+    show(name);
+    return;
+}
+
+function back() {
+    trail.pop();
+    if (!trail.length) {
+        trail.push(data.start);
+    }
+    const previous = trail.at(-1);
+    if (location.hash.slice(1) === previous) {
+        show(previous);
+        return;
+    }
+    pending = previous;
+    location.hash = previous;
+    return;
+}
+
+function toggleFavorite(button) {
+    const favorite = button.getAttribute("data-isfavorite") !== "true";
+    const text = button.querySelector(".button-text");
+    button.setAttribute("data-isfavorite", String(favorite));
+    button.classList.toggle("ratingbutton-withrating", favorite);
+    button.querySelector(".material-icons")?.classList.toggle("ratingbutton-icon-withrating", favorite);
+    button.title = favorite ? "Favorite" : "Add to favorites";
+    if (text) {
+        text.innerText = button.title;
     }
     return;
 }
@@ -212,23 +282,24 @@ function click(event) {
     if (link) {
         event.preventDefault();
     }
-    if (element.closest(".headerBackButton, .btnBack, header button[aria-label='Back']")) {
+    if (element.closest(".headerBackButton, .btnBack, button[aria-label='Back']")) {
         event.preventDefault();
-        history.back();
+        back();
         return;
     }
-    if (element.closest(".btnPause")) {
-        const video = document.querySelector("video");
-        if (video?.paused) {
-            video.play();
-        } else {
-            video?.pause();
-        }
+    const rating = element.closest("[is='emby-ratingbutton']");
+    if (rating) {
+        event.preventDefault();
+        toggleFavorite(rating);
+        return;
+    }
+    if (current.kind === "player") {
         return;
     }
     if (element.closest(".btnPlay, .btnResume, [data-action='play'], [data-action='resume']")) {
         event.preventDefault();
         event.stopPropagation();
+        autoplay = true;
         go("player");
         return;
     }
@@ -255,5 +326,6 @@ new MutationObserver(guard).observe(document.documentElement, { attributes: true
 document.addEventListener("click", click, true);
 document.addEventListener("keydown", keydown);
 window.addEventListener("scroll", scrolled, { passive: true });
-window.addEventListener("hashchange", () => show(location.hash.slice(1) || data.start));
-show(location.hash.slice(1) || data.start);
+window.addEventListener("hashchange", changed);
+trail.push(location.hash.slice(1) || data.start);
+show(trail[0]);
