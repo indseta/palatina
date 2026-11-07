@@ -52,6 +52,10 @@ body:has(#videoOsdPage:not(.hide)) .dialogBackdrop:has(+ .dialogContainer > .act
     max-height: calc(100% - var(--palatina-popup-bottom, 105px) - var(--palatina-player-edge));
 }
 
+body:has(#videoOsdPage:not(.hide)) .actionSheet:not(.actionsheet-fullscreen) {
+    box-shadow: none;
+}
+
 body:has(#videoOsdPage:not(.hide)) .actionSheet:not(.actionsheet-fullscreen) .actionSheetTitle {
     display: none;
 }
