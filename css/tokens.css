@@ -5,6 +5,7 @@
     --palatina-color-interactive-channel: 179 179 179;
     --palatina-color-text: var(--palatina-color-interactive);
     --palatina-color-muted: #999;
+    --palatina-color-translucent: rgb(var(--palatina-color-highlight-channel) / 70.2%);
     --palatina-color-track: #333;
     --palatina-color-divider: rgb(var(--palatina-color-highlight-channel) / 12%);
     --palatina-color-contrast: rgb(var(--palatina-color-contrast-channel));

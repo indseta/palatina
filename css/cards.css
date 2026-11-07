@@ -12,7 +12,7 @@
 
 .itemProgressBarForeground:not(.itemProgressBarForeground-recording),
 .itemLinearProgress .MuiLinearProgress-bar {
-    background-color: rgb(var(--palatina-color-highlight-channel) / 70.2%);
+    background-color: var(--palatina-color-translucent);
 }
 
 :is(.card, .listItemImage):is(:hover, :focus-within) :is(.itemProgressBar, .itemLinearProgress) {
