@@ -1,3 +1,5 @@
 :root {
     --palatina-font-title: "Source Serif 4", "Noto Sans", "Noto Sans HK", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", serif;
+    --palatina-color-text: #fff;
+    --palatina-color-interactive: #b3b3b3;
 }
