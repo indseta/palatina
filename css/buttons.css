@@ -62,3 +62,9 @@ a.button-link[style]:not(:hover, :active, :focus-visible) {
 :is(a, .button-link, .textActionButton, .MuiLink-root) {
     text-decoration: none;
 }
+
+.cardOverlayContainer > .cardOverlayFab-primary,
+.cardOverlayContainer > .cardOverlayFab-primary:hover {
+    background-color: transparent;
+    transform: none;
+}
