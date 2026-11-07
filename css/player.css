@@ -41,8 +41,9 @@
     font-weight: 400;
 }
 
-.dialogBackdrop:has(+ .dialogContainer .palatina-osd-popup) {
+body:has(#videoOsdPage:not(.hide)) .dialogBackdrop:has(+ .dialogContainer > .actionSheet:not(.actionsheet-fullscreen)) {
     opacity: 0;
+    transition: none;
 }
 
 .actionSheet.palatina-osd-popup {
@@ -51,6 +52,6 @@
     max-height: calc(100% - var(--palatina-popup-bottom, 105px) - var(--palatina-player-edge));
 }
 
-.palatina-osd-popup .actionSheetTitle {
+body:has(#videoOsdPage:not(.hide)) .actionSheet:not(.actionsheet-fullscreen) .actionSheetTitle {
     display: none;
 }
