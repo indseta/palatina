@@ -59,3 +59,8 @@ body:has(#videoOsdPage:not(.hide)) .actionSheet:not(.actionsheet-fullscreen) {
 body:has(#videoOsdPage:not(.hide)) .actionSheet:not(.actionsheet-fullscreen) .actionSheetTitle {
     display: none;
 }
+
+:is(.osdHeader, .videoOsdBottom) {
+    cursor: default;
+    user-select: none;
+}
