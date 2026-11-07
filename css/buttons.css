@@ -56,3 +56,9 @@ a.button-link[style]:not(:hover, :active, :focus-visible) {
     background: var(--jf-palette-primary-main);
     color: var(--jf-palette-primary-contrastText);
 }
+
+.button-link:hover,
+.textActionButton:hover,
+:is(a, .button-link, .textActionButton, .MuiLink-root) {
+    text-decoration: none;
+}
