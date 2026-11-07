@@ -7,17 +7,17 @@
     display: none;
 }
 
-:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected) {
+:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *) {
     color: var(--palatina-color-interactive);
 }
 
 @media (hover: hover) and (pointer: fine) {
-    :is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected):hover {
+    :is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *):hover {
         color: var(--palatina-color-text);
     }
 }
 
-:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected):is(:active, :focus-visible, .show-focus:focus, .emby-tab-button-active, .alphaPickerButton-selected, .MuiButton-textPrimary, .Mui-selected) {
+:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *):is(:active, :focus-visible, .show-focus:focus, .emby-tab-button-active, .alphaPickerButton-selected, .MuiButton-textPrimary, .Mui-selected) {
     color: var(--palatina-color-text);
 }
 

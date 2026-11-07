@@ -1,13 +1,4 @@
-.card .cardText {
+.card .cardText,
+.card .cardText a[href] {
     color: var(--palatina-color-interactive);
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .card:hover :is(.cardText, .cardText a[href]) {
-        color: var(--palatina-color-text);
-    }
-}
-
-.card:is(.show-focus:focus, :has(:focus-visible)) :is(.cardText, .cardText a[href]) {
-    color: var(--palatina-color-text);
 }

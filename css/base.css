@@ -8,11 +8,6 @@ html {
     --jf-palette-secondary-main: var(--palatina-color-text);
 }
 
-:is(h1, h2, h3, h4, h5, h6, .sectionTitle, .pageTitle, .itemName):not(a *, button *, :has(a, button)),
-.sectionTitle-cards {
-    font-family: var(--palatina-font-title);
-}
-
 .MuiListItemIcon-root {
     color: inherit;
 }
