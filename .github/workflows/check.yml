@@ -14,3 +14,22 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: npm run check
+  tag:
+    needs: lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: |
+          version=$(node -p "require('./package.json').version")
+          if git rev-parse -q --verify "refs/tags/$version" > /dev/null; then
+            if [ "$(git rev-list -n 1 "$version")" = "$(git rev-parse HEAD)" ]; then exit 0; fi
+            echo "Tag $version already exists on another commit, bump version in package.json" >&2
+            exit 1
+          fi
+          git tag "$version"
+          git push origin "$version"

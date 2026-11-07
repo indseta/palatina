@@ -7,17 +7,17 @@ A Jellyfin 12.4 theme.
 Dashboard > General > Custom CSS, as the first line:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/indseta/palatina@v0/css/palatina.css");
+@import url("https://cdn.jsdelivr.net/gh/indseta/palatina@0.1.0/css/palatina.css");
 ```
 
 JS Injector > Add Script:
 
-- Script URL: `https://cdn.jsdelivr.net/gh/indseta/palatina@v0/js/palatina.js`
+- Script URL: `https://cdn.jsdelivr.net/gh/indseta/palatina@0.1.0/js/palatina.js`
 - Load as module: on
 - Enabled: on
 - Plugin setting "Allow external script URLs": on
 
-Each release is a git tag (`v0`, `v1`, ...). Change the number in both places to update.
+Every push to `main` raises `version` in `package.json` (`0.1.0`, `0.1.1`, ...), and CI tags the commit with it once the lint check passes. Change the number in both places to update.
 
 ## Layout
 
