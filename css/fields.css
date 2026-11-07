@@ -83,7 +83,7 @@
 }
 
 .trackSelections .selectContainer .detailTrackSelect {
-    font-size: 0.875rem;
+    font-size: inherit;
     padding-block: 0.5em;
     padding-inline: 0.5em 1.9em;
 }

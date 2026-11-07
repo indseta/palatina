@@ -35,6 +35,10 @@ a.button-link[style]:active {
     color: var(--palatina-color-highlight) !important;
 }
 
+.detailsGroupItem .button-link {
+    font-weight: inherit;
+}
+
 :is(a[href], button, .itemAction) :is(.secondary, .secondaryText) {
     color: inherit;
 }
