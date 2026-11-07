@@ -187,8 +187,13 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] {
-    padding: 6px 8px 6px 4px;
+    padding: 6px 8px;
     font-weight: 500;
+}
+
+.MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] > .MuiButton-endIcon {
+    order: -1;
+    margin: 0 8px 0 -4px;
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] > .MuiTypography-root {
