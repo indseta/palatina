@@ -167,10 +167,6 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
     font-size: var(--palatina-header-icon) !important;
 }
 
-:is(.MuiAppBar-root, .osdHeader) .MuiSvgIcon-root:is([data-testid="ArrowDropDownIcon"], [data-testid="ArrowForwardIosSharpIcon"], [data-testid="ChevronLeftIcon"], [data-testid="ChevronRightIcon"], [data-testid="ExpandLessIcon"], [data-testid="ExpandMoreIcon"], [data-testid="KeyboardArrowLeftIcon"], [data-testid="KeyboardArrowRightIcon"], [data-testid="NavigateBeforeIcon"], [data-testid="NavigateNextIcon"]) {
-    font-size: var(--palatina-header-arrow) !important;
-}
-
 .MuiPaper-root.MuiPopover-paper .MuiMenuItem-root .MuiListItemText-root {
     margin: 0;
 }
@@ -178,10 +174,6 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 .MuiMenuItem-root .MuiListItemText-root ~ .MuiListItemIcon-root {
     min-width: 0;
     margin-inline-start: 16px;
-}
-
-.MuiMenuItem-root .MuiListItemText-root ~ .MuiListItemIcon-root .MuiSvgIcon-root {
-    font-size: var(--palatina-icon-arrow-size) !important;
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] {
@@ -201,10 +193,6 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 .MuiToolbar-root .MuiButtonGroup-text > .MuiButton-root.MuiButtonGroup-grouped {
     min-width: 0;
     padding: 6px 12px;
-}
-
-.MuiToolbar-root .MuiButtonGroup-text > .MuiButton-root.MuiButtonGroup-grouped:has(> :is([data-testid="NavigateBeforeIcon"], [data-testid="NavigateNextIcon"])) {
-    padding-inline: calc(12px + (var(--palatina-header-icon) - var(--palatina-header-arrow)) / 2);
 }
 
 .MuiToolbar-root .MuiStack-root > .MuiButtonGroup-root:has([data-testid="NavigateBeforeIcon"]) {

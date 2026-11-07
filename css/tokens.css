@@ -17,9 +17,7 @@
     --palatina-radius: 4px;
     --palatina-player-edge: 24px;
     --palatina-header-icon: 20px;
-    --palatina-header-arrow: 16px;
     --palatina-menu-padding: 6px 16px;
     --palatina-icon-size: 1.25rem;
-    --palatina-icon-arrow-size: calc(var(--palatina-icon-size) * 0.8);
     --palatina-menu-icon-gap: calc(36px - var(--palatina-icon-size));
 }

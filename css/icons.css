@@ -57,6 +57,7 @@
 .material-icons.arrow_downward,
 .MuiSvgIcon-root[data-testid="ArrowDownwardIcon"] {
     --palatina-icon: url("../icons/fluent/arrow_down_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.download,
@@ -75,6 +76,7 @@
 .material-icons.arrow_back,
 .MuiSvgIcon-root[data-testid="ArrowBackIcon"] {
     --palatina-icon: url("../icons/fluent/arrow_left_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.redo {
@@ -92,6 +94,7 @@
 
 .material-icons.arrow_forward {
     --palatina-icon: url("../icons/fluent/arrow_right_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.shuffle,
@@ -116,6 +119,7 @@
 .material-icons.arrow_upward,
 .MuiSvgIcon-root[data-testid="ArrowUpwardIcon"] {
     --palatina-icon: url("../icons/fluent/arrow_up_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.vertical_align_top,
@@ -192,6 +196,7 @@
 .MuiSvgIcon-root[data-testid="ArrowDropDownIcon"],
 .MuiSvgIcon-root[data-testid="ExpandMoreIcon"] {
     --palatina-icon: url("../icons/fluent/chevron_down_24_filled.svg");
+    --palatina-icon-scale: 1.246;
 }
 
 .material-icons.chevron_left,
@@ -201,6 +206,7 @@
 .MuiSvgIcon-root[data-testid="KeyboardArrowLeftIcon"],
 .MuiSvgIcon-root[data-testid="NavigateBeforeIcon"] {
     --palatina-icon: url("../icons/fluent/chevron_left_24_filled.svg");
+    --palatina-icon-scale: 1.255;
 }
 
 .material-icons.chevron_right,
@@ -211,11 +217,13 @@
 .MuiSvgIcon-root[data-testid="KeyboardArrowRightIcon"],
 .MuiSvgIcon-root[data-testid="NavigateNextIcon"] {
     --palatina-icon: url("../icons/fluent/chevron_right_24_filled.svg");
+    --palatina-icon-scale: 1.246;
 }
 
 .material-icons.keyboard_arrow_up,
 .MuiSvgIcon-root[data-testid="ExpandLessIcon"] {
     --palatina-icon: url("../icons/fluent/chevron_up_24_filled.svg");
+    --palatina-icon-scale: 1.255;
 }
 
 .material-icons.fiber_manual_record,
@@ -866,10 +874,6 @@
     font-size: var(--palatina-icon-size) !important;
 }
 
-:is(.material-icons:is(.chevron_left, .chevron_right, .expand_more, .keyboard_arrow_down, .keyboard_arrow_left, .keyboard_arrow_right, .keyboard_arrow_up, .navigate_before, .navigate_next):not(.selectArrow), .MuiSvgIcon-root:is([data-testid="ArrowDropDownIcon"], [data-testid="ArrowForwardIosSharpIcon"], [data-testid="ChevronLeftIcon"], [data-testid="ChevronRightIcon"], [data-testid="ExpandLessIcon"], [data-testid="ExpandMoreIcon"], [data-testid="KeyboardArrowLeftIcon"], [data-testid="KeyboardArrowRightIcon"], [data-testid="NavigateBeforeIcon"], [data-testid="NavigateNextIcon"])) {
-    font-size: var(--palatina-icon-arrow-size) !important;
-}
-
 .material-icons.selectArrow::before {
-    mask-size: var(--palatina-icon-arrow-size);
+    mask-size: calc(var(--palatina-icon-size) * var(--palatina-icon-scale, 1));
 }
