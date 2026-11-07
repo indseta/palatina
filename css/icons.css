@@ -18,182 +18,113 @@
     visibility: hidden;
 }
 
-.material-icons.airplay,
-.material-icons.cast,
-.material-icons.cast_connected,
-.MuiSvgIcon-root[data-testid="CastIcon"],
-.MuiSvgIcon-root[data-testid="CastConnectedIcon"] {
-    --palatina-icon: url("../icons/custom/cast.svg");
+.material-icons.arrow_circle_left {
+    --palatina-icon: url("../icons/phosphor/arrow-circle-left-fill.svg");
 }
 
-.material-icons.picture_in_picture_alt {
-    --palatina-icon: url("../icons/custom/picture_in_picture.svg");
-}
-
-.material-icons.radio,
-.MuiSvgIcon-root[data-testid="LanIcon"] {
-    --palatina-icon: url("../icons/framework7/antenna_radiowaves_left_right.svg");
-}
-
-.material-icons.autorenew {
-    --palatina-icon: url("../icons/framework7/arrow_2_circlepath.svg");
-}
-
-.material-icons.call_split,
-.MuiSvgIcon-root[data-testid="CallSplitIcon"] {
-    --palatina-icon: url("../icons/framework7/arrow_branch.svg");
-}
-
-.material-icons.refresh,
-.material-icons.update,
-.MuiSvgIcon-root[data-testid="RefreshIcon"] {
-    --palatina-icon: url("../icons/framework7/arrow_clockwise.svg");
+.material-icons.arrow_circle_right {
+    --palatina-icon: url("../icons/phosphor/arrow-circle-right-fill.svg");
 }
 
 .material-icons.replay,
 .MuiSvgIcon-root[data-testid="ReplayIcon"],
-.MuiSvgIcon-root[data-testid="RestartAltIcon"],
-.MuiSvgIcon-root[data-testid="RestoreIcon"] {
-    --palatina-icon: url("../icons/framework7/arrow_counterclockwise.svg");
+.MuiSvgIcon-root[data-testid="RestartAltIcon"] {
+    --palatina-icon: url("../icons/phosphor/arrow-counter-clockwise-fill.svg");
 }
 
 .material-icons.arrow_downward,
 .MuiSvgIcon-root[data-testid="ArrowDownwardIcon"] {
-    --palatina-icon: url("../icons/framework7/arrow_down.svg");
+    --palatina-icon: url("../icons/phosphor/arrow-down-fill.svg");
 }
 
-.material-icons.fullscreen_exit {
-    --palatina-icon: url("../icons/framework7/arrow_down_right_arrow_up_left.svg");
-}
-
-.material-icons.download,
-.material-icons.file_download,
-.material-icons.get_app,
-.material-icons.vertical_align_bottom,
-.MuiSvgIcon-root[data-testid="DownloadIcon"],
-.MuiSvgIcon-root[data-testid="FileDownloadIcon"] {
-    --palatina-icon: url("../icons/framework7/arrow_down_to_line.svg");
+.material-icons.keyboard_return {
+    --palatina-icon: url("../icons/phosphor/arrow-elbow-down-left-fill.svg");
 }
 
 .material-icons.arrow_back,
 .MuiSvgIcon-root[data-testid="ArrowBackIcon"] {
-    --palatina-icon: url("../icons/framework7/arrow_left.svg");
+    --palatina-icon: url("../icons/phosphor/arrow-left-fill.svg");
 }
 
-.material-icons.arrow_circle_left {
-    --palatina-icon: url("../icons/framework7/arrow_left_circle_fill.svg");
+.material-icons.vertical_align_bottom {
+    --palatina-icon: url("../icons/phosphor/arrow-line-down-fill.svg");
 }
 
-.material-icons.call_merge {
-    --palatina-icon: url("../icons/framework7/arrow_merge.svg");
+.material-icons.vertical_align_top {
+    --palatina-icon: url("../icons/phosphor/arrow-line-up-fill.svg");
 }
 
 .material-icons.arrow_forward {
-    --palatina-icon: url("../icons/framework7/arrow_right.svg");
+    --palatina-icon: url("../icons/phosphor/arrow-right-fill.svg");
 }
 
-.MuiSvgIcon-root[data-testid="SyncAltIcon"] {
-    --palatina-icon: url("../icons/framework7/arrow_right_arrow_left.svg");
+.MuiSvgIcon-root[data-testid="OpenInNewIcon"] {
+    --palatina-icon: url("../icons/phosphor/arrow-square-out-fill.svg");
 }
 
-.material-icons.arrow_circle_right {
-    --palatina-icon: url("../icons/framework7/arrow_right_circle_fill.svg");
+.material-icons.undo {
+    --palatina-icon: url("../icons/phosphor/arrow-u-up-left-fill.svg");
+}
+
+.material-icons.redo {
+    --palatina-icon: url("../icons/phosphor/arrow-u-up-right-fill.svg");
 }
 
 .material-icons.arrow_upward,
 .MuiSvgIcon-root[data-testid="ArrowUpwardIcon"] {
-    --palatina-icon: url("../icons/framework7/arrow_up.svg");
+    --palatina-icon: url("../icons/phosphor/arrow-up-fill.svg");
 }
 
-.material-icons.sort_by_alpha,
-.MuiSvgIcon-root[data-testid="SortByAlphaIcon"] {
-    --palatina-icon: url("../icons/framework7/arrow_up_arrow_down.svg");
+.material-icons.autorenew,
+.material-icons.refresh,
+.material-icons.update,
+.MuiSvgIcon-root[data-testid="RefreshIcon"] {
+    --palatina-icon: url("../icons/phosphor/arrows-clockwise-fill.svg");
 }
 
-.material-icons.fullscreen,
-.MuiSvgIcon-root[data-testid="FullscreenIcon"] {
-    --palatina-icon: url("../icons/framework7/arrow_up_left_arrow_down_right.svg");
+.MuiSvgIcon-root[data-testid="SyncAltIcon"] {
+    --palatina-icon: url("../icons/phosphor/arrows-left-right-fill.svg");
 }
 
-.MuiSvgIcon-root[data-testid="OpenInNewIcon"] {
-    --palatina-icon: url("../icons/framework7/arrow_up_right_square_fill.svg");
+.material-icons.call_merge {
+    --palatina-icon: url("../icons/phosphor/arrows-merge-fill.svg");
 }
 
-.material-icons.vertical_align_top,
-.MuiSvgIcon-root[data-testid="UploadIcon"] {
-    --palatina-icon: url("../icons/framework7/arrow_up_to_line.svg");
+.material-icons.call_split,
+.MuiSvgIcon-root[data-testid="CallSplitIcon"] {
+    --palatina-icon: url("../icons/phosphor/arrows-split-fill.svg");
 }
 
-.material-icons.undo {
-    --palatina-icon: url("../icons/framework7/arrow_uturn_left.svg");
+.MuiSvgIcon-root[data-testid="ArticleIcon"] {
+    --palatina-icon: url("../icons/phosphor/article-fill.svg");
 }
 
-.material-icons.redo {
-    --palatina-icon: url("../icons/framework7/arrow_uturn_right.svg");
-}
-
-.material-icons.skip_previous,
-.MuiSvgIcon-root[data-testid="FirstPageIcon"] {
-    --palatina-icon: url("../icons/framework7/backward_end_fill.svg");
-}
-
-.material-icons.fast_rewind {
-    --palatina-icon: url("../icons/framework7/backward_fill.svg");
+.material-icons.backspace {
+    --palatina-icon: url("../icons/phosphor/backspace-fill.svg");
 }
 
 .MuiSvgIcon-root[data-testid="NotificationsIcon"] {
-    --palatina-icon: url("../icons/framework7/bell_fill.svg");
-}
-
-.MuiSvgIcon-root[data-testid="UsbIcon"] {
-    --palatina-icon: url("../icons/framework7/bolt_fill.svg");
+    --palatina-icon: url("../icons/phosphor/bell-fill.svg");
 }
 
 .material-icons.book,
-.material-icons.import_contacts,
 .MuiSvgIcon-root[data-testid="BookIcon"] {
-    --palatina-icon: url("../icons/framework7/book_fill.svg");
+    --palatina-icon: url("../icons/phosphor/book-fill.svg");
+}
+
+.material-icons.import_contacts {
+    --palatina-icon: url("../icons/phosphor/book-open-fill.svg");
 }
 
 .material-icons.event {
-    --palatina-icon: url("../icons/framework7/calendar.svg");
-}
-
-.material-icons.closed_caption,
-.material-icons.subtitles,
-.MuiSvgIcon-root[data-testid="ClosedCaptionIcon"] {
-    --palatina-icon: url("../icons/framework7/captions_bubble_fill.svg");
-}
-
-.MuiSvgIcon-root[data-testid="AnalyticsIcon"] {
-    --palatina-icon: url("../icons/framework7/chart_bar_fill.svg");
-}
-
-.material-icons.message,
-.MuiSvgIcon-root[data-testid="CommentIcon"] {
-    --palatina-icon: url("../icons/framework7/chat_bubble_fill.svg");
-}
-
-.material-icons.check,
-.MuiSvgIcon-root[data-testid="CheckIcon"],
-.MuiSvgIcon-root[data-testid="DownloadDoneIcon"] {
-    --palatina-icon: url("../icons/framework7/checkmark_alt.svg");
-}
-
-.material-icons.library_add_check {
-    --palatina-icon: url("../icons/framework7/checkmark_rectangle_fill.svg");
-}
-
-.material-icons.check_box,
-.MuiSvgIcon-root[data-testid="CheckBoxIcon"] {
-    --palatina-icon: url("../icons/framework7/checkmark_square_fill.svg");
+    --palatina-icon: url("../icons/phosphor/calendar-fill.svg");
 }
 
 .material-icons.expand_more,
 .material-icons.keyboard_arrow_down,
 .MuiSvgIcon-root[data-testid="ArrowDropDownIcon"],
 .MuiSvgIcon-root[data-testid="ExpandMoreIcon"] {
-    --palatina-icon: url("../icons/framework7/chevron_down.svg");
+    --palatina-icon: url("../icons/phosphor/caret-down-fill.svg");
 }
 
 .material-icons.chevron_left,
@@ -202,7 +133,7 @@
 .MuiSvgIcon-root[data-testid="ChevronLeftIcon"],
 .MuiSvgIcon-root[data-testid="KeyboardArrowLeftIcon"],
 .MuiSvgIcon-root[data-testid="NavigateBeforeIcon"] {
-    --palatina-icon: url("../icons/framework7/chevron_left.svg");
+    --palatina-icon: url("../icons/phosphor/caret-left-fill.svg");
 }
 
 .material-icons.chevron_right,
@@ -212,111 +143,173 @@
 .MuiSvgIcon-root[data-testid="ChevronRightIcon"],
 .MuiSvgIcon-root[data-testid="KeyboardArrowRightIcon"],
 .MuiSvgIcon-root[data-testid="NavigateNextIcon"] {
-    --palatina-icon: url("../icons/framework7/chevron_right.svg");
+    --palatina-icon: url("../icons/phosphor/caret-right-fill.svg");
 }
 
 .material-icons.keyboard_arrow_up,
 .MuiSvgIcon-root[data-testid="ExpandLessIcon"] {
-    --palatina-icon: url("../icons/framework7/chevron_up.svg");
+    --palatina-icon: url("../icons/phosphor/caret-up-fill.svg");
 }
 
-.MuiSvgIcon-root[data-testid="RadioButtonUncheckedIcon"] {
-    --palatina-icon: url("../icons/framework7/circle.svg");
+.MuiSvgIcon-root[data-testid="AnalyticsIcon"] {
+    --palatina-icon: url("../icons/phosphor/chart-bar-fill.svg");
+}
+
+.material-icons.message,
+.MuiSvgIcon-root[data-testid="CommentIcon"] {
+    --palatina-icon: url("../icons/phosphor/chat-circle-fill.svg");
+}
+
+.material-icons.check,
+.MuiSvgIcon-root[data-testid="CheckIcon"],
+.MuiSvgIcon-root[data-testid="DownloadDoneIcon"] {
+    --palatina-icon: url("../icons/phosphor/check-fat-fill.svg");
+}
+
+.material-icons.check_box,
+.MuiSvgIcon-root[data-testid="CheckBoxIcon"] {
+    --palatina-icon: url("../icons/phosphor/check-square-fill.svg");
+}
+
+.material-icons.library_add_check {
+    --palatina-icon: url("../icons/phosphor/check-square-offset-fill.svg");
 }
 
 .material-icons.fiber_manual_record,
 .MuiSvgIcon-root[data-testid="FiberManualRecordIcon"] {
-    --palatina-icon: url("../icons/framework7/circle_fill.svg");
+    --palatina-icon: url("../icons/phosphor/circle-fill.svg");
 }
 
 .material-icons.brightness_medium {
-    --palatina-icon: url("../icons/framework7/circle_lefthalf_fill.svg");
+    --palatina-icon: url("../icons/phosphor/circle-half-fill.svg");
+}
+
+.MuiSvgIcon-root[data-testid="RadioButtonUncheckedIcon"] {
+    --palatina-icon: url("../icons/phosphor/circle.svg");
+}
+
+.material-icons.forward_30 {
+    --palatina-icon: url("../icons/phosphor/clock-clockwise-fill.svg");
 }
 
 .material-icons.history,
+.material-icons.replay_10,
+.MuiSvgIcon-root[data-testid="RestoreIcon"] {
+    --palatina-icon: url("../icons/phosphor/clock-counter-clockwise-fill.svg");
+}
+
 .material-icons.schedule,
 .MuiSvgIcon-root[data-testid="AccessTimeIcon"],
 .MuiSvgIcon-root[data-testid="ScheduleIcon"] {
-    --palatina-icon: url("../icons/framework7/clock_fill.svg");
+    --palatina-icon: url("../icons/phosphor/clock-fill.svg");
+}
+
+.material-icons.closed_caption,
+.MuiSvgIcon-root[data-testid="ClosedCaptionIcon"] {
+    --palatina-icon: url("../icons/phosphor/closed-captioning-fill.svg");
 }
 
 .material-icons.cloud_download {
-    --palatina-icon: url("../icons/framework7/cloud_download_fill.svg");
+    --palatina-icon: url("../icons/phosphor/cloud-arrow-down-fill.svg");
 }
 
 .MuiSvgIcon-root[data-testid="BackupIcon"] {
-    --palatina-icon: url("../icons/framework7/cloud_upload_fill.svg");
+    --palatina-icon: url("../icons/phosphor/cloud-arrow-up-fill.svg");
+}
+
+.MuiSvgIcon-root[data-testid="ViewColumnIcon"] {
+    --palatina-icon: url("../icons/phosphor/columns-fill.svg");
 }
 
 .material-icons.explore,
 .MuiSvgIcon-root[data-testid="ExploreIcon"] {
-    --palatina-icon: url("../icons/framework7/compass_fill.svg");
+    --palatina-icon: url("../icons/phosphor/compass-fill.svg");
 }
 
-.MuiSvgIcon-root[data-testid="ExtensionIcon"] {
-    --palatina-icon: url("../icons/framework7/cube_box_fill.svg");
+.material-icons.content_copy,
+.MuiSvgIcon-root[data-testid="ContentCopyIcon"] {
+    --palatina-icon: url("../icons/phosphor/copy-fill.svg");
 }
 
-.material-icons.backspace {
-    --palatina-icon: url("../icons/framework7/delete_left_fill.svg");
+.material-icons.fullscreen_exit {
+    --palatina-icon: url("../icons/phosphor/corners-in-fill.svg");
+}
+
+.material-icons.fullscreen,
+.MuiSvgIcon-root[data-testid="FullscreenIcon"] {
+    --palatina-icon: url("../icons/phosphor/corners-out-fill.svg");
+}
+
+.MuiSvgIcon-root[data-testid="MemoryIcon"] {
+    --palatina-icon: url("../icons/phosphor/cpu-fill.svg");
+}
+
+.MuiSvgIcon-root[data-testid="LocationSearchingIcon"] {
+    --palatina-icon: url("../icons/phosphor/crosshair-fill.svg");
 }
 
 .material-icons.computer,
 .MuiSvgIcon-root[data-testid="ComputerIcon"] {
-    --palatina-icon: url("../icons/framework7/desktopcomputer.svg");
+    --palatina-icon: url("../icons/phosphor/desktop-fill.svg");
+}
+
+.material-icons.phonelink_lock,
+.material-icons.smartphone,
+.MuiSvgIcon-root[data-testid="PhonelinkLockIcon"],
+.MuiSvgIcon-root[data-testid="SmartphoneIcon"] {
+    --palatina-icon: url("../icons/phosphor/device-mobile-fill.svg");
+}
+
+.material-icons.tablet,
+.MuiSvgIcon-root[data-testid="TabletIcon"] {
+    --palatina-icon: url("../icons/phosphor/device-tablet-fill.svg");
 }
 
 .material-icons.devices,
 .material-icons.devices_other,
 .MuiSvgIcon-root[data-testid="DevicesIcon"] {
-    --palatina-icon: url("../icons/framework7/device_laptop.svg");
+    --palatina-icon: url("../icons/phosphor/devices-fill.svg");
 }
 
-.material-icons.smartphone,
-.MuiSvgIcon-root[data-testid="SmartphoneIcon"] {
-    --palatina-icon: url("../icons/framework7/device_phone_portrait.svg");
-}
-
-.material-icons.tablet,
-.MuiSvgIcon-root[data-testid="TabletIcon"] {
-    --palatina-icon: url("../icons/framework7/device_tablet_portrait.svg");
-}
-
-.material-icons.content_copy,
-.MuiSvgIcon-root[data-testid="ContentCopyIcon"] {
-    --palatina-icon: url("../icons/framework7/doc_on_doc_fill.svg");
-}
-
-.MuiSvgIcon-root[data-testid="ArticleIcon"] {
-    --palatina-icon: url("../icons/framework7/doc_text_fill.svg");
+.material-icons.drag_handle,
+.MuiSvgIcon-root[data-testid="DragHandleIcon"] {
+    --palatina-icon: url("../icons/phosphor/dots-six-vertical-fill.svg");
 }
 
 .material-icons.more {
-    --palatina-icon: url("../icons/framework7/ellipsis.svg");
+    --palatina-icon: url("../icons/phosphor/dots-three-fill.svg");
 }
 
 .material-icons.more_vert,
 .MuiSvgIcon-root[data-testid="MoreVertIcon"] {
-    --palatina-icon: url("../icons/framework7/ellipsis_vertical.svg");
+    --palatina-icon: url("../icons/phosphor/dots-three-outline-vertical-fill.svg");
 }
 
-.material-icons.error {
-    --palatina-icon: url("../icons/framework7/exclamationmark_circle_fill.svg");
-}
-
-.material-icons.warning,
-.MuiSvgIcon-root[data-testid="WarningIcon"] {
-    --palatina-icon: url("../icons/framework7/exclamationmark_triangle_fill.svg");
+.material-icons.download,
+.material-icons.file_download,
+.material-icons.get_app,
+.MuiSvgIcon-root[data-testid="DownloadIcon"],
+.MuiSvgIcon-root[data-testid="FileDownloadIcon"] {
+    --palatina-icon: url("../icons/phosphor/download-simple-fill.svg");
 }
 
 .material-icons.preview,
 .material-icons.remove_red_eye,
 .MuiSvgIcon-root[data-testid="VisibilityIcon"] {
-    --palatina-icon: url("../icons/framework7/eye_fill.svg");
+    --palatina-icon: url("../icons/phosphor/eye-fill.svg");
 }
 
 .MuiSvgIcon-root[data-testid="VisibilityOffIcon"] {
-    --palatina-icon: url("../icons/framework7/eye_slash_fill.svg");
+    --palatina-icon: url("../icons/phosphor/eye-slash-fill.svg");
+}
+
+.material-icons.fast_forward {
+    --palatina-icon: url("../icons/phosphor/fast-forward-fill.svg");
+}
+
+.material-icons.video_library,
+.MuiSvgIcon-root[data-testid="VideoLibraryIcon"] {
+    --palatina-icon: url("../icons/phosphor/film-slate-fill.svg");
 }
 
 .material-icons.local_movies,
@@ -324,212 +317,71 @@
 .material-icons.theaters,
 .MuiSvgIcon-root[data-testid="MovieIcon"],
 .MuiSvgIcon-root[data-testid="TheatersIcon"] {
-    --palatina-icon: url("../icons/framework7/film_fill.svg");
+    --palatina-icon: url("../icons/phosphor/film-strip-fill.svg");
 }
 
 .material-icons.save {
-    --palatina-icon: url("../icons/framework7/floppy_disk.svg");
+    --palatina-icon: url("../icons/phosphor/floppy-disk-fill.svg");
 }
 
 .material-icons.folder,
-.material-icons.folder_open,
 .MuiSvgIcon-root[data-testid="FolderIcon"] {
-    --palatina-icon: url("../icons/framework7/folder_fill.svg");
+    --palatina-icon: url("../icons/phosphor/folder-fill.svg");
 }
 
-.material-icons.skip_next,
-.MuiSvgIcon-root[data-testid="LastPageIcon"] {
-    --palatina-icon: url("../icons/framework7/forward_end_fill.svg");
+.material-icons.folder_open {
+    --palatina-icon: url("../icons/phosphor/folder-open-fill.svg");
 }
 
-.material-icons.fast_forward {
-    --palatina-icon: url("../icons/framework7/forward_fill.svg");
+.MuiSvgIcon-root[data-testid="LibraryAddIcon"] {
+    --palatina-icon: url("../icons/phosphor/folder-plus-fill.svg");
+}
+
+.material-icons.filter_alt,
+.MuiSvgIcon-root[data-testid="FilterAltIcon"] {
+    --palatina-icon: url("../icons/phosphor/funnel-fill.svg");
+}
+
+.MuiSvgIcon-root[data-testid="FilterListIcon"] {
+    --palatina-icon: url("../icons/phosphor/funnel-simple-fill.svg");
+}
+
+.MuiSvgIcon-root[data-testid="FilterAltOffIcon"] {
+    --palatina-icon: url("../icons/phosphor/funnel-x-fill.svg");
 }
 
 .material-icons.gamepad {
-    --palatina-icon: url("../icons/framework7/gamecontroller_fill.svg");
-}
-
-.MuiSvgIcon-root[data-testid="MemoryIcon"] {
-    --palatina-icon: url("../icons/framework7/gauge.svg");
+    --palatina-icon: url("../icons/phosphor/game-controller-fill.svg");
 }
 
 .material-icons.settings,
 .MuiSvgIcon-root[data-testid="AppSettingsAltIcon"],
 .MuiSvgIcon-root[data-testid="SettingsIcon"] {
-    --palatina-icon: url("../icons/framework7/gear_alt_fill.svg");
+    --palatina-icon: url("../icons/phosphor/gear-six-fill.svg");
 }
 
 .material-icons.language,
 .material-icons.public {
-    --palatina-icon: url("../icons/framework7/globe.svg");
+    --palatina-icon: url("../icons/phosphor/globe-fill.svg");
 }
 
-.material-icons.replay_10 {
-    --palatina-icon: url("../icons/framework7/gobackward_10.svg");
-}
-
-.material-icons.forward_30 {
-    --palatina-icon: url("../icons/framework7/goforward_30.svg");
+.material-icons.storage,
+.MuiSvgIcon-root[data-testid="StorageIcon"] {
+    --palatina-icon: url("../icons/phosphor/hard-drives-fill.svg");
 }
 
 .material-icons.favorite,
 .MuiSvgIcon-root[data-testid="FavoriteIcon"] {
-    --palatina-icon: url("../icons/framework7/heart_fill.svg");
+    --palatina-icon: url("../icons/phosphor/heart-fill.svg");
 }
 
 .material-icons.home,
 .MuiSvgIcon-root[data-testid="HomeIcon"] {
-    --palatina-icon: url("../icons/framework7/house_fill.svg");
+    --palatina-icon: url("../icons/phosphor/house-fill.svg");
 }
 
-.material-icons.details,
-.material-icons.info,
-.material-icons.info_outline,
-.MuiSvgIcon-root[data-testid="InfoIcon"] {
-    --palatina-icon: url("../icons/framework7/info_circle_fill.svg");
-}
-
-.material-icons.keyboard,
-.material-icons.space_bar {
-    --palatina-icon: url("../icons/framework7/keyboard.svg");
-}
-
-.MuiSvgIcon-root[data-testid="RadioButtonCheckedIcon"] {
-    --palatina-icon: url("../icons/framework7/largecircle_fill_circle.svg");
-}
-
-.material-icons.light {
-    --palatina-icon: url("../icons/framework7/lightbulb_fill.svg");
-}
-
-.material-icons.drag_handle,
-.material-icons.menu,
-.MuiSvgIcon-root[data-testid="DensityMediumIcon"],
-.MuiSvgIcon-root[data-testid="DensitySmallIcon"],
-.MuiSvgIcon-root[data-testid="DragHandleIcon"],
-.MuiSvgIcon-root[data-testid="MenuIcon"] {
-    --palatina-icon: url("../icons/framework7/line_horizontal_3.svg");
-}
-
-.material-icons.filter_alt,
-.MuiSvgIcon-root[data-testid="FilterAltIcon"],
-.MuiSvgIcon-root[data-testid="FilterListIcon"] {
-    --palatina-icon: url("../icons/framework7/line_horizontal_3_decrease.svg");
-}
-
-.material-icons.link {
-    --palatina-icon: url("../icons/framework7/link.svg");
-}
-
-.material-icons.list,
-.material-icons.toc,
-.MuiSvgIcon-root[data-testid="ViewListIcon"] {
-    --palatina-icon: url("../icons/framework7/list_bullet.svg");
-}
-
-.material-icons.key,
-.material-icons.lock,
-.material-icons.password,
-.MuiSvgIcon-root[data-testid="VpnKeyIcon"] {
-    --palatina-icon: url("../icons/framework7/lock_fill.svg");
-}
-
-.material-icons.phonelink_lock,
-.MuiSvgIcon-root[data-testid="PhonelinkLockIcon"] {
-    --palatina-icon: url("../icons/framework7/lock_shield_fill.svg");
-}
-
-.material-icons.remove {
-    --palatina-icon: url("../icons/framework7/minus.svg");
-}
-
-.material-icons.remove_circle,
-.material-icons.remove_circle_outline,
-.MuiSvgIcon-root[data-testid="RemoveCircleIcon"] {
-    --palatina-icon: url("../icons/framework7/minus_circle_fill.svg");
-}
-
-.MuiSvgIcon-root[data-testid="IndeterminateCheckBoxIcon"] {
-    --palatina-icon: url("../icons/framework7/minus_square_fill.svg");
-}
-
-.material-icons.album,
-.MuiSvgIcon-root[data-testid="AlbumIcon"] {
-    --palatina-icon: url("../icons/framework7/music_albums_fill.svg");
-}
-
-.material-icons.audiotrack,
-.material-icons.music_note,
-.MuiSvgIcon-root[data-testid="MusicNoteIcon"] {
-    --palatina-icon: url("../icons/framework7/music_note.svg");
-}
-
-.material-icons.queue_music {
-    --palatina-icon: url("../icons/framework7/music_note_list.svg");
-}
-
-.material-icons.block,
 .MuiSvgIcon-root[data-testid="ImageNotSupportedIcon"] {
-    --palatina-icon: url("../icons/framework7/nosign.svg");
-}
-
-.material-icons.style,
-.MuiSvgIcon-root[data-testid="PaletteIcon"] {
-    --palatina-icon: url("../icons/framework7/paintbrush_fill.svg");
-}
-
-.material-icons.pause_circle_filled,
-.material-icons.pause_circle_outline {
-    --palatina-icon: url("../icons/framework7/pause_circle_fill.svg");
-}
-
-.material-icons.pause,
-.MuiSvgIcon-root[data-testid="PauseIcon"] {
-    --palatina-icon: url("../icons/framework7/pause_fill.svg");
-}
-
-.material-icons.create,
-.material-icons.edit,
-.material-icons.mode_edit,
-.MuiSvgIcon-root[data-testid="EditIcon"] {
-    --palatina-icon: url("../icons/framework7/pencil.svg");
-}
-
-.material-icons.percent {
-    --palatina-icon: url("../icons/framework7/percent.svg");
-}
-
-.MuiSvgIcon-root[data-testid="PeopleIcon"] {
-    --palatina-icon: url("../icons/framework7/person_2_fill.svg");
-}
-
-.material-icons.groups,
-.MuiSvgIcon-root[data-testid="GroupsIcon"] {
-    --palatina-icon: url("../icons/framework7/person_3_fill.svg");
-}
-
-.MuiSvgIcon-root[data-testid="PersonOffIcon"],
-.MuiSvgIcon-root[data-testid="PersonRemoveIcon"] {
-    --palatina-icon: url("../icons/framework7/person_badge_minus_fill.svg");
-}
-
-.MuiSvgIcon-root[data-testid="GroupAddIcon"],
-.MuiSvgIcon-root[data-testid="PersonAddIcon"] {
-    --palatina-icon: url("../icons/framework7/person_badge_plus_fill.svg");
-}
-
-.MuiSvgIcon-root[data-testid="AccountCircleIcon"] {
-    --palatina-icon: url("../icons/framework7/person_crop_circle_fill.svg");
-}
-
-.material-icons.portrait {
-    --palatina-icon: url("../icons/framework7/person_crop_rectangle_fill.svg");
-}
-
-.material-icons.person,
-.MuiSvgIcon-root[data-testid="PersonIcon"] {
-    --palatina-icon: url("../icons/framework7/person_fill.svg");
+    --palatina-icon: url("../icons/phosphor/image-broken-fill.svg");
 }
 
 .material-icons.image,
@@ -537,242 +389,417 @@
 .material-icons.photo,
 .MuiSvgIcon-root[data-testid="ImageIcon"],
 .MuiSvgIcon-root[data-testid="PhotoIcon"] {
-    --palatina-icon: url("../icons/framework7/photo_fill.svg");
+    --palatina-icon: url("../icons/phosphor/image-fill.svg");
 }
 
 .material-icons.photo_album,
 .MuiSvgIcon-root[data-testid="PermMediaIcon"],
 .MuiSvgIcon-root[data-testid="PhotoAlbumIcon"] {
-    --palatina-icon: url("../icons/framework7/photo_on_rectangle.svg");
+    --palatina-icon: url("../icons/phosphor/images-fill.svg");
+}
+
+.material-icons.details,
+.material-icons.info,
+.material-icons.info_outline,
+.MuiSvgIcon-root[data-testid="InfoIcon"] {
+    --palatina-icon: url("../icons/phosphor/info-fill.svg");
+}
+
+.material-icons.key,
+.MuiSvgIcon-root[data-testid="VpnKeyIcon"] {
+    --palatina-icon: url("../icons/phosphor/key-fill.svg");
+}
+
+.material-icons.keyboard,
+.material-icons.space_bar {
+    --palatina-icon: url("../icons/phosphor/keyboard-fill.svg");
+}
+
+.material-icons.light {
+    --palatina-icon: url("../icons/phosphor/lightbulb-fill.svg");
+}
+
+.material-icons.link {
+    --palatina-icon: url("../icons/phosphor/link-fill.svg");
+}
+
+.material-icons.toc,
+.MuiSvgIcon-root[data-testid="ViewListIcon"] {
+    --palatina-icon: url("../icons/phosphor/list-bullets-fill.svg");
+}
+
+.material-icons.list,
+.material-icons.menu,
+.MuiSvgIcon-root[data-testid="DensityMediumIcon"],
+.MuiSvgIcon-root[data-testid="DensitySmallIcon"],
+.MuiSvgIcon-root[data-testid="MenuIcon"] {
+    --palatina-icon: url("../icons/phosphor/list-fill.svg");
+}
+
+.material-icons.playlist_add,
+.MuiSvgIcon-root[data-testid="PlaylistAddIcon"] {
+    --palatina-icon: url("../icons/phosphor/list-plus-fill.svg");
+}
+
+.material-icons.lock {
+    --palatina-icon: url("../icons/phosphor/lock-fill.svg");
+}
+
+.material-icons.search,
+.MuiSvgIcon-root[data-testid="SearchIcon"] {
+    --palatina-icon: url("../icons/phosphor/magnifying-glass-fill.svg");
+}
+
+.material-icons.lyrics {
+    --palatina-icon: url("../icons/phosphor/microphone-stage-fill.svg");
+}
+
+.material-icons.playlist_remove,
+.material-icons.remove_circle,
+.material-icons.remove_circle_outline,
+.MuiSvgIcon-root[data-testid="RemoveCircleIcon"] {
+    --palatina-icon: url("../icons/phosphor/minus-circle-fill.svg");
+}
+
+.material-icons.remove {
+    --palatina-icon: url("../icons/phosphor/minus-fill.svg");
+}
+
+.MuiSvgIcon-root[data-testid="IndeterminateCheckBoxIcon"] {
+    --palatina-icon: url("../icons/phosphor/minus-square-fill.svg");
+}
+
+.material-icons.music_video,
+.material-icons.ondemand_video,
+.MuiSvgIcon-root[data-testid="MusicVideoIcon"],
+.MuiSvgIcon-root[data-testid="OndemandVideoIcon"] {
+    --palatina-icon: url("../icons/phosphor/monitor-play-fill.svg");
+}
+
+.material-icons.audiotrack,
+.material-icons.music_note,
+.MuiSvgIcon-root[data-testid="MusicNoteIcon"] {
+    --palatina-icon: url("../icons/phosphor/music-note-fill.svg");
+}
+
+.MuiSvgIcon-root[data-testid="LanIcon"] {
+    --palatina-icon: url("../icons/phosphor/network-fill.svg");
+}
+
+.material-icons.style {
+    --palatina-icon: url("../icons/phosphor/paint-brush-fill.svg");
+}
+
+.MuiSvgIcon-root[data-testid="PaletteIcon"] {
+    --palatina-icon: url("../icons/phosphor/palette-fill.svg");
+}
+
+.material-icons.password {
+    --palatina-icon: url("../icons/phosphor/password-fill.svg");
+}
+
+.material-icons.pause_circle_filled,
+.material-icons.pause_circle_outline {
+    --palatina-icon: url("../icons/phosphor/pause-circle-fill.svg");
+}
+
+.material-icons.pause,
+.MuiSvgIcon-root[data-testid="PauseIcon"] {
+    --palatina-icon: url("../icons/phosphor/pause-fill.svg");
+}
+
+.material-icons.create,
+.material-icons.edit,
+.material-icons.mode_edit,
+.MuiSvgIcon-root[data-testid="EditIcon"] {
+    --palatina-icon: url("../icons/phosphor/pencil-simple-fill.svg");
+}
+
+.material-icons.percent {
+    --palatina-icon: url("../icons/phosphor/percent-fill.svg");
+}
+
+.material-icons.picture_in_picture_alt {
+    --palatina-icon: url("../icons/phosphor/picture-in-picture-fill.svg");
 }
 
 .material-icons.play_circle_filled,
 .material-icons.play_circle_outline,
 .MuiSvgIcon-root[data-testid="PlayCircleIcon"] {
-    --palatina-icon: url("../icons/framework7/play_circle_fill.svg");
+    --palatina-icon: url("../icons/phosphor/play-circle-fill.svg");
 }
 
 .material-icons.play_arrow,
 .MuiSvgIcon-root[data-testid="PlayArrowIcon"] {
-    --palatina-icon: url("../icons/framework7/play_fill.svg");
+    --palatina-icon: url("../icons/phosphor/play-fill.svg");
 }
 
-.material-icons.video_library,
-.MuiSvgIcon-root[data-testid="VideoLibraryIcon"] {
-    --palatina-icon: url("../icons/framework7/play_rectangle_fill.svg");
+.material-icons.queue_music {
+    --palatina-icon: url("../icons/phosphor/playlist-fill.svg");
+}
+
+.material-icons.add_circle {
+    --palatina-icon: url("../icons/phosphor/plus-circle-fill.svg");
 }
 
 .material-icons.add,
 .MuiSvgIcon-root[data-testid="AddIcon"] {
-    --palatina-icon: url("../icons/framework7/plus.svg");
-}
-
-.material-icons.add_circle {
-    --palatina-icon: url("../icons/framework7/plus_circle_fill.svg");
-}
-
-.MuiSvgIcon-root[data-testid="LibraryAddIcon"] {
-    --palatina-icon: url("../icons/framework7/plus_rectangle_on_rectangle.svg");
+    --palatina-icon: url("../icons/phosphor/plus-fill.svg");
 }
 
 .MuiSvgIcon-root[data-testid="PowerSettingsNewIcon"] {
-    --palatina-icon: url("../icons/framework7/power.svg");
+    --palatina-icon: url("../icons/phosphor/power-fill.svg");
 }
 
 .material-icons.print {
-    --palatina-icon: url("../icons/framework7/printer_fill.svg");
+    --palatina-icon: url("../icons/phosphor/printer-fill.svg");
+}
+
+.material-icons.block {
+    --palatina-icon: url("../icons/phosphor/prohibit-fill.svg");
+}
+
+.MuiSvgIcon-root[data-testid="ExtensionIcon"] {
+    --palatina-icon: url("../icons/phosphor/puzzle-piece-fill.svg");
 }
 
 .MuiSvgIcon-root[data-testid="HelpOutlineIcon"] {
-    --palatina-icon: url("../icons/framework7/question_circle_fill.svg");
+    --palatina-icon: url("../icons/phosphor/question-fill.svg");
 }
 
-.material-icons.lyrics {
-    --palatina-icon: url("../icons/framework7/quote_bubble_fill.svg");
+.MuiSvgIcon-root[data-testid="RadioButtonCheckedIcon"] {
+    --palatina-icon: url("../icons/phosphor/radio-button-fill.svg");
+}
+
+.material-icons.radio {
+    --palatina-icon: url("../icons/phosphor/radio-fill.svg");
 }
 
 .material-icons.dvr,
-.MuiSvgIcon-root[data-testid="DvrIcon"] {
-    --palatina-icon: url("../icons/framework7/recordingtape.svg");
-}
-
-.MuiSvgIcon-root[data-testid="ViewColumnIcon"] {
-    --palatina-icon: url("../icons/framework7/rectangle_split_3x1_fill.svg");
-}
-
-.material-icons.collections,
-.material-icons.queue,
-.MuiSvgIcon-root[data-testid="QueueIcon"] {
-    --palatina-icon: url("../icons/framework7/rectangle_stack_fill.svg");
+.material-icons.fiber_smart_record,
+.MuiSvgIcon-root[data-testid="DvrIcon"],
+.MuiSvgIcon-root[data-testid="FiberSmartRecordIcon"] {
+    --palatina-icon: url("../icons/phosphor/record-fill.svg");
 }
 
 .material-icons.repeat {
-    --palatina-icon: url("../icons/framework7/repeat.svg");
+    --palatina-icon: url("../icons/phosphor/repeat-fill.svg");
 }
 
 .material-icons.repeat_one {
-    --palatina-icon: url("../icons/framework7/repeat_1.svg");
+    --palatina-icon: url("../icons/phosphor/repeat-once-fill.svg");
 }
 
-.material-icons.keyboard_return {
-    --palatina-icon: url("../icons/framework7/return.svg");
+.material-icons.fast_rewind {
+    --palatina-icon: url("../icons/phosphor/rewind-fill.svg");
 }
 
-.MuiSvgIcon-root[data-testid="LocationSearchingIcon"] {
-    --palatina-icon: url("../icons/framework7/scope.svg");
+.material-icons.airplay,
+.material-icons.cast,
+.material-icons.cast_connected,
+.MuiSvgIcon-root[data-testid="CastIcon"],
+.MuiSvgIcon-root[data-testid="CastConnectedIcon"] {
+    --palatina-icon: url("../icons/phosphor/screencast-fill.svg");
 }
 
-.material-icons.search,
-.MuiSvgIcon-root[data-testid="SearchIcon"] {
-    --palatina-icon: url("../icons/framework7/search.svg");
+.material-icons.select_all {
+    --palatina-icon: url("../icons/phosphor/selection-all-fill.svg");
+}
+
+.material-icons.share {
+    --palatina-icon: url("../icons/phosphor/share-network-fill.svg");
 }
 
 .material-icons.shuffle,
 .MuiSvgIcon-root[data-testid="ShuffleIcon"] {
-    --palatina-icon: url("../icons/framework7/shuffle.svg");
+    --palatina-icon: url("../icons/phosphor/shuffle-fill.svg");
 }
 
-.material-icons.video_settings,
-.MuiSvgIcon-root[data-testid="SettingsRemoteIcon"],
-.MuiSvgIcon-root[data-testid="TuneIcon"] {
-    --palatina-icon: url("../icons/framework7/slider_horizontal_3.svg");
-}
-
-.material-icons.fiber_smart_record,
-.MuiSvgIcon-root[data-testid="FiberSmartRecordIcon"] {
-    --palatina-icon: url("../icons/framework7/smallcircle_circle_fill.svg");
-}
-
-.material-icons.volume_up {
-    --palatina-icon: url("../icons/framework7/speaker_3_fill.svg");
-}
-
-.material-icons.volume_off {
-    --palatina-icon: url("../icons/framework7/speaker_slash_fill.svg");
-}
-
-.material-icons.sports {
-    --palatina-icon: url("../icons/framework7/sportscourt_fill.svg");
-}
-
-.material-icons.check_box_outline_blank,
-.MuiSvgIcon-root[data-testid="CheckBoxOutlineBlankIcon"] {
-    --palatina-icon: url("../icons/framework7/square.svg");
+.material-icons.login {
+    --palatina-icon: url("../icons/phosphor/sign-in-fill.svg");
 }
 
 .material-icons.exit_to_app,
 .material-icons.logout,
 .material-icons.meeting_room,
 .MuiSvgIcon-root[data-testid="LogoutIcon"] {
-    --palatina-icon: url("../icons/framework7/square_arrow_left_fill.svg");
+    --palatina-icon: url("../icons/phosphor/sign-out-fill.svg");
 }
 
-.material-icons.login {
-    --palatina-icon: url("../icons/framework7/square_arrow_right_fill.svg");
+.material-icons.skip_previous,
+.MuiSvgIcon-root[data-testid="FirstPageIcon"] {
+    --palatina-icon: url("../icons/phosphor/skip-back-fill.svg");
 }
 
-.material-icons.share {
-    --palatina-icon: url("../icons/framework7/square_arrow_up_fill.svg");
+.material-icons.skip_next,
+.MuiSvgIcon-root[data-testid="LastPageIcon"] {
+    --palatina-icon: url("../icons/phosphor/skip-forward-fill.svg");
+}
+
+.material-icons.video_settings,
+.MuiSvgIcon-root[data-testid="SettingsRemoteIcon"],
+.MuiSvgIcon-root[data-testid="TuneIcon"] {
+    --palatina-icon: url("../icons/phosphor/sliders-horizontal-fill.svg");
+}
+
+.material-icons.sports {
+    --palatina-icon: url("../icons/phosphor/soccer-ball-fill.svg");
+}
+
+.material-icons.sort_by_alpha,
+.MuiSvgIcon-root[data-testid="SortByAlphaIcon"] {
+    --palatina-icon: url("../icons/phosphor/sort-ascending-fill.svg");
+}
+
+.material-icons.volume_up {
+    --palatina-icon: url("../icons/phosphor/speaker-high-fill.svg");
+}
+
+.material-icons.volume_off {
+    --palatina-icon: url("../icons/phosphor/speaker-slash-fill.svg");
 }
 
 .material-icons.square {
-    --palatina-icon: url("../icons/framework7/square_fill.svg");
+    --palatina-icon: url("../icons/phosphor/square-fill.svg");
+}
+
+.material-icons.check_box_outline_blank,
+.MuiSvgIcon-root[data-testid="CheckBoxOutlineBlankIcon"] {
+    --palatina-icon: url("../icons/phosphor/square.svg");
 }
 
 .material-icons.category,
 .material-icons.dashboard,
+.material-icons.view_comfy,
 .MuiSvgIcon-root[data-testid="DashboardIcon"],
 .MuiSvgIcon-root[data-testid="ViewModuleIcon"] {
-    --palatina-icon: url("../icons/framework7/square_grid_2x2_fill.svg");
+    --palatina-icon: url("../icons/phosphor/squares-four-fill.svg");
 }
 
-.material-icons.view_comfy {
-    --palatina-icon: url("../icons/framework7/square_grid_3x2_fill.svg");
-}
-
-.material-icons.select_all {
-    --palatina-icon: url("../icons/framework7/square_on_square.svg");
+.material-icons.collections,
+.material-icons.queue,
+.MuiSvgIcon-root[data-testid="QueueIcon"] {
+    --palatina-icon: url("../icons/phosphor/stack-fill.svg");
 }
 
 .material-icons.star,
 .MuiSvgIcon-root[data-testid="StarIcon"] {
-    --palatina-icon: url("../icons/framework7/star_fill.svg");
+    --palatina-icon: url("../icons/phosphor/star-fill.svg");
 }
 
 .MuiSvgIcon-root[data-testid="StopCircleIcon"] {
-    --palatina-icon: url("../icons/framework7/stop_circle_fill.svg");
+    --palatina-icon: url("../icons/phosphor/stop-circle-fill.svg");
 }
 
 .material-icons.stop,
 .MuiSvgIcon-root[data-testid="StopIcon"] {
-    --palatina-icon: url("../icons/framework7/stop_fill.svg");
+    --palatina-icon: url("../icons/phosphor/stop-fill.svg");
 }
 
-.material-icons.brightness_high {
-    --palatina-icon: url("../icons/framework7/sun_max_fill.svg");
+.material-icons.subtitles {
+    --palatina-icon: url("../icons/phosphor/subtitles-fill.svg");
 }
 
 .material-icons.brightness_low {
-    --palatina-icon: url("../icons/framework7/sun_min_fill.svg");
+    --palatina-icon: url("../icons/phosphor/sun-dim-fill.svg");
+}
+
+.material-icons.brightness_high {
+    --palatina-icon: url("../icons/phosphor/sun-fill.svg");
 }
 
 .material-icons.label,
 .material-icons.tag {
-    --palatina-icon: url("../icons/framework7/tag_fill.svg");
+    --palatina-icon: url("../icons/phosphor/tag-fill.svg");
 }
 
-.material-icons.playlist_remove {
-    --palatina-icon: url("../icons/framework7/text_badge_minus.svg");
+.material-icons.live_tv,
+.MuiSvgIcon-root[data-testid="LiveTvIcon"] {
+    --palatina-icon: url("../icons/phosphor/television-fill.svg");
 }
 
-.material-icons.playlist_add,
-.MuiSvgIcon-root[data-testid="PlaylistAddIcon"] {
-    --palatina-icon: url("../icons/framework7/text_badge_plus.svg");
+.material-icons.tv,
+.MuiSvgIcon-root[data-testid="TvIcon"] {
+    --palatina-icon: url("../icons/phosphor/television-simple-fill.svg");
 }
 
 .material-icons.text_decrease,
 .material-icons.text_increase {
-    --palatina-icon: url("../icons/framework7/textformat_size.svg");
+    --palatina-icon: url("../icons/phosphor/text-aa-fill.svg");
 }
 
 .material-icons.delete,
 .MuiSvgIcon-root[data-testid="DeleteIcon"] {
-    --palatina-icon: url("../icons/framework7/trash_fill.svg");
+    --palatina-icon: url("../icons/phosphor/trash-fill.svg");
 }
 
-.material-icons.storage,
-.MuiSvgIcon-root[data-testid="StorageIcon"] {
-    --palatina-icon: url("../icons/framework7/tray_2_fill.svg");
+.MuiSvgIcon-root[data-testid="UploadIcon"] {
+    --palatina-icon: url("../icons/phosphor/upload-simple-fill.svg");
 }
 
-.material-icons.live_tv,
-.material-icons.ondemand_video,
-.material-icons.tv,
-.MuiSvgIcon-root[data-testid="LiveTvIcon"],
-.MuiSvgIcon-root[data-testid="OndemandVideoIcon"],
-.MuiSvgIcon-root[data-testid="TvIcon"] {
-    --palatina-icon: url("../icons/framework7/tv_fill.svg");
+.MuiSvgIcon-root[data-testid="UsbIcon"] {
+    --palatina-icon: url("../icons/phosphor/usb-fill.svg");
 }
 
-.material-icons.music_video,
-.MuiSvgIcon-root[data-testid="MusicVideoIcon"] {
-    --palatina-icon: url("../icons/framework7/tv_music_note_fill.svg");
+.MuiSvgIcon-root[data-testid="AccountCircleIcon"] {
+    --palatina-icon: url("../icons/phosphor/user-circle-fill.svg");
+}
+
+.material-icons.person,
+.MuiSvgIcon-root[data-testid="PersonIcon"] {
+    --palatina-icon: url("../icons/phosphor/user-fill.svg");
+}
+
+.MuiSvgIcon-root[data-testid="PersonOffIcon"],
+.MuiSvgIcon-root[data-testid="PersonRemoveIcon"] {
+    --palatina-icon: url("../icons/phosphor/user-minus-fill.svg");
+}
+
+.MuiSvgIcon-root[data-testid="GroupAddIcon"],
+.MuiSvgIcon-root[data-testid="PersonAddIcon"] {
+    --palatina-icon: url("../icons/phosphor/user-plus-fill.svg");
+}
+
+.material-icons.portrait {
+    --palatina-icon: url("../icons/phosphor/user-square-fill.svg");
+}
+
+.MuiSvgIcon-root[data-testid="PeopleIcon"] {
+    --palatina-icon: url("../icons/phosphor/users-fill.svg");
+}
+
+.material-icons.groups,
+.MuiSvgIcon-root[data-testid="GroupsIcon"] {
+    --palatina-icon: url("../icons/phosphor/users-three-fill.svg");
 }
 
 .material-icons.videocam,
 .MuiSvgIcon-root[data-testid="VideocamIcon"] {
-    --palatina-icon: url("../icons/framework7/videocam_fill.svg");
+    --palatina-icon: url("../icons/phosphor/video-camera-fill.svg");
+}
+
+.material-icons.album,
+.MuiSvgIcon-root[data-testid="AlbumIcon"] {
+    --palatina-icon: url("../icons/phosphor/vinyl-record-fill.svg");
+}
+
+.material-icons.error {
+    --palatina-icon: url("../icons/phosphor/warning-circle-fill.svg");
+}
+
+.material-icons.warning,
+.MuiSvgIcon-root[data-testid="WarningIcon"] {
+    --palatina-icon: url("../icons/phosphor/warning-fill.svg");
+}
+
+.material-icons.cancel,
+.MuiSvgIcon-root[data-testid="CancelIcon"] {
+    --palatina-icon: url("../icons/phosphor/x-circle-fill.svg");
 }
 
 .material-icons.clear,
 .material-icons.clear_all,
 .material-icons.close,
 .MuiSvgIcon-root[data-testid="CloseIcon"] {
-    --palatina-icon: url("../icons/framework7/xmark.svg");
-}
-
-.material-icons.cancel,
-.MuiSvgIcon-root[data-testid="CancelIcon"],
-.MuiSvgIcon-root[data-testid="FilterAltOffIcon"] {
-    --palatina-icon: url("../icons/framework7/xmark_circle_fill.svg");
+    --palatina-icon: url("../icons/phosphor/x-fill.svg");
 }
