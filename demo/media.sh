@@ -6,6 +6,21 @@ if [ ! -f "$clip" ]; then
     mkdir -p "$media"
     ffmpeg -loglevel error -y -f lavfi -i testsrc2=size=1280x720:rate=24 -f lavfi -i sine=frequency=440 -t 30 -c:v libvpx-vp9 -deadline realtime -cpu-used 8 -b:v 400k -c:a libopus "$clip"
 fi
+scenes="$media/.scenes.webm"
+if [ ! -f "$scenes" ]; then
+    printf ';FFMETADATA1\n[CHAPTER]\nTIMEBASE=1/1000\nSTART=0\nEND=10000\ntitle=Cold Open\n[CHAPTER]\nTIMEBASE=1/1000\nSTART=10000\nEND=20000\ntitle=The Harbor\n[CHAPTER]\nTIMEBASE=1/1000\nSTART=20000\nEND=30000\ntitle=Last Light\n' > "$media/.scenes.txt"
+    ffmpeg -loglevel error -y -i "$clip" -i "$media/.scenes.txt" -map 0 -map_metadata 1 -map_chapters 1 -c copy "$scenes"
+fi
+episode() {
+    case "$1" in
+        1:1) echo "The Night Ferry" ;;
+        1:2) echo "Low Water" ;;
+        1:3) echo "Signal Fires" ;;
+        2:1) echo "Breakwater" ;;
+        *) echo "Salt and Iron" ;;
+    esac
+    return 0
+}
 while IFS='|' read -r kind title year from to genre plot; do
     if [ "$kind" = movie ]; then
         dir="$media/Movies/$title ($year)"
@@ -17,13 +32,19 @@ while IFS='|' read -r kind title year from to genre plot; do
         fi
     else
         dir="$media/Shows/$title"
-        if [ ! -f "$dir/tvshow.nfo" ]; then
-            mkdir -p "$dir/Season 01"
-            for n in 1 2 3; do
-                cp "$clip" "$dir/Season 01/$title S01E0$n.webm"
+        if [ ! -f "$dir/Season 02/$title S02E02.webm" ]; then
+            mkdir -p "$dir/Season 01" "$dir/Season 02"
+            for key in 1:1 1:2 1:3 2:1 2:2; do
+                s="${key%:*}"
+                e="${key#*:}"
+                name="$dir/Season 0$s/$title S0${s}E0$e"
+                cp "$scenes" "$name.webm"
+                printf '<episodedetails><title>%s</title><season>%s</season><episode>%s</episode><aired>%s-0%s-1%s</aired><plot>The tide turns on %s as old debts surface in the harbor.</plot><director>Lena Hart</director><credits>Owen Price</credits><actor><name>Theo Lind</name><role>Harbor Pilot</role></actor></episodedetails>\n' "$(episode "$key")" "$s" "$e" "$year" "$s" "$e" "$title" > "$name.nfo"
             done
-            printf '<tvshow><title>%s</title><year>%s</year><plot>%s</plot><genre>%s</genre><rating>8.1</rating></tvshow>\n' "$title" "$year" "$plot" "$genre" > "$dir/tvshow.nfo"
-            sh demo/art.sh "$dir" "$title" "$year" "$from" "$to"
+            printf '<tvshow><title>%s</title><year>%s</year><premiered>%s-03-01</premiered><plot>%s</plot><genre>%s</genre><rating>8.1</rating><mpaa>TV-14</mpaa><status>Continuing</status><studio>Northlight</studio><tag>Coastal</tag><uniqueid type="imdb" default="true">tt99%s</uniqueid><uniqueid type="tvdb">99%s</uniqueid><uniqueid type="tmdb">99%s</uniqueid><actor><name>Mara Quinn</name><role>Ilse Varga</role></actor><actor><name>Jonah Reyes</name><role>Teodor Brandt</role></actor><actor><name>Sofia Lund</name><role>Harbor Master Kell</role></actor><actor><name>Elias Ward</name><role>Nils Varga</role></actor></tvshow>\n' "$title" "$year" "$year" "$plot" "$genre" "$year" "$year" "$year" > "$dir/tvshow.nfo"
+            if [ ! -f "$dir/poster.jpg" ]; then
+                sh demo/art.sh "$dir" "$title" "$year" "$from" "$to"
+            fi
         fi
     fi
 done < demo/catalog.txt

@@ -26,7 +26,7 @@ count() {
     curl -fs "$DEMO_URL/Items?IncludeItemTypes=$1&Recursive=true&Limit=0" -H "$auth" | sed 's/.*"TotalRecordCount":\([0-9]*\).*/\1/I'
     return 0
 }
-until [ "$(count Movie)" = "$(grep -c '^movie|' demo/catalog.txt)" ] && [ "$(count Episode)" = 3 ]; do
+until [ "$(count Movie)" = "$(grep -c '^movie|' demo/catalog.txt)" ] && [ "$(count Episode)" = "$(( $(grep -c '^series|' demo/catalog.txt) * 5 ))" ]; do
     curl -fs -X POST "$DEMO_URL/Library/Refresh" -H "$auth"
     sleep 5
 done

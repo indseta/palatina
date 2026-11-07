@@ -7,3 +7,4 @@ movie|The Last Orchard|2019|#5a3f37|#2c7744|Drama|Four generations, one farm, an
 movie|Paper Satellites|2025|#232526|#414345|Science Fiction|A teenage radio amateur picks up a signal from a satellite launched in 1962.
 movie|Low Tide|2018|#2b5876|#4e4376|Romance|Two strangers stranded on a tidal island until the water goes out again.
 series|Harbor Lights|2024|#000428|#004e92|Drama|A harbor master and a smuggler share a town too small for secrets.
+series|Tidewater|2023|#1f4037|#99f2c8|Drama|A ferry captain keeps the island running, and its oldest secret buried.
