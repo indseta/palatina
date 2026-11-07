@@ -97,7 +97,7 @@ a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *
 }
 
 .MuiButtonGroup-root.MuiButtonGroup-text > .MuiButtonGroup-grouped {
-    border-color: var(--palatina-color-divider);
+    border-right: 0;
 }
 
 .MuiIconButton-root:has(> .MuiAvatar-root) {
