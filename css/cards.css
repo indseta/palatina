@@ -1,6 +1,6 @@
 .card .cardText,
 .card .cardText a[href] {
-    color: var(--palatina-color-interactive);
+    color: var(--palatina-color-muted);
 }
 
 .itemProgressBar,
