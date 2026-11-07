@@ -18,3 +18,7 @@
 :is(.card, .listItemImage):is(:hover, :focus-within) :is(.itemProgressBar, .itemLinearProgress) {
     opacity: 0;
 }
+
+.cardOverlayContainer {
+    backdrop-filter: blur(8px);
+}
