@@ -177,6 +177,10 @@ a.button-link[style]:active {
     padding: 12px;
 }
 
+.MuiToolbar-root .MuiIconButton-root:has(> .MuiAvatar-root) {
+    margin-inline-end: -12px;
+}
+
 .MuiIconButton-root > .MuiAvatar-root {
     width: var(--palatina-header-icon);
     height: var(--palatina-header-icon);
@@ -193,6 +197,7 @@ a.button-link[style]:active {
 }
 
 .MuiToolbar-root a.MuiButton-root[href="#/"] {
+    margin-inline-start: -4px;
     padding: 6px 8px;
     font-size: 0.875rem;
     font-weight: 500;
@@ -252,8 +257,13 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] {
+    margin-inline-start: -4px;
     padding: 6px 8px;
     font-weight: 500;
+}
+
+.MuiToolbar-root .MuiButtonGroup-text:has(:is([data-testid="FilterAltIcon"], [data-testid="SortByAlphaIcon"])) {
+    margin-inline-end: -12px;
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] > .MuiButton-endIcon {

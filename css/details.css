@@ -31,13 +31,14 @@
 
 .layout-desktop .mainDetailButtons {
     margin-block: 0;
+    margin-inline-end: -0.85em;
 }
 
 .layout-desktop .itemBackdrop {
     height: var(--palatina-backdrop-height);
 }
 
-.palatina-details:not(:has(.backgroundContainer.withBackdrop)) :is(.itemBackdrop:not([data-src], [style*="url("], .lazy-hidden), .detailLogo) {
+.palatina-details:not(:has(.backgroundContainer.withBackdrop)) .palatina-rendered :is(.itemBackdrop:not([data-src], [style*="url("], .lazy-hidden), .detailLogo) {
     display: none;
 }
 
