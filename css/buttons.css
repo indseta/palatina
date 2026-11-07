@@ -103,6 +103,7 @@ a.button-link[style]:active {
     margin-bottom: var(--palatina-gap-row);
     padding: 0;
     border-radius: var(--palatina-radius);
+    cursor: pointer;
 }
 
 .itemsContainer > .listItem.itemAction:hover,
