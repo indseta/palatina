@@ -112,6 +112,19 @@ function place(entry, trigger) {
     return;
 }
 
+function placeSheet(sheet, trigger) {
+    const box = trigger.getBoundingClientRect();
+    const width = sheet.offsetWidth || 160;
+    const height = sheet.offsetHeight || 300;
+    const left = box.left + box.width / 2 - width / 2;
+    const top = box.top + box.height / 2 - height / 2;
+    const overflowX = left + width - window.innerWidth;
+    const overflowY = top + height - window.innerHeight;
+    sheet.style.left = Math.max(overflowX > 0 ? left - overflowX - 20 : left, 10) + "px";
+    sheet.style.top = Math.max(overflowY > 0 ? top - overflowY - 20 : top, 10) + "px";
+    return;
+}
+
 function resized() {
     if (layer) {
         layer.papers.forEach((entry) => place(entry, layer.trigger));
@@ -128,6 +141,7 @@ function openLayer(overlay, trigger) {
         return;
     });
     papers.forEach((entry) => place(entry, trigger));
+    nodes.forEach((node) => node.querySelectorAll(".actionSheet[style*='position: fixed']").forEach((sheet) => placeSheet(sheet, trigger)));
     if (overlay.follow) {
         document.querySelectorAll(overlay.follow.selector).forEach((element, index) => element.setAttribute("data-sample-href", overlay.follow.targets[index] ?? ""));
     }

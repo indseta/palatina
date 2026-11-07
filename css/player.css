@@ -34,3 +34,23 @@
 .chapterThumbText-dim {
     display: none;
 }
+
+.sliderBubble :is(.sliderBubbleText, h2.chapterThumbText) {
+    color: var(--palatina-color-text);
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.dialogBackdrop:has(+ .dialogContainer .palatina-osd-popup) {
+    opacity: 0;
+}
+
+.actionSheet.palatina-osd-popup {
+    top: auto !important;
+    bottom: var(--palatina-popup-bottom, 105px) !important;
+    max-height: calc(100% - var(--palatina-popup-bottom, 105px) - var(--palatina-player-edge));
+}
+
+.palatina-osd-popup .actionSheetTitle {
+    display: none;
+}
