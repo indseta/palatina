@@ -3,12 +3,18 @@
     color: var(--palatina-color-interactive);
 }
 
-.card .itemProgressBar,
-.card .itemLinearProgress {
+.itemProgressBar,
+.itemLinearProgress {
     background: rgb(var(--palatina-color-text-channel) / 20%);
+    backdrop-filter: blur(8px);
+    transition: opacity 0.2s;
 }
 
-.card .itemProgressBarForeground:not(.itemProgressBarForeground-recording),
-.card .itemLinearProgress .MuiLinearProgress-bar {
+.itemProgressBarForeground:not(.itemProgressBarForeground-recording),
+.itemLinearProgress .MuiLinearProgress-bar {
     background-color: rgb(var(--palatina-color-text-channel) / 70.2%);
+}
+
+:is(.card, .listItemImage):is(:hover, :focus-within) :is(.itemProgressBar, .itemLinearProgress) {
+    opacity: 0;
 }
