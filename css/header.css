@@ -3,6 +3,7 @@
 }
 
 .MuiAppBar-root.MuiAppBar-positionFixed {
-    background-color: var(--palatina-color-background);
+    background-color: var(--palatina-color-glass);
     background-image: none;
+    backdrop-filter: var(--palatina-glass-blur);
 }

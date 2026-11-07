@@ -3,7 +3,6 @@
 }
 
 .actionSheet:not(.actionsheet-fullscreen) {
-    border: 1px solid var(--palatina-color-divider);
     border-radius: var(--palatina-radius) !important;
 }
 
@@ -13,10 +12,17 @@
     }
 }
 
-.MuiPaper-root.MuiPopover-paper {
+.MuiPaper-root.MuiPopover-paper,
+.MuiPaper-root.MuiDialog-paper:not(.MuiDialog-paperFullScreen),
+.dialog:not(.dialog-fullscreen, .actionsheet-fullscreen) {
     border: 1px solid var(--palatina-color-divider);
-    background-color: var(--palatina-color-background);
+    background-color: var(--palatina-color-glass);
     background-image: none;
+    backdrop-filter: var(--palatina-glass-blur);
+}
+
+.dialog:not(.dialog-fullscreen, .actionsheet-fullscreen) :is(.formDialogHeader, .formDialogFooter) {
+    background-color: transparent;
 }
 
 .MuiPopover-paper :is(.MuiAccordion-root, .MuiAccordionSummary-root) {

@@ -8,6 +8,8 @@
     --palatina-color-translucent: rgb(var(--palatina-color-highlight-channel) / 70.2%);
     --palatina-color-track: #333;
     --palatina-color-divider: rgb(var(--palatina-color-highlight-channel) / 12%);
+    --palatina-color-glass: rgb(var(--palatina-color-background-channel) / 70%);
+    --palatina-glass-blur: blur(16px);
     --palatina-color-contrast: rgb(var(--palatina-color-contrast-channel));
     --palatina-color-contrast-channel: 0 0 0;
     --palatina-color-background: rgb(var(--palatina-color-background-channel));
