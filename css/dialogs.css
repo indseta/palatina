@@ -3,6 +3,7 @@
 }
 
 .actionSheet:not(.actionsheet-fullscreen) {
+    border: 1px solid var(--palatina-color-divider);
     border-radius: var(--palatina-radius) !important;
 }
 
@@ -13,10 +14,19 @@
 }
 
 .MuiPaper-root.MuiPopover-paper {
+    border: 1px solid var(--palatina-color-divider);
     background-color: var(--palatina-color-background);
     background-image: none;
 }
 
 .MuiPopover-paper :is(.MuiAccordion-root, .MuiAccordionSummary-root) {
     background-color: transparent;
+}
+
+.MuiPaper-root.MuiPopover-paper .MuiAccordion-root {
+    border-width: 0;
+}
+
+.MuiPaper-root.MuiPopover-paper .MuiAccordion-root + .MuiAccordion-root {
+    border-top-width: 1px;
 }
