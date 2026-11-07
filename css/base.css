@@ -113,3 +113,7 @@ html {
     background-color: var(--palatina-color-interactive);
     color: var(--palatina-color-contrast);
 }
+
+.MuiTooltip-popper {
+    display: none;
+}

@@ -4,8 +4,26 @@
 }
 
 .videoOsdBottom {
+    padding-bottom: max(env(safe-area-inset-bottom), calc(var(--palatina-player-edge) - 0.556em));
     background: linear-gradient(0deg, rgb(var(--palatina-color-background-channel) / 75%), rgb(var(--palatina-color-background-channel) / 0%));
     color: var(--palatina-color-text);
+}
+
+.MuiToolbar-root.videoOsd-appBar {
+    min-height: 0;
+    padding: calc(var(--palatina-player-edge) - 12px) calc(var(--palatina-player-edge) - 12px) 0;
+}
+
+.videoOsdBottom .osdControls {
+    padding: 0 var(--palatina-player-edge);
+}
+
+.videoOsdBottom .osdTextContainer {
+    padding-left: 0;
+}
+
+.videoOsdBottom .buttons {
+    margin: 0 calc(-0.29em - 0.556em);
 }
 
 .videoOsdBottom .sliderContainer:has(> .osdPositionSlider) {

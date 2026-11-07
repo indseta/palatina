@@ -11,4 +11,5 @@
     --palatina-color-background: rgb(var(--palatina-color-background-channel));
     --palatina-color-background-channel: 0 0 0;
     --palatina-radius: 4px;
+    --palatina-player-edge: 24px;
 }

@@ -133,3 +133,7 @@ a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *
 body:has(#indexPage:not(.hide) #homeTab.is-active) .MuiToolbar-root a.MuiButton-root[href="#/"] {
     color: var(--palatina-color-highlight);
 }
+
+.videoOsdBottom :is(.btnPreviousChapter, .btnNextChapter, .btnPreviousTrack, .btnNextTrack) {
+    display: none;
+}
