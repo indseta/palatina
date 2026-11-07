@@ -22,3 +22,8 @@
 .cardOverlayContainer {
     backdrop-filter: blur(8px);
 }
+
+.countIndicator,
+.playedIndicator {
+    display: none;
+}

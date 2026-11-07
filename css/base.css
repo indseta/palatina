@@ -87,8 +87,6 @@ html {
     color: var(--palatina-color-contrast);
 }
 
-.countIndicator,
-.playedIndicator,
 .fullSyncIndicator,
 .mediaSourceIndicator,
 .checkboxOutline .checkboxIcon {
