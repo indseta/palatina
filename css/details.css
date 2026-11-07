@@ -43,7 +43,7 @@
 
 .detailLogo,
 [dir="rtl"] .detailLogo {
-    top: calc((var(--palatina-backdrop-height) - 16vh) / 2);
+    top: min(calc((var(--palatina-backdrop-height) - 16vh + var(--palatina-scroll, 0px)) / 2), calc(var(--palatina-backdrop-height) - 16vh - var(--palatina-gap)));
     right: 0;
     left: 0;
     margin: 0 auto;

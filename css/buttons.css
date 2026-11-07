@@ -84,6 +84,10 @@ a.button-link[style]:active {
     color: var(--palatina-color-translucent);
 }
 
+:is(.cardOverlayContainer > .cardOverlayFab-primary, .listItemImageButton) .material-icons {
+    font-size: var(--palatina-play-size) !important;
+}
+
 .emby-button:not(.paper-icon-button-light, .fab),
 .skip-button,
 .alphaPickerButton {
