@@ -1,7 +1,7 @@
 export const overlays = [
     { name: "user-menu", screen: "home", trigger: "header button[aria-label='User Menu']", links: { "Sign Out": "#/login" } },
-    { name: "syncplay-menu", screen: "home", trigger: "button[aria-label='SyncPlay']" },
-    { name: "cast-menu", screen: "home", trigger: "button[aria-label='Cast to Device']" },
+    { name: "syncplay-menu", screen: "home", trigger: "header.MuiAppBar-root button[aria-label='SyncPlay']" },
+    { name: "cast-menu", screen: "home", trigger: "header.MuiAppBar-root button[aria-label='Cast to Device']" },
     { name: "card-menu", screen: "home", trigger: ".card button[data-action='menu']" },
     { name: "movies-view-menu", screen: "movies", trigger: "header button[aria-controls='library-view-menu']", kinds: ["library-movies"], follow: "#library-view-menu li" },
     { name: "tv-view-menu", screen: "tvshows", trigger: "header button[aria-controls='library-view-menu']", kinds: ["library-tvshows"], follow: "#library-view-menu li" },

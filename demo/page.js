@@ -91,7 +91,7 @@ async function layer(page, assets, spec, specs) {
     await open(page, base, true);
     const before = await baseline(page);
     const trigger = page.locator(spec.trigger).first();
-    if (await trigger.count() === 0) {
+    if (await trigger.count() === 0 || !await trigger.isVisible()) {
         console.log("missing trigger", spec.name);
         return null;
     }
