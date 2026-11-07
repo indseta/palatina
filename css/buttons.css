@@ -72,3 +72,9 @@ a.button-link[style]:not(:hover, :active, :focus-visible) {
 .cardOverlayFab-primary > .MuiSvgIcon-root {
     font-size: 1.6696em;
 }
+
+.emby-button:not(.paper-icon-button-light, .fab),
+.skip-button,
+.alphaPickerButton {
+    border-radius: var(--palatina-radius);
+}

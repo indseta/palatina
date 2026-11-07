@@ -1,0 +1,13 @@
+.dialog:not(.dialog-fullscreen) {
+    border-radius: var(--palatina-radius);
+}
+
+.actionSheet:not(.actionsheet-fullscreen) {
+    border-radius: var(--palatina-radius) !important;
+}
+
+@media (width <= 80em), (height <= 45em) {
+    .dialog:is(.dialog-fixedSize, .dialog-fullscreen-lowres) {
+        border-radius: 0;
+    }
+}

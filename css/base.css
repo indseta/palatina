@@ -6,8 +6,29 @@ html {
 [data-theme] {
     --jf-palette-text-secondary: var(--palatina-color-text);
     --jf-palette-secondary-main: var(--palatina-color-text);
+    --jf-card-borderRadius: var(--palatina-radius);
+    --jf-shape-borderRadius: var(--palatina-radius);
 }
 
 .MuiListItemIcon-root {
     color: inherit;
+}
+
+.toast,
+.infoBanner,
+.iconOsd,
+.mediaInfoText,
+.mediaInfoProgramAttribute,
+.criticReview,
+.subtitleSyncContainer,
+.subtitleSyncSliderContainer,
+.sessionNowPlayingContent,
+.quickConnectError,
+.listItem:focus,
+.emby-input,
+.emby-textarea,
+.emby-select-withcolor,
+.MuiPaper-rounded,
+.MuiChip-root {
+    border-radius: var(--palatina-radius);
 }
