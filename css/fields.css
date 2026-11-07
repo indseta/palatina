@@ -96,4 +96,23 @@
     top: 50%;
     line-height: 0;
     transform: translateY(-50%);
+    inset-inline-end: 0.4em;
+}
+
+.trackSelections .selectContainer .selectArrowContainer .selectArrow {
+    font-size: var(--palatina-icon-size);
+}
+
+.emby-select:not(:disabled) {
+    cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .emby-select:not(:disabled):hover + .selectArrowContainer {
+        color: var(--palatina-color-highlight);
+    }
+}
+
+.emby-select:not(:disabled):active + .selectArrowContainer {
+    color: var(--palatina-color-highlight);
 }
