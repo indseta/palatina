@@ -82,3 +82,8 @@ a.button-link[style]:not(:hover, :active, :focus-visible) {
 .buttonActive {
     color: var(--palatina-color-text) !important;
 }
+
+.cardOverlayContainer .cardOverlayButton:not(.cardOverlayFab-primary),
+.cardOverlayContainer .cardOverlayButton-br {
+    display: none;
+}
