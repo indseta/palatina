@@ -91,3 +91,12 @@ a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *
 .MuiButtonGroup-root.MuiButtonGroup-contained :is(.MuiButtonGroup-firstButton, .MuiButtonGroup-middleButton) {
     border-color: rgb(var(--palatina-color-contrast-channel) / 25%);
 }
+
+.MuiIconButton-root:has(> .MuiAvatar-root) {
+    padding: calc(12px + 0.125rem);
+}
+
+.MuiIconButton-root > .MuiAvatar-root {
+    width: 1.25rem;
+    height: 1.25rem;
+}
