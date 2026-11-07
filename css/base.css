@@ -61,11 +61,11 @@ html {
 }
 
 .mdl-slider::-webkit-slider-thumb {
-    background: var(--palatina-color-interactive);
+    background: transparent;
 }
 
 .mdl-slider::-moz-range-thumb {
-    background: var(--palatina-color-interactive);
+    background: transparent;
 }
 
 .mdl-slider-background-flex,
@@ -74,10 +74,19 @@ html {
 }
 
 .mdl-slider-background-lower,
-.sliderMarker.watched,
 .iconOsdProgressInner,
 .MuiLinearProgress-root .MuiLinearProgress-bar {
     background-color: var(--palatina-color-interactive);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .mdl-slider-container:hover .mdl-slider-background-lower {
+        background-color: var(--palatina-color-text);
+    }
+}
+
+.mdl-slider-container:has(.mdl-slider:is(:active, :focus-visible)) .mdl-slider-background-lower {
+    background-color: var(--palatina-color-text);
 }
 
 .mdl-spinner__layer-1,

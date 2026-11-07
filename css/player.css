@@ -9,3 +9,8 @@
 .videoOsdBottom .sliderContainer:has(> .osdPositionSlider) {
     top: -0.125em;
 }
+
+.sliderMarkerContainer,
+.chapterThumbText-dim {
+    display: none;
+}
