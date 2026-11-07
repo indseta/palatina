@@ -10,6 +10,7 @@ let layer = null;
 let stopPlayer = () => null;
 let autoplay = false;
 let pending = null;
+let loading = null;
 
 const sheets = [...document.body.querySelectorAll("link, style")];
 const theme = sheets.find((sheet) => sheet.getAttribute("href") === "css/palatina.css");
@@ -190,6 +191,7 @@ function begin(screen) {
 }
 
 function show(name) {
+    clearTimeout(loading);
     closeLayer();
     stopPlayer();
     stopPlayer = () => null;
@@ -229,6 +231,30 @@ function show(name) {
     }
     focus(screen.focus);
     document.querySelector(".page:not(.hide)")?.dispatchEvent(new CustomEvent("viewshow", { bubbles: true, detail: {} }));
+    return;
+}
+
+function spinner() {
+    const element = document.createElement("div");
+    const half = (side) => "<div class=\"mdl-spinner__circle-clipper mdl-spinner__" + side + "\"><div class=\"mdl-spinner__circle mdl-spinner__circle" + side[0].toUpperCase() + side.slice(1) + "\"></div></div>";
+    element.setAttribute("dir", "ltr");
+    element.className = "docspinner mdl-spinner mdlSpinnerActive";
+    element.innerHTML = [1, 2, 3, 4].map((layer) => "<div class=\"mdl-spinner__layer mdl-spinner__layer-" + layer + "\">" + half("left") + half("right") + "</div>").join("");
+    return element;
+}
+
+function load() {
+    const player = document.createElement("div");
+    const poster = data.screens.player?.html.match(/<video[^>]* poster="([^"]+)"/)?.[1] ?? "";
+    player.setAttribute("dir", "ltr");
+    player.className = "videoPlayerContainer videoPlayerContainer-onTop";
+    player.style.animation = "htmlvideoplayer-zoomin 240ms ease-in normal";
+    player.innerHTML = "<video class=\"htmlvideoplayer\" preload=\"metadata\" playsinline=\"\" poster=\"" + poster + "\"></video>";
+    closeLayer();
+    document.body.classList.add("hide-scroll");
+    document.body.insertBefore(player, document.body.firstChild);
+    document.body.appendChild(spinner());
+    loading = setTimeout(() => go("player"), 1000);
     return;
 }
 
@@ -364,7 +390,7 @@ function click(event) {
         event.preventDefault();
         event.stopPropagation();
         autoplay = true;
-        go("player");
+        load();
         return;
     }
     if (href && href !== "#") {
