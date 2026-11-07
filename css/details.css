@@ -1,0 +1,33 @@
+.palatina-details .backgroundContainer.withBackdrop {
+    opacity: 0;
+}
+
+.itemDetailPage .detailPageWrapperContainer {
+    background-color: var(--palatina-color-background);
+}
+
+.detailImageContainer {
+    display: none;
+}
+
+.detailRibbon {
+    background: var(--palatina-color-background);
+}
+
+.detailLogo,
+[dir="rtl"] .detailLogo {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.layout-mobile :is([dir="ltr"], [dir="rtl"]) .infoWrapper {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+:is(.layout-desktop, .layout-tv) :is([dir="ltr"], [dir="rtl"]) .detailRibbon,
+:is([dir="ltr"], [dir="rtl"]) .detailPagePrimaryContent {
+    padding-right: max(env(safe-area-inset-right), 3.3%);
+    padding-left: max(env(safe-area-inset-left), 3.3%);
+}
