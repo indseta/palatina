@@ -1,9 +1,11 @@
 .skinHeader-withBackground.osdHeader {
     background: linear-gradient(180deg, rgb(var(--palatina-color-background-channel) / 75%), rgb(var(--palatina-color-background-channel) / 0%));
+    color: var(--palatina-color-text);
 }
 
 .videoOsdBottom {
     background: linear-gradient(0deg, rgb(var(--palatina-color-background-channel) / 75%), rgb(var(--palatina-color-background-channel) / 0%));
+    color: var(--palatina-color-text);
 }
 
 .videoOsdBottom .sliderContainer:has(> .osdPositionSlider) {

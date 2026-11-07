@@ -1,8 +1,9 @@
 :root {
-    --palatina-color-text: rgb(var(--palatina-color-text-channel));
-    --palatina-color-text-channel: 255 255 255;
+    --palatina-color-highlight: rgb(var(--palatina-color-highlight-channel));
+    --palatina-color-highlight-channel: 255 255 255;
     --palatina-color-interactive: rgb(var(--palatina-color-interactive-channel));
     --palatina-color-interactive-channel: 179 179 179;
+    --palatina-color-text: var(--palatina-color-interactive);
     --palatina-color-muted: #999;
     --palatina-color-track: #333;
     --palatina-color-contrast: rgb(var(--palatina-color-contrast-channel));

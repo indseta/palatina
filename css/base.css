@@ -1,4 +1,5 @@
 html {
+    color: var(--palatina-color-text);
     font-family: "Noto Sans", "Noto Sans HK", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", sans-serif;
 }
 
@@ -6,22 +7,23 @@ html {
 [data-theme] {
     --jf-palette-background-default: var(--palatina-color-background);
     --jf-palette-background-defaultChannel: var(--palatina-color-background-channel);
+    --jf-palette-text-primary: var(--palatina-color-text);
     --jf-palette-text-secondary: var(--palatina-color-text);
     --jf-palette-primary-main: var(--palatina-color-interactive);
     --jf-palette-primary-light: var(--palatina-color-interactive);
-    --jf-palette-primary-dark: var(--palatina-color-text);
+    --jf-palette-primary-dark: var(--palatina-color-highlight);
     --jf-palette-primary-contrastText: var(--palatina-color-contrast);
     --jf-palette-primary-mainChannel: var(--palatina-color-interactive-channel);
     --jf-palette-primary-lightChannel: var(--palatina-color-interactive-channel);
-    --jf-palette-primary-darkChannel: var(--palatina-color-text-channel);
+    --jf-palette-primary-darkChannel: var(--palatina-color-highlight-channel);
     --jf-palette-primary-contrastTextChannel: var(--palatina-color-contrast-channel);
-    --jf-palette-secondary-main: var(--palatina-color-text);
-    --jf-palette-secondary-light: var(--palatina-color-text);
-    --jf-palette-secondary-dark: var(--palatina-color-text);
+    --jf-palette-secondary-main: var(--palatina-color-highlight);
+    --jf-palette-secondary-light: var(--palatina-color-highlight);
+    --jf-palette-secondary-dark: var(--palatina-color-highlight);
     --jf-palette-secondary-contrastText: var(--palatina-color-contrast);
-    --jf-palette-secondary-mainChannel: var(--palatina-color-text-channel);
-    --jf-palette-secondary-lightChannel: var(--palatina-color-text-channel);
-    --jf-palette-secondary-darkChannel: var(--palatina-color-text-channel);
+    --jf-palette-secondary-mainChannel: var(--palatina-color-highlight-channel);
+    --jf-palette-secondary-lightChannel: var(--palatina-color-highlight-channel);
+    --jf-palette-secondary-darkChannel: var(--palatina-color-highlight-channel);
     --jf-palette-secondary-contrastTextChannel: var(--palatina-color-contrast-channel);
     --jf-palette-LinearProgress-primaryBg: rgb(var(--palatina-color-interactive-channel) / 30%);
     --jf-palette-LinearProgress-secondaryBg: rgb(var(--palatina-color-interactive-channel) / 30%);
@@ -81,12 +83,12 @@ html {
 
 @media (hover: hover) and (pointer: fine) {
     .mdl-slider-container:hover .mdl-slider-background-lower {
-        background-color: var(--palatina-color-text);
+        background-color: var(--palatina-color-highlight);
     }
 }
 
 .mdl-slider-container:has(.mdl-slider:is(:active, :focus-visible:not(.palatina-pointer *))) .mdl-slider-background-lower {
-    background-color: var(--palatina-color-text);
+    background-color: var(--palatina-color-highlight);
 }
 
 .mdl-spinner__layer-1,

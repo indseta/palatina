@@ -5,14 +5,14 @@
 
 .itemProgressBar,
 .itemLinearProgress {
-    background: rgb(var(--palatina-color-text-channel) / 20%);
+    background: rgb(var(--palatina-color-highlight-channel) / 20%);
     backdrop-filter: blur(8px);
     transition: opacity 0.2s;
 }
 
 .itemProgressBarForeground:not(.itemProgressBarForeground-recording),
 .itemLinearProgress .MuiLinearProgress-bar {
-    background-color: rgb(var(--palatina-color-text-channel) / 70.2%);
+    background-color: rgb(var(--palatina-color-highlight-channel) / 70.2%);
 }
 
 :is(.card, .listItemImage):is(:hover, :focus-within) :is(.itemProgressBar, .itemLinearProgress) {
