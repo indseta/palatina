@@ -17,11 +17,11 @@
     }
 }
 
-:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea, .MuiInputBase-input):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *):is(:active, :focus-visible:not(.palatina-pointer *), .show-focus:focus, .emby-tab-button-active, .alphaPickerButton-selected, .MuiButton-textPrimary, .Mui-selected) {
+:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea, .MuiInputBase-input):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *):is(:active, .emby-tab-button-active, .alphaPickerButton-selected, .MuiButton-textPrimary, .Mui-selected) {
     color: var(--palatina-color-highlight);
 }
 
-a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *)) {
+a.button-link[style]:not(:hover, :active) {
     color: var(--palatina-color-interactive) !important;
 }
 
@@ -42,10 +42,12 @@ a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *
 
 .emby-button.show-focus:focus:not(.fab, .raised, .button-submit, .button-delete) {
     background: transparent;
+    color: inherit;
 }
 
 :is(.fab, .raised, a[data-role="button"]):not(.button-submit, .button-delete):focus {
     background: var(--jf-palette-Button-inheritContainedBg);
+    color: var(--jf-palette-text-secondary);
 }
 
 :is(.fab, .raised, a[data-role="button"]):not(.button-submit, .button-delete):hover {
@@ -73,7 +75,7 @@ a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *
     font-size: 1.6696em;
 }
 
-:is(.cardOverlayContainer > .cardOverlayFab-primary, .listItemImageButton):not(:hover, :active, :focus-visible:not(.palatina-pointer *)) {
+:is(.cardOverlayContainer > .cardOverlayFab-primary, .listItemImageButton):not(:hover, :active) {
     color: var(--palatina-color-translucent);
 }
 
@@ -115,7 +117,7 @@ a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *
     }
 }
 
-.MuiIconButton-root:is(:active, :focus-visible:not(.palatina-pointer *)) > .MuiAvatar-root.MuiAvatar-colorDefault {
+.MuiIconButton-root:active > .MuiAvatar-root.MuiAvatar-colorDefault {
     background-color: var(--palatina-color-highlight);
 }
 
@@ -256,5 +258,33 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 }
 
 #app-user-menu .MuiMenuItem-root > .MuiTouchRipple-root {
+    display: none;
+}
+
+:is(.emby-button, .paper-icon-button-light, .emby-tab-button).show-focus:focus {
+    transform: none !important;
+}
+
+.paper-icon-button-light.show-focus:focus {
+    color: inherit;
+}
+
+.guide-date-tab-button.show-focus:focus {
+    background-color: transparent;
+}
+
+:is(.emby-tab-button.show-focus, .guide-date-tab-button):focus:not(:hover, .emby-tab-button-active) {
+    color: var(--jf-palette-text-secondary);
+}
+
+.MuiButton-contained.Mui-focusVisible:not(:hover, :active) {
+    box-shadow: var(--jf-shadows-2);
+}
+
+.MuiChip-clickableColorPrimary.Mui-focusVisible:not(:hover) {
+    background-color: var(--jf-palette-primary-main);
+}
+
+.MuiTouchRipple-ripplePulsate {
     display: none;
 }

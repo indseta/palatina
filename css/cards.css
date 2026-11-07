@@ -15,7 +15,7 @@
     background-color: var(--palatina-color-translucent);
 }
 
-:is(.card, .listItemImage):is(:hover, :focus-within) :is(.itemProgressBar, .itemLinearProgress) {
+:is(.card, .listItemImage):hover :is(.itemProgressBar, .itemLinearProgress) {
     opacity: 0;
 }
 
@@ -26,4 +26,16 @@
 .countIndicator,
 .playedIndicator {
     display: none;
+}
+
+.card-hoverable:focus-within:not(:hover) :is(.cardOverlayButton-hover, .cardOverlayContainer) {
+    opacity: 0;
+}
+
+.card.show-animation:focus > .cardBox {
+    transform: none;
+}
+
+.card:focus :is(.cardBox.visualCardBox, .cardBox:not(.visualCardBox) .cardScalable) {
+    border-color: transparent !important;
 }

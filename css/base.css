@@ -33,6 +33,8 @@ html {
     --jf-palette-Switch-secondaryDisabledColor: rgb(var(--palatina-color-interactive-channel) / 30%);
     --jf-card-borderRadius: var(--palatina-radius);
     --jf-shape-borderRadius: var(--palatina-radius);
+    --jf-palette-action-focus: transparent;
+    --jf-palette-action-focusOpacity: 0;
 }
 
 .MuiListItemIcon-root {
@@ -87,7 +89,7 @@ html {
     }
 }
 
-.mdl-slider-container:has(.mdl-slider:is(:active, :focus-visible:not(.palatina-pointer *))) .mdl-slider-background-lower {
+.mdl-slider-container:has(.mdl-slider:active) .mdl-slider-background-lower {
     background-color: var(--palatina-color-highlight);
 }
 
@@ -116,4 +118,19 @@ html {
 
 .MuiTooltip-popper {
     display: none;
+}
+
+:focus-visible,
+.Mui-focusVisible {
+    outline: none !important;
+}
+
+.listItem-focusscale:focus {
+    transform: none;
+}
+
+.programCell:focus,
+.guide-channelHeaderCell:focus {
+    --jf-palette-primary-main: transparent;
+    --jf-palette-primary-contrastText: var(--palatina-color-text);
 }

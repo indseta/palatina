@@ -50,3 +50,29 @@
 .MuiInputBase-root.MuiFilledInput-root::after {
     display: none;
 }
+
+.emby-select-focusscale:focus {
+    transform: none;
+}
+
+.emby-select-tv-withcolor:focus {
+    --jf-palette-secondary-main: var(--palatina-color-background);
+    --jf-palette-secondary-contrastText: var(--palatina-color-text);
+}
+
+.emby-checkbox:focus:not(:checked) + span + .checkboxOutline {
+    border-color: currentcolor;
+}
+
+.emby-checkbox:focus:checked + span + .checkboxOutline {
+    border-color: var(--jf-palette-primary-main);
+}
+
+.mdl-radio.show-focus .mdl-radio__button:focus + .mdl-radio__circles {
+    --jf-palette-secondary-main: currentcolor;
+}
+
+.mdl-switch__input:focus + .mdl-switch__label + .mdl-switch__trackContainer .mdl-switch__focus-helper {
+    background-color: transparent;
+    box-shadow: none;
+}
