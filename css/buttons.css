@@ -17,7 +17,7 @@
     }
 }
 
-:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea, .MuiInputBase-input):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *):is(:active, .emby-tab-button-active, .alphaPickerButton-selected, .MuiButton-textPrimary, .Mui-selected) {
+:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea, .MuiInputBase-input):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *):is(:active, .emby-tab-button-active, .alphaPickerButton-selected, .MuiButton-textPrimary, .Mui-selected, .palatina-menu-item-selected) {
     color: var(--palatina-color-highlight);
 }
 
@@ -118,6 +118,20 @@ a.button-link[style]:active {
 
 .listViewUserDataButtons {
     display: none;
+}
+
+.overview-expand.emby-button,
+.sectionTitleContainer .more.raised {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: 500;
+}
+
+.sectionTitleContainer .more.raised,
+.sectionTitleContainer .more.raised:is(:hover, :focus) {
+    background: transparent;
 }
 
 .listItemImageButton {

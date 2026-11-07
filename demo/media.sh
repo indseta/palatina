@@ -4,8 +4,16 @@ media="$1"
 clip="$media/.clip.webm"
 if [ ! -f "$clip" ]; then
     mkdir -p "$media"
-    ffmpeg -loglevel error -y -f lavfi -i testsrc2=size=1280x720:rate=24 -f lavfi -i sine=frequency=440 -t 30 -c:v libvpx-vp9 -deadline realtime -cpu-used 8 -b:v 400k -c:a libopus "$clip"
+    ffmpeg -loglevel error -y -f lavfi -i testsrc2=size=1280x720:rate=24 -f lavfi -i sine=frequency=440 -f lavfi -i sine=frequency=660 -t 30 -map 0:v -map 1:a -map 2:a -metadata:s:a:0 language=eng -metadata:s:a:1 language=nor -c:v libvpx-vp9 -deadline realtime -cpu-used 8 -b:v 400k -c:a libopus "$clip"
 fi
+subtitles() {
+    for language in en no; do
+        if [ ! -f "$1.$language.srt" ]; then
+            printf '1\n00:00:01,000 --> 00:00:05,000\nThe harbor lights are out.\n\n2\n00:00:06,000 --> 00:00:10,000\nThen we sail by the stars.\n' > "$1.$language.srt"
+        fi
+    done
+    return 0
+}
 scenes="$media/.scenes.webm"
 if [ ! -f "$scenes" ]; then
     printf ';FFMETADATA1\n[CHAPTER]\nTIMEBASE=1/1000\nSTART=0\nEND=10000\ntitle=Cold Open\n[CHAPTER]\nTIMEBASE=1/1000\nSTART=10000\nEND=20000\ntitle=The Harbor\n[CHAPTER]\nTIMEBASE=1/1000\nSTART=20000\nEND=30000\ntitle=Last Light\n' > "$media/.scenes.txt"
@@ -30,6 +38,7 @@ while IFS='|' read -r kind title year from to genre plot; do
             printf '<movie><title>%s</title><year>%s</year><plot>%s</plot><genre>%s</genre><rating>7.4</rating><mpaa>PG-13</mpaa><director>Alex Moreau</director></movie>\n' "$title" "$year" "$plot" "$genre" > "$dir/movie.nfo"
             sh demo/art.sh "$dir" "$title" "$year" "$from" "$to"
         fi
+        subtitles "$dir/$title ($year)"
     else
         dir="$media/Shows/$title"
         if [ ! -f "$dir/Season 02/$title S02E02.webm" ]; then
@@ -46,5 +55,8 @@ while IFS='|' read -r kind title year from to genre plot; do
                 sh demo/art.sh "$dir" "$title" "$year" "$from" "$to"
             fi
         fi
+        for key in 1:1 1:2 1:3 2:1 2:2; do
+            subtitles "$dir/Season 0${key%:*}/$title S0${key%:*}E0${key#*:}"
+        done
     fi
 done < demo/catalog.txt

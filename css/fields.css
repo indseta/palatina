@@ -76,3 +76,24 @@
     background-color: transparent;
     box-shadow: none;
 }
+
+.trackSelections .selectContainer {
+    position: relative;
+    align-items: center;
+}
+
+.trackSelections .selectContainer .detailTrackSelect {
+    font-size: 0.875rem;
+    padding-block: 0.5em;
+    padding-inline: 0.5em 1.9em;
+}
+
+.trackSelections .selectContainer .detailTrackSelect:disabled {
+    opacity: 1;
+}
+
+.trackSelections .selectContainer .selectArrowContainer {
+    top: 50%;
+    line-height: 0;
+    transform: translateY(-50%);
+}

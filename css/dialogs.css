@@ -79,3 +79,31 @@
 .MuiPopover-paper .MuiAccordionDetails-root .MuiCheckbox-root .MuiSvgIcon-root {
     font-size: var(--palatina-icon-size);
 }
+
+.palatina-menu {
+    position: fixed;
+    z-index: 1300;
+    overflow-y: auto;
+    border: 1px solid var(--palatina-color-divider);
+    border-radius: var(--palatina-radius);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    background-color: var(--palatina-color-glass);
+    backdrop-filter: var(--palatina-glass-blur);
+}
+
+.palatina-menu-item {
+    padding: var(--palatina-menu-padding);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .palatina-menu-item:hover {
+        background-color: var(--jf-palette-action-hover);
+    }
+}
+
+.palatina-menu-item:active {
+    background-color: var(--jf-palette-action-hover);
+}

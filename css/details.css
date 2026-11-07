@@ -37,6 +37,10 @@
     height: var(--palatina-backdrop-height);
 }
 
+.palatina-details:not(:has(.backgroundContainer.withBackdrop)) :is(.itemBackdrop:not([data-src], [style*="url("], .lazy-hidden), .detailLogo) {
+    display: none;
+}
+
 .detailLogo,
 [dir="rtl"] .detailLogo {
     top: calc((var(--palatina-backdrop-height) - 16vh) / 2);
@@ -80,8 +84,8 @@
 
 .itemDetailPage .detailSectionContent > .overview-controls {
     display: block;
-    margin: 0 0 var(--palatina-gap) !important;
-    text-align: end;
+    margin: var(--palatina-gap-row) 0 var(--palatina-gap) !important;
+    text-align: start;
 }
 
 .overview > bdi > :first-child {
@@ -99,4 +103,23 @@
 .itemDetailPage .detailVerticalSection {
     margin-top: var(--palatina-gap-section);
     margin-bottom: calc(var(--palatina-gap-section) * -1);
+}
+
+.itemDetailsGroup:not(:has(.detailsGroupItem)) {
+    display: none;
+}
+
+.itemDetailPage .sectionTitleContainer-cards {
+    display: flex;
+    align-items: baseline;
+    padding-top: 0;
+}
+
+.itemDetailPage .sectionTitleContainer-cards > .sectionTitle {
+    padding: 0.5em 0 0.2em;
+}
+
+.itemDetailPage .sectionTitleContainer-cards > .clearLink {
+    margin-block: 0;
+    padding: 0;
 }

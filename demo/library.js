@@ -4,9 +4,10 @@ export async function library(page) {
         const user = client.getCurrentUserId();
         const views = await client.getUserViews({}, user);
         const items = await client.getItems(user, { IncludeItemTypes: "Movie,Series,Season,Episode", Recursive: true, SortBy: "SortName" });
+        const people = await client.getJSON(client.getUrl("Persons", { userId: user }));
         return {
             views: views.Items.map((view) => ({ id: view.Id, type: view.CollectionType })),
-            items: items.Items.map((item) => ({ id: item.Id, type: item.Type, name: item.Name }))
+            items: [...items.Items, ...people.Items].map((item) => ({ id: item.Id, type: item.Type, name: item.Name }))
         };
     });
     return result;
