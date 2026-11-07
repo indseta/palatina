@@ -14,7 +14,8 @@
 
 .MuiPaper-root.MuiPopover-paper,
 .MuiPaper-root.MuiDialog-paper:not(.MuiDialog-paperFullScreen),
-.dialog:not(.dialog-fullscreen, .actionsheet-fullscreen) {
+.dialog:not(.dialog-fullscreen, .actionsheet-fullscreen),
+.sliderBubble:has(> .sliderBubbleText) {
     border: 1px solid var(--palatina-color-divider);
     background-color: var(--palatina-color-glass);
     background-image: none;
