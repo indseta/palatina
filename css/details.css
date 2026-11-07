@@ -15,6 +15,7 @@
 }
 
 .layout-desktop .detailRibbon {
+    align-items: flex-start;
     height: auto;
     margin-top: 0;
     padding-top: var(--palatina-gap);
@@ -57,6 +58,10 @@
 
 .itemDetailPage :is(.trackSelections, .detailSectionContent, .itemDetailsGroup) {
     margin: var(--palatina-gap) 0 0;
+}
+
+.itemExternalLinks {
+    display: none;
 }
 
 .itemDetailPage .detailSectionContent > * {

@@ -135,3 +135,7 @@ html {
     --jf-palette-primary-main: transparent;
     --jf-palette-primary-contrastText: var(--palatina-color-text);
 }
+
+.endsAt {
+    display: none;
+}
