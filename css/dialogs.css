@@ -50,3 +50,25 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+
+.MuiPaper-root.MuiPopover-paper .MuiAccordionDetails-root {
+    padding: 0;
+}
+
+.MuiPopover-paper .MuiAccordionDetails-root .MuiFormControlLabel-root {
+    margin: 0;
+    padding: var(--palatina-menu-padding);
+}
+
+.MuiPopover-paper .MuiAccordionDetails-root .MuiFormControlLabel-label {
+    font-size: 0.875rem;
+}
+
+.MuiPopover-paper .MuiAccordionDetails-root .MuiCheckbox-root {
+    margin-inline-end: var(--palatina-menu-icon-gap);
+    padding: 0;
+}
+
+.MuiPopover-paper .MuiAccordionDetails-root .MuiCheckbox-root .MuiSvgIcon-root {
+    font-size: var(--palatina-menu-icon);
+}

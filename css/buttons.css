@@ -160,3 +160,39 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 :is(.listItem-button, .emby-button.listItem-border) :is(.listItemBodyText, .actionSheetItemAsideText) {
     font-size: 0.875rem;
 }
+
+.MuiPaper-root.MuiPopover-paper .MuiMenuItem-root .MuiListItemText-root {
+    margin: 0;
+}
+
+.MuiMenuItem-root .MuiListItemIcon-root .MuiSvgIcon-root {
+    font-size: var(--palatina-menu-icon);
+}
+
+.MuiPaper-root.MuiPopover-paper .MuiAccordionSummary-root {
+    min-height: 0;
+    padding: var(--palatina-menu-padding);
+}
+
+.MuiPaper-root.MuiPopover-paper .MuiAccordionSummary-content {
+    margin: 0;
+}
+
+.actionSheet .listItem-button.actionSheetMenuItem {
+    padding: var(--palatina-menu-padding);
+}
+
+.actionSheet .actionSheetMenuItem .actionsheetMenuItemIcon {
+    margin: 0 !important;
+    margin-inline-end: var(--palatina-menu-icon-gap) !important;
+    font-size: var(--palatina-menu-icon);
+}
+
+.actionSheet .actionSheetMenuItem .actionsheetListItemBody {
+    padding: 0 !important;
+}
+
+.actionSheet .actionSheetMenuItem :is(.listItemBodyText, .actionSheetItemAsideText) {
+    padding: 0;
+    line-height: 1.5;
+}
