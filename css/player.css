@@ -5,3 +5,7 @@
 .videoOsdBottom {
     background: linear-gradient(0deg, rgb(var(--palatina-color-background-channel) / 75%), rgb(var(--palatina-color-background-channel) / 0%));
 }
+
+.videoOsdBottom .sliderContainer:has(> .osdPositionSlider) {
+    top: -0.125em;
+}

@@ -68,6 +68,11 @@ html {
     background: var(--palatina-color-interactive);
 }
 
+.mdl-slider-background-flex,
+.mdl-slider-background-upper {
+    background: var(--palatina-color-track);
+}
+
 .mdl-slider-background-lower,
 .sliderMarker.watched,
 .iconOsdProgressInner,
