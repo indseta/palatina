@@ -41,7 +41,7 @@
     font-weight: 400;
 }
 
-body:has(#videoOsdPage:not(.hide)) .dialogBackdrop:has(+ .dialogContainer > .actionSheet:not(.actionsheet-fullscreen)) {
+body:has(#videoOsdPage:not(.hide)) .dialogBackdrop {
     opacity: 0;
     transition: none;
 }
