@@ -117,6 +117,19 @@ a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *
     font-weight: 500;
 }
 
-.MuiToolbar-root a.MuiButton-root[href="#/"] > .MuiButton-startIcon {
+.MuiToolbar-root a.MuiButton-root[href="#/"] > .MuiButton-startIcon > img {
     display: none;
+}
+
+.MuiToolbar-root a.MuiButton-root[href="#/"] > .MuiButton-startIcon::before {
+    width: 20px;
+    height: 20px;
+    background-color: currentcolor;
+    content: "";
+    -webkit-mask: url("../icons/fluent/home_24_filled.svg") center / contain no-repeat;
+    mask: url("../icons/fluent/home_24_filled.svg") center / contain no-repeat;
+}
+
+body:has(#indexPage:not(.hide) #homeTab.is-active) .MuiToolbar-root a.MuiButton-root[href="#/"] {
+    color: var(--palatina-color-text);
 }
