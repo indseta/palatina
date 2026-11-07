@@ -5,10 +5,5 @@
 .MuiAppBar-root.MuiAppBar-positionFixed {
     background-color: var(--palatina-color-glass);
     background-image: none;
-    box-shadow: 0 1px 0 var(--palatina-color-divider);
     backdrop-filter: var(--palatina-glass-blur);
-}
-
-.MuiAppBar-root > .MuiToolbar-root + .MuiToolbar-root {
-    box-shadow: inset 0 1px 0 var(--palatina-color-divider);
 }

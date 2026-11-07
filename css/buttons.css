@@ -205,6 +205,11 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
     padding: 6px 12px;
 }
 
+.MuiToolbar-root .MuiStack-root > .MuiButtonGroup-root:has([data-testid="NavigateBeforeIcon"]) {
+    order: -1;
+    margin: 0 auto 0 4px;
+}
+
 .MuiPaper-root.MuiPopover-paper .MuiAccordionSummary-root {
     min-height: 0;
     padding: var(--palatina-menu-padding);
