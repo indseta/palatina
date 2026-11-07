@@ -16,6 +16,8 @@
     --palatina-color-background-channel: 0 0 0;
     --palatina-radius: 4px;
     --palatina-player-edge: 24px;
+    --palatina-header-icon: 20px;
+    --palatina-header-arrow: 16px;
     --palatina-menu-padding: 6px 16px;
     --palatina-menu-icon: 1.25rem;
     --palatina-menu-icon-gap: calc(36px - var(--palatina-menu-icon));

@@ -101,12 +101,12 @@ a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *
 }
 
 .MuiIconButton-root:has(> .MuiAvatar-root) {
-    padding: calc(12px + 0.125rem);
+    padding: calc(12px + var(--palatina-header-icon) / 12);
 }
 
 .MuiIconButton-root > .MuiAvatar-root {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: calc(var(--palatina-header-icon) * 5 / 6);
+    height: calc(var(--palatina-header-icon) * 5 / 6);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -130,12 +130,12 @@ a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *
 }
 
 .MuiToolbar-root a.MuiButton-root[href="#/"] > .MuiButton-startIcon::before {
-    width: 20px;
-    height: 20px;
+    width: var(--palatina-header-icon);
+    height: var(--palatina-header-icon);
     background-color: currentcolor;
     content: "";
-    -webkit-mask: url("../icons/fluent/home_24_filled.svg") center / contain no-repeat;
-    mask: url("../icons/fluent/home_24_filled.svg") center / contain no-repeat;
+    -webkit-mask: url("../icons/fluent/home_24_filled.svg") center / 105.3% no-repeat;
+    mask: url("../icons/fluent/home_24_filled.svg") center / 105.3% no-repeat;
 }
 
 body:has(#indexPage:not(.hide) #homeTab.is-active) .MuiToolbar-root a.MuiButton-root[href="#/"] {
@@ -165,6 +165,14 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
     font-size: 0.875rem;
 }
 
+.MuiAppBar-root .MuiSvgIcon-root:not(.MuiAvatar-fallback) {
+    font-size: var(--palatina-header-icon);
+}
+
+.MuiAppBar-root .MuiSvgIcon-root:is([data-testid="NavigateBeforeIcon"], [data-testid="NavigateNextIcon"], [data-testid="ArrowDropDownIcon"]) {
+    font-size: var(--palatina-header-arrow);
+}
+
 .MuiPaper-root.MuiPopover-paper .MuiMenuItem-root .MuiListItemText-root {
     margin: 0;
 }
@@ -180,10 +188,6 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 
 .MuiMenuItem-root .MuiListItemText-root ~ .MuiListItemIcon-root .MuiSvgIcon-root {
     font-size: 0.9rem;
-}
-
-.MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] .MuiButton-endIcon > .MuiSvgIcon-root {
-    font-size: 16px;
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] {
@@ -203,6 +207,10 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 .MuiToolbar-root .MuiButtonGroup-text > .MuiButton-root.MuiButtonGroup-grouped {
     min-width: 0;
     padding: 6px 12px;
+}
+
+.MuiToolbar-root .MuiButtonGroup-text > .MuiButton-root.MuiButtonGroup-grouped:has(> :is([data-testid="NavigateBeforeIcon"], [data-testid="NavigateNextIcon"])) {
+    padding-inline: calc(12px + (var(--palatina-header-icon) - var(--palatina-header-arrow)) / 2);
 }
 
 .MuiToolbar-root .MuiStack-root > .MuiButtonGroup-root:has([data-testid="NavigateBeforeIcon"]) {

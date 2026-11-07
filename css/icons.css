@@ -4,14 +4,14 @@
     height: 1em;
     content: "";
     background-color: currentcolor;
-    -webkit-mask: var(--palatina-icon) center / contain no-repeat;
-    mask: var(--palatina-icon) center / contain no-repeat;
+    -webkit-mask: var(--palatina-icon) center / calc(var(--palatina-icon-scale, 1) * 100%) no-repeat;
+    mask: var(--palatina-icon) center / calc(var(--palatina-icon-scale, 1) * 100%) no-repeat;
 }
 
 .MuiSvgIcon-root:is([data-testid="AccessTimeIcon"], [data-testid="AccountCircleIcon"], [data-testid="AddIcon"], [data-testid="AlbumIcon"], [data-testid="AnalyticsIcon"], [data-testid="AppSettingsAltIcon"], [data-testid="ArrowBackIcon"], [data-testid="ArrowDownwardIcon"], [data-testid="ArrowDropDownIcon"], [data-testid="ArrowForwardIosSharpIcon"], [data-testid="ArrowUpwardIcon"], [data-testid="ArticleIcon"], [data-testid="BackupIcon"], [data-testid="BookIcon"], [data-testid="CallSplitIcon"], [data-testid="CancelIcon"], [data-testid="CastIcon"], [data-testid="CastConnectedIcon"], [data-testid="CheckIcon"], [data-testid="CheckBoxIcon"], [data-testid="CheckBoxOutlineBlankIcon"], [data-testid="ChevronLeftIcon"], [data-testid="ChevronRightIcon"], [data-testid="CloseIcon"], [data-testid="ClosedCaptionIcon"], [data-testid="CommentIcon"], [data-testid="ComputerIcon"], [data-testid="ContentCopyIcon"], [data-testid="DashboardIcon"], [data-testid="DeleteIcon"], [data-testid="DensityMediumIcon"], [data-testid="DensitySmallIcon"], [data-testid="DevicesIcon"], [data-testid="DownloadIcon"], [data-testid="DownloadDoneIcon"], [data-testid="DragHandleIcon"], [data-testid="DvrIcon"], [data-testid="EditIcon"], [data-testid="ExpandLessIcon"], [data-testid="ExpandMoreIcon"], [data-testid="ExploreIcon"], [data-testid="ExtensionIcon"], [data-testid="FavoriteIcon"], [data-testid="FiberManualRecordIcon"], [data-testid="FiberSmartRecordIcon"], [data-testid="FileDownloadIcon"], [data-testid="FilterAltIcon"], [data-testid="FilterAltOffIcon"], [data-testid="FilterListIcon"], [data-testid="FirstPageIcon"], [data-testid="FolderIcon"], [data-testid="FullscreenIcon"], [data-testid="GroupAddIcon"], [data-testid="GroupsIcon"], [data-testid="HelpOutlineIcon"], [data-testid="HomeIcon"], [data-testid="ImageIcon"], [data-testid="ImageNotSupportedIcon"], [data-testid="IndeterminateCheckBoxIcon"], [data-testid="InfoIcon"], [data-testid="KeyboardArrowLeftIcon"], [data-testid="KeyboardArrowRightIcon"], [data-testid="LanIcon"], [data-testid="LastPageIcon"], [data-testid="LibraryAddIcon"], [data-testid="LiveTvIcon"], [data-testid="LocationSearchingIcon"], [data-testid="LogoutIcon"], [data-testid="MemoryIcon"], [data-testid="MenuIcon"], [data-testid="MoreVertIcon"], [data-testid="MovieIcon"], [data-testid="MusicNoteIcon"], [data-testid="MusicVideoIcon"], [data-testid="NavigateBeforeIcon"], [data-testid="NavigateNextIcon"], [data-testid="NotificationsIcon"], [data-testid="OndemandVideoIcon"], [data-testid="OpenInNewIcon"], [data-testid="PaletteIcon"], [data-testid="PauseIcon"], [data-testid="PeopleIcon"], [data-testid="PermMediaIcon"], [data-testid="PersonIcon"], [data-testid="PersonAddIcon"], [data-testid="PersonOffIcon"], [data-testid="PersonRemoveIcon"], [data-testid="PhonelinkLockIcon"], [data-testid="PhotoIcon"], [data-testid="PhotoAlbumIcon"], [data-testid="PlayArrowIcon"], [data-testid="PlayCircleIcon"], [data-testid="PlaylistAddIcon"], [data-testid="PowerSettingsNewIcon"], [data-testid="QueueIcon"], [data-testid="RadioButtonCheckedIcon"], [data-testid="RadioButtonUncheckedIcon"], [data-testid="RefreshIcon"], [data-testid="RemoveCircleIcon"], [data-testid="ReplayIcon"], [data-testid="RestartAltIcon"], [data-testid="RestoreIcon"], [data-testid="ScheduleIcon"], [data-testid="SearchIcon"], [data-testid="SettingsIcon"], [data-testid="SettingsRemoteIcon"], [data-testid="ShuffleIcon"], [data-testid="SmartphoneIcon"], [data-testid="SortByAlphaIcon"], [data-testid="StarIcon"], [data-testid="StopIcon"], [data-testid="StopCircleIcon"], [data-testid="StorageIcon"], [data-testid="SyncAltIcon"], [data-testid="TabletIcon"], [data-testid="TheatersIcon"], [data-testid="TuneIcon"], [data-testid="TvIcon"], [data-testid="UploadIcon"], [data-testid="UsbIcon"], [data-testid="VideoLibraryIcon"], [data-testid="VideocamIcon"], [data-testid="ViewColumnIcon"], [data-testid="ViewListIcon"], [data-testid="ViewModuleIcon"], [data-testid="VisibilityIcon"], [data-testid="VisibilityOffIcon"], [data-testid="VpnKeyIcon"], [data-testid="WarningIcon"]) {
     background-color: currentcolor;
-    -webkit-mask: var(--palatina-icon) center / contain no-repeat;
-    mask: var(--palatina-icon) center / contain no-repeat;
+    -webkit-mask: var(--palatina-icon) center / calc(var(--palatina-icon-scale, 1) * 100%) no-repeat;
+    mask: var(--palatina-icon) center / calc(var(--palatina-icon-scale, 1) * 100%) no-repeat;
 }
 
 .MuiSvgIcon-root:is([data-testid="AccessTimeIcon"], [data-testid="AccountCircleIcon"], [data-testid="AddIcon"], [data-testid="AlbumIcon"], [data-testid="AnalyticsIcon"], [data-testid="AppSettingsAltIcon"], [data-testid="ArrowBackIcon"], [data-testid="ArrowDownwardIcon"], [data-testid="ArrowDropDownIcon"], [data-testid="ArrowForwardIosSharpIcon"], [data-testid="ArrowUpwardIcon"], [data-testid="ArticleIcon"], [data-testid="BackupIcon"], [data-testid="BookIcon"], [data-testid="CallSplitIcon"], [data-testid="CancelIcon"], [data-testid="CastIcon"], [data-testid="CastConnectedIcon"], [data-testid="CheckIcon"], [data-testid="CheckBoxIcon"], [data-testid="CheckBoxOutlineBlankIcon"], [data-testid="ChevronLeftIcon"], [data-testid="ChevronRightIcon"], [data-testid="CloseIcon"], [data-testid="ClosedCaptionIcon"], [data-testid="CommentIcon"], [data-testid="ComputerIcon"], [data-testid="ContentCopyIcon"], [data-testid="DashboardIcon"], [data-testid="DeleteIcon"], [data-testid="DensityMediumIcon"], [data-testid="DensitySmallIcon"], [data-testid="DevicesIcon"], [data-testid="DownloadIcon"], [data-testid="DownloadDoneIcon"], [data-testid="DragHandleIcon"], [data-testid="DvrIcon"], [data-testid="EditIcon"], [data-testid="ExpandLessIcon"], [data-testid="ExpandMoreIcon"], [data-testid="ExploreIcon"], [data-testid="ExtensionIcon"], [data-testid="FavoriteIcon"], [data-testid="FiberManualRecordIcon"], [data-testid="FiberSmartRecordIcon"], [data-testid="FileDownloadIcon"], [data-testid="FilterAltIcon"], [data-testid="FilterAltOffIcon"], [data-testid="FilterListIcon"], [data-testid="FirstPageIcon"], [data-testid="FolderIcon"], [data-testid="FullscreenIcon"], [data-testid="GroupAddIcon"], [data-testid="GroupsIcon"], [data-testid="HelpOutlineIcon"], [data-testid="HomeIcon"], [data-testid="ImageIcon"], [data-testid="ImageNotSupportedIcon"], [data-testid="IndeterminateCheckBoxIcon"], [data-testid="InfoIcon"], [data-testid="KeyboardArrowLeftIcon"], [data-testid="KeyboardArrowRightIcon"], [data-testid="LanIcon"], [data-testid="LastPageIcon"], [data-testid="LibraryAddIcon"], [data-testid="LiveTvIcon"], [data-testid="LocationSearchingIcon"], [data-testid="LogoutIcon"], [data-testid="MemoryIcon"], [data-testid="MenuIcon"], [data-testid="MoreVertIcon"], [data-testid="MovieIcon"], [data-testid="MusicNoteIcon"], [data-testid="MusicVideoIcon"], [data-testid="NavigateBeforeIcon"], [data-testid="NavigateNextIcon"], [data-testid="NotificationsIcon"], [data-testid="OndemandVideoIcon"], [data-testid="OpenInNewIcon"], [data-testid="PaletteIcon"], [data-testid="PauseIcon"], [data-testid="PeopleIcon"], [data-testid="PermMediaIcon"], [data-testid="PersonIcon"], [data-testid="PersonAddIcon"], [data-testid="PersonOffIcon"], [data-testid="PersonRemoveIcon"], [data-testid="PhonelinkLockIcon"], [data-testid="PhotoIcon"], [data-testid="PhotoAlbumIcon"], [data-testid="PlayArrowIcon"], [data-testid="PlayCircleIcon"], [data-testid="PlaylistAddIcon"], [data-testid="PowerSettingsNewIcon"], [data-testid="QueueIcon"], [data-testid="RadioButtonCheckedIcon"], [data-testid="RadioButtonUncheckedIcon"], [data-testid="RefreshIcon"], [data-testid="RemoveCircleIcon"], [data-testid="ReplayIcon"], [data-testid="RestartAltIcon"], [data-testid="RestoreIcon"], [data-testid="ScheduleIcon"], [data-testid="SearchIcon"], [data-testid="SettingsIcon"], [data-testid="SettingsRemoteIcon"], [data-testid="ShuffleIcon"], [data-testid="SmartphoneIcon"], [data-testid="SortByAlphaIcon"], [data-testid="StarIcon"], [data-testid="StopIcon"], [data-testid="StopCircleIcon"], [data-testid="StorageIcon"], [data-testid="SyncAltIcon"], [data-testid="TabletIcon"], [data-testid="TheatersIcon"], [data-testid="TuneIcon"], [data-testid="TvIcon"], [data-testid="UploadIcon"], [data-testid="UsbIcon"], [data-testid="VideoLibraryIcon"], [data-testid="VideocamIcon"], [data-testid="ViewColumnIcon"], [data-testid="ViewListIcon"], [data-testid="ViewModuleIcon"], [data-testid="VisibilityIcon"], [data-testid="VisibilityOffIcon"], [data-testid="VpnKeyIcon"], [data-testid="WarningIcon"]) > * {
@@ -21,6 +21,7 @@
 .material-icons.add,
 .MuiSvgIcon-root[data-testid="AddIcon"] {
     --palatina-icon: url("../icons/fluent/add_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.add_circle {
@@ -29,6 +30,7 @@
 
 .MuiSvgIcon-root[data-testid="NotificationsIcon"] {
     --palatina-icon: url("../icons/fluent/alert_24_filled.svg");
+    --palatina-icon-scale: 1.025;
 }
 
 .material-icons.arrow_circle_left {
@@ -42,12 +44,14 @@
 .material-icons.refresh,
 .MuiSvgIcon-root[data-testid="RefreshIcon"] {
     --palatina-icon: url("../icons/fluent/arrow_clockwise_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.replay,
 .MuiSvgIcon-root[data-testid="ReplayIcon"],
 .MuiSvgIcon-root[data-testid="RestartAltIcon"] {
     --palatina-icon: url("../icons/fluent/arrow_counterclockwise_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.arrow_downward,
@@ -79,6 +83,7 @@
 
 .material-icons.repeat_one {
     --palatina-icon: url("../icons/fluent/arrow_repeat_1_24_filled.svg");
+    --palatina-icon-scale: 0.952;
 }
 
 .material-icons.repeat {
@@ -101,6 +106,7 @@
 .material-icons.autorenew,
 .material-icons.update {
     --palatina-icon: url("../icons/fluent/arrow_sync_24_filled.svg");
+    --palatina-icon-scale: 0.869;
 }
 
 .material-icons.undo {
@@ -141,6 +147,7 @@
 
 .material-icons.event {
     --palatina-icon: url("../icons/fluent/calendar_ltr_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.airplay,
@@ -159,21 +166,25 @@
 .material-icons.library_add_check,
 .MuiSvgIcon-root[data-testid="CheckBoxIcon"] {
     --palatina-icon: url("../icons/fluent/checkbox_checked_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .MuiSvgIcon-root[data-testid="IndeterminateCheckBoxIcon"] {
     --palatina-icon: url("../icons/fluent/checkbox_indeterminate_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.check_box_outline_blank,
 .MuiSvgIcon-root[data-testid="CheckBoxOutlineBlankIcon"] {
     --palatina-icon: url("../icons/fluent/checkbox_unchecked_24_regular.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.check,
 .MuiSvgIcon-root[data-testid="CheckIcon"],
 .MuiSvgIcon-root[data-testid="DownloadDoneIcon"] {
     --palatina-icon: url("../icons/fluent/checkmark_24_filled.svg");
+    --palatina-icon-scale: 1.15;
 }
 
 .material-icons.expand_more,
@@ -256,15 +267,18 @@
 .material-icons.content_copy,
 .MuiSvgIcon-root[data-testid="ContentCopyIcon"] {
     --palatina-icon: url("../icons/fluent/copy_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .MuiSvgIcon-root[data-testid="AnalyticsIcon"] {
     --palatina-icon: url("../icons/fluent/data_bar_vertical_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.delete,
 .MuiSvgIcon-root[data-testid="DeleteIcon"] {
     --palatina-icon: url("../icons/fluent/delete_24_filled.svg");
+    --palatina-icon-scale: 0.976;
 }
 
 .material-icons.computer,
@@ -281,6 +295,7 @@
 .material-icons.close,
 .MuiSvgIcon-root[data-testid="CloseIcon"] {
     --palatina-icon: url("../icons/fluent/dismiss_24_filled.svg");
+    --palatina-icon-scale: 1.245;
 }
 
 .material-icons.cancel,
@@ -295,6 +310,7 @@
 
 .material-icons.login {
     --palatina-icon: url("../icons/fluent/door_arrow_left_24_filled.svg");
+    --palatina-icon-scale: 0.988;
 }
 
 .material-icons.create,
@@ -302,6 +318,7 @@
 .material-icons.mode_edit,
 .MuiSvgIcon-root[data-testid="EditIcon"] {
     --palatina-icon: url("../icons/fluent/edit_24_filled.svg");
+    --palatina-icon-scale: 0.992;
 }
 
 .material-icons.error {
@@ -312,6 +329,7 @@
 .material-icons.remove_red_eye,
 .MuiSvgIcon-root[data-testid="VisibilityIcon"] {
     --palatina-icon: url("../icons/fluent/eye_24_filled.svg");
+    --palatina-icon-scale: 1.028;
 }
 
 .MuiSvgIcon-root[data-testid="VisibilityOffIcon"] {
@@ -320,16 +338,19 @@
 
 .material-icons.fast_forward {
     --palatina-icon: url("../icons/fluent/skip_forward_10_24_filled.svg");
+    --palatina-icon-scale: 1.039;
 }
 
 .material-icons.filter_alt,
 .MuiSvgIcon-root[data-testid="FilterAltIcon"],
 .MuiSvgIcon-root[data-testid="FilterListIcon"] {
     --palatina-icon: url("../icons/fluent/filter_24_filled.svg");
+    --palatina-icon-scale: 1.241;
 }
 
 .MuiSvgIcon-root[data-testid="FilterAltOffIcon"] {
     --palatina-icon: url("../icons/fluent/filter_dismiss_24_filled.svg");
+    --palatina-icon-scale: 1.049;
 }
 
 .material-icons.folder,
@@ -339,23 +360,28 @@
 
 .MuiSvgIcon-root[data-testid="LibraryAddIcon"] {
     --palatina-icon: url("../icons/fluent/folder_add_24_filled.svg");
+    --palatina-icon-scale: 0.952;
 }
 
 .material-icons.folder_open {
     --palatina-icon: url("../icons/fluent/folder_open_24_filled.svg");
+    --palatina-icon-scale: 0.953;
 }
 
 .material-icons.fullscreen,
 .MuiSvgIcon-root[data-testid="FullscreenIcon"] {
     --palatina-icon: url("../icons/fluent/full_screen_maximize_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.fullscreen_exit {
     --palatina-icon: url("../icons/fluent/full_screen_minimize_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.gamepad {
     --palatina-icon: url("../icons/fluent/games_24_filled.svg");
+    --palatina-icon-scale: 0.988;
 }
 
 .material-icons.language,
@@ -369,21 +395,25 @@
 .MuiSvgIcon-root[data-testid="DashboardIcon"],
 .MuiSvgIcon-root[data-testid="ViewModuleIcon"] {
     --palatina-icon: url("../icons/fluent/grid_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.favorite,
 .MuiSvgIcon-root[data-testid="FavoriteIcon"] {
     --palatina-icon: url("../icons/fluent/heart_24_filled.svg");
+    --palatina-icon-scale: 0.995;
 }
 
 .material-icons.history,
 .MuiSvgIcon-root[data-testid="RestoreIcon"] {
     --palatina-icon: url("../icons/fluent/history_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.home,
 .MuiSvgIcon-root[data-testid="HomeIcon"] {
     --palatina-icon: url("../icons/fluent/home_24_filled.svg");
+    --palatina-icon-scale: 1.053;
 }
 
 .material-icons.image,
@@ -392,12 +422,14 @@
 .MuiSvgIcon-root[data-testid="ImageIcon"],
 .MuiSvgIcon-root[data-testid="PhotoIcon"] {
     --palatina-icon: url("../icons/fluent/image_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.photo_album,
 .MuiSvgIcon-root[data-testid="PermMediaIcon"],
 .MuiSvgIcon-root[data-testid="PhotoAlbumIcon"] {
     --palatina-icon: url("../icons/fluent/image_multiple_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .MuiSvgIcon-root[data-testid="ImageNotSupportedIcon"] {
@@ -427,23 +459,28 @@
 
 .material-icons.link {
     --palatina-icon: url("../icons/fluent/link_24_filled.svg");
+    --palatina-icon-scale: 0.989;
 }
 
 .material-icons.lock {
     --palatina-icon: url("../icons/fluent/lock_closed_24_filled.svg");
+    --palatina-icon-scale: 0.952;
 }
 
 .material-icons.call_merge {
     --palatina-icon: url("../icons/fluent/merge_24_filled.svg");
+    --palatina-icon-scale: 1.052;
 }
 
 .material-icons.more {
     --palatina-icon: url("../icons/fluent/more_horizontal_24_filled.svg");
+    --palatina-icon-scale: 1.25;
 }
 
 .material-icons.more_vert,
 .MuiSvgIcon-root[data-testid="MoreVertIcon"] {
     --palatina-icon: url("../icons/fluent/more_vertical_24_filled.svg");
+    --palatina-icon-scale: 1.25;
 }
 
 .material-icons.local_movies,
@@ -471,6 +508,7 @@
 .MuiSvgIcon-root[data-testid="DensitySmallIcon"],
 .MuiSvgIcon-root[data-testid="MenuIcon"] {
     --palatina-icon: url("../icons/fluent/navigation_24_filled.svg");
+    --palatina-icon-scale: 0.994;
 }
 
 .MuiSvgIcon-root[data-testid="LanIcon"] {
@@ -480,10 +518,12 @@
 .material-icons.skip_next,
 .MuiSvgIcon-root[data-testid="LastPageIcon"] {
     --palatina-icon: url("../icons/fluent/next_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .MuiSvgIcon-root[data-testid="OpenInNewIcon"] {
     --palatina-icon: url("../icons/fluent/open_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.video_settings,
@@ -503,6 +543,7 @@
 .material-icons.pause,
 .MuiSvgIcon-root[data-testid="PauseIcon"] {
     --palatina-icon: url("../icons/fluent/pause_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.pause_circle_filled,
@@ -516,6 +557,7 @@
 
 .MuiSvgIcon-root[data-testid="GroupAddIcon"] {
     --palatina-icon: url("../icons/fluent/people_add_24_filled.svg");
+    --palatina-icon-scale: 0.952;
 }
 
 .material-icons.groups,
@@ -530,6 +572,7 @@
 
 .MuiSvgIcon-root[data-testid="PersonAddIcon"] {
     --palatina-icon: url("../icons/fluent/person_add_24_filled.svg");
+    --palatina-icon-scale: 0.952;
 }
 
 .MuiSvgIcon-root[data-testid="AccountCircleIcon"] {
@@ -538,14 +581,17 @@
 
 .MuiSvgIcon-root[data-testid="PersonRemoveIcon"] {
     --palatina-icon: url("../icons/fluent/person_delete_24_filled.svg");
+    --palatina-icon-scale: 0.952;
 }
 
 .MuiSvgIcon-root[data-testid="PersonOffIcon"] {
     --palatina-icon: url("../icons/fluent/person_prohibited_24_filled.svg");
+    --palatina-icon-scale: 0.952;
 }
 
 .material-icons.portrait {
     --palatina-icon: url("../icons/fluent/person_square_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.smartphone,
@@ -562,15 +608,18 @@
 .material-icons.phonelink_lock,
 .MuiSvgIcon-root[data-testid="PhonelinkLockIcon"] {
     --palatina-icon: url("../icons/fluent/phone_lock_24_filled.svg");
+    --palatina-icon-scale: 0.952;
 }
 
 .material-icons.picture_in_picture_alt {
     --palatina-icon: url("../icons/fluent/picture_in_picture_24_filled.svg");
+    --palatina-icon-scale: 0.952;
 }
 
 .material-icons.play_arrow,
 .MuiSvgIcon-root[data-testid="PlayArrowIcon"] {
     --palatina-icon: url("../icons/fluent/play_24_filled.svg");
+    --palatina-icon-scale: 1.114;
 }
 
 .material-icons.play_circle_filled,
@@ -586,6 +635,7 @@
 .material-icons.skip_previous,
 .MuiSvgIcon-root[data-testid="FirstPageIcon"] {
     --palatina-icon: url("../icons/fluent/previous_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.print {
@@ -594,6 +644,7 @@
 
 .material-icons.block {
     --palatina-icon: url("../icons/fluent/prohibited_24_filled.svg");
+    --palatina-icon-scale: 1.006;
 }
 
 .MuiSvgIcon-root[data-testid="ExtensionIcon"] {
@@ -612,6 +663,7 @@
 .material-icons.drag_handle,
 .MuiSvgIcon-root[data-testid="DragHandleIcon"] {
     --palatina-icon: url("../icons/fluent/re_order_dots_vertical_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.dvr,
@@ -627,25 +679,30 @@
 
 .material-icons.fast_rewind {
     --palatina-icon: url("../icons/fluent/skip_back_10_24_filled.svg");
+    --palatina-icon-scale: 1.039;
 }
 
 .material-icons.save {
     --palatina-icon: url("../icons/fluent/save_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.search,
 .MuiSvgIcon-root[data-testid="SearchIcon"] {
     --palatina-icon: url("../icons/fluent/search_24_filled.svg");
+    --palatina-icon-scale: 1.052;
 }
 
 .material-icons.select_all {
     --palatina-icon: url("../icons/fluent/select_all_on_24_filled.svg");
+    --palatina-icon-scale: 1.081;
 }
 
 .material-icons.settings,
 .MuiSvgIcon-root[data-testid="AppSettingsAltIcon"],
 .MuiSvgIcon-root[data-testid="SettingsIcon"] {
     --palatina-icon: url("../icons/fluent/settings_24_filled.svg");
+    --palatina-icon-scale: 1.026;
 }
 
 .material-icons.share {
@@ -661,10 +718,12 @@
 
 .material-icons.replay_10 {
     --palatina-icon: url("../icons/fluent/skip_back_10_24_filled.svg");
+    --palatina-icon-scale: 1.039;
 }
 
 .material-icons.forward_30 {
     --palatina-icon: url("../icons/fluent/skip_forward_30_24_filled.svg");
+    --palatina-icon-scale: 1.039;
 }
 
 .material-icons.volume_up {
@@ -686,6 +745,7 @@
 
 .material-icons.square {
     --palatina-icon: url("../icons/fluent/square_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.collections,
@@ -702,6 +762,7 @@
 .material-icons.stop,
 .MuiSvgIcon-root[data-testid="StopIcon"] {
     --palatina-icon: url("../icons/fluent/stop_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.storage,
@@ -711,6 +772,7 @@
 
 .material-icons.remove {
     --palatina-icon: url("../icons/fluent/subtract_24_filled.svg");
+    --palatina-icon-scale: 1.111;
 }
 
 .material-icons.remove_circle,
@@ -727,6 +789,7 @@
 .material-icons.label,
 .material-icons.tag {
     --palatina-icon: url("../icons/fluent/tag_24_filled.svg");
+    --palatina-icon-scale: 1.028;
 }
 
 .MuiSvgIcon-root[data-testid="LocationSearchingIcon"] {
@@ -736,6 +799,7 @@
 .material-icons.playlist_add,
 .MuiSvgIcon-root[data-testid="PlaylistAddIcon"] {
     --palatina-icon: url("../icons/fluent/text_bullet_list_add_24_filled.svg");
+    --palatina-icon-scale: 0.909;
 }
 
 .material-icons.list,
@@ -751,10 +815,12 @@
 
 .material-icons.percent {
     --palatina-icon: url("../icons/fluent/text_percent_24_filled.svg");
+    --palatina-icon-scale: 1.053;
 }
 
 .material-icons.lyrics {
     --palatina-icon: url("../icons/fluent/text_quote_24_filled.svg");
+    --palatina-icon-scale: 1.429;
 }
 
 .material-icons.sort_by_alpha,
@@ -788,6 +854,7 @@
 .material-icons.video_library,
 .MuiSvgIcon-root[data-testid="VideoLibraryIcon"] {
     --palatina-icon: url("../icons/fluent/video_clip_multiple_24_filled.svg");
+    --palatina-icon-scale: 1.026;
 }
 
 .material-icons.warning,
