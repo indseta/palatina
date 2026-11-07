@@ -69,3 +69,7 @@ body:has(#videoOsdPage:not(.hide)) .actionSheet:not(.actionsheet-fullscreen) .ac
 .volumeOsd {
     display: none !important;
 }
+
+body:has(> .videoPlayerContainer-onTop) :is(.MuiAppBar-root, .skinHeader:not(.osdHeader)) {
+    visibility: hidden;
+}
