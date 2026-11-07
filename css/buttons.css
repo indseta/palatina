@@ -25,6 +25,16 @@ a.button-link[style]:not(:hover, :active) {
     color: var(--palatina-color-interactive) !important;
 }
 
+@media (hover: hover) and (pointer: fine) {
+    a.button-link[style]:hover {
+        color: var(--palatina-color-highlight) !important;
+    }
+}
+
+a.button-link[style]:active {
+    color: var(--palatina-color-highlight) !important;
+}
+
 :is(a[href], button, .itemAction) :is(.secondary, .secondaryText) {
     color: inherit;
 }

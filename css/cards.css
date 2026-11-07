@@ -62,3 +62,6 @@
     }
 }
 
+:is(.defaultCardBackground1, .defaultCardBackground2, .defaultCardBackground3, .defaultCardBackground4, .defaultCardBackground5) {
+    background-color: var(--palatina-color-placeholder);
+}

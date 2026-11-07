@@ -10,10 +10,15 @@
 
 .MuiAppBar-root.MuiAppBar-positionFixed:has(> .MuiToolbar-root + .MuiToolbar-root) {
     position: absolute;
-    padding-top: var(--palatina-header-height, 48px);
     background-color: transparent;
     box-shadow: none;
     backdrop-filter: none;
+}
+
+.MuiAppBar-root.MuiAppBar-positionFixed:has(> .MuiToolbar-root + .MuiToolbar-root)::before {
+    flex-shrink: 0;
+    height: var(--palatina-header-height, 48px);
+    content: "";
 }
 
 .MuiAppBar-root.MuiAppBar-positionFixed:has(> .MuiToolbar-root + .MuiToolbar-root) > .MuiToolbar-root:first-child {
