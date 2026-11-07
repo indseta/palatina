@@ -68,3 +68,7 @@ a.button-link[style]:not(:hover, :active, :focus-visible) {
     background-color: transparent;
     transform: none;
 }
+
+.cardOverlayFab-primary > .MuiSvgIcon-root {
+    font-size: 1.6696em;
+}
