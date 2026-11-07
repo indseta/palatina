@@ -172,6 +172,11 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 .MuiPaper-root.MuiPopover-paper .MuiAccordionSummary-root {
     min-height: 0;
     padding: var(--palatina-menu-padding);
+    column-gap: 16px;
+}
+
+.MuiPaper-root.MuiPopover-paper .MuiAccordionSummary-expandIconWrapper {
+    color: inherit;
 }
 
 .MuiPaper-root.MuiPopover-paper .MuiAccordionSummary-content {
@@ -195,4 +200,12 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 .actionSheet .actionSheetMenuItem :is(.listItemBodyText, .actionSheetItemAsideText) {
     padding: 0;
     line-height: 1.5;
+}
+
+#app-user-menu .MuiMenuItem-root:is(:hover, .Mui-focusVisible, .Mui-selected) {
+    background-color: transparent;
+}
+
+#app-user-menu .MuiMenuItem-root > .MuiTouchRipple-root {
+    display: none;
 }

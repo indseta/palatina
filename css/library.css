@@ -1,0 +1,12 @@
+.alphaPicker,
+.alphaPicker-fixed-right {
+    display: none;
+}
+
+[dir="ltr"] .padded-right-withalphapicker {
+    padding-right: max(env(safe-area-inset-right), 3.3%);
+}
+
+[dir="rtl"] .padded-right-withalphapicker {
+    padding-left: max(env(safe-area-inset-left), 3.3%);
+}
