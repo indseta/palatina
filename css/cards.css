@@ -15,7 +15,7 @@
     background-color: var(--palatina-color-translucent);
 }
 
-:is(.card, .listItemImage):hover :is(.itemProgressBar, .itemLinearProgress) {
+:is(.card, .listItem):hover :is(.itemProgressBar, .itemLinearProgress) {
     opacity: 0;
 }
 
@@ -57,7 +57,7 @@
         pointer-events: none;
     }
 
-    .listItemImage:has(> .listItemImageButton):hover::after {
+    .listItem:hover .listItemImage:has(> .listItemImageButton)::after {
         opacity: 1;
     }
 }

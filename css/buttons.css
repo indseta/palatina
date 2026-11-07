@@ -99,6 +99,21 @@ a.button-link[style]:active {
     color: var(--palatina-color-highlight);
 }
 
+.itemsContainer > .listItem {
+    margin-bottom: var(--palatina-gap-row);
+    padding: 0;
+    border-radius: var(--palatina-radius);
+}
+
+.itemsContainer > .listItem:hover .listItemImage {
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+}
+
+.listViewUserDataButtons {
+    display: none;
+}
+
 .listItemImageButton {
     position: relative;
     z-index: 1;
@@ -116,7 +131,7 @@ a.button-link[style]:active {
         transition: opacity 0.2s;
     }
 
-    .listItemImage:hover .listItemImageButton {
+    .listItem:hover .listItemImageButton {
         opacity: 1;
     }
 }
