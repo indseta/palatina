@@ -96,6 +96,10 @@ a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *
     border-color: rgb(var(--palatina-color-contrast-channel) / 25%);
 }
 
+.MuiButtonGroup-root.MuiButtonGroup-text > .MuiButtonGroup-grouped {
+    border-color: var(--palatina-color-divider);
+}
+
 .MuiIconButton-root:has(> .MuiAvatar-root) {
     padding: calc(12px + 0.125rem);
 }
@@ -180,6 +184,20 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] .MuiButton-endIcon > .MuiSvgIcon-root {
     font-size: 16px;
+}
+
+.MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] {
+    padding: 6px 8px 6px 4px;
+    font-weight: 500;
+}
+
+.MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] > .MuiTypography-root {
+    font: inherit;
+}
+
+.MuiToolbar-root .MuiButtonGroup-text > .MuiButton-root.MuiButtonGroup-grouped {
+    min-width: 0;
+    padding: 6px 12px;
 }
 
 .MuiPaper-root.MuiPopover-paper .MuiAccordionSummary-root {
