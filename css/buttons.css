@@ -7,17 +7,17 @@
     display: none;
 }
 
-:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *) {
+:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea, .MuiInputBase-input):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *) {
     color: var(--palatina-color-interactive);
 }
 
 @media (hover: hover) and (pointer: fine) {
-    :is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *):hover {
+    :is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea, .MuiInputBase-input):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *):hover {
         color: var(--palatina-color-highlight);
     }
 }
 
-:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *):is(:active, :focus-visible:not(.palatina-pointer *), .show-focus:focus, .emby-tab-button-active, .alphaPickerButton-selected, .MuiButton-textPrimary, .Mui-selected) {
+:is(a[href], button, select, [role="button"], [role="link"], [role="menuitem"], [role="option"], [role="tab"], .itemAction, .emby-input, .emby-textarea, .MuiInputBase-input):not(:disabled, .sectionTitleTextButton, .button-submit, .button-delete, .MuiButton-contained, .navMenuOption-selected, .cardText *):is(:active, :focus-visible:not(.palatina-pointer *), .show-focus:focus, .emby-tab-button-active, .alphaPickerButton-selected, .MuiButton-textPrimary, .Mui-selected) {
     color: var(--palatina-color-highlight);
 }
 
@@ -71,6 +71,10 @@ a.button-link[style]:not(:hover, :active, :focus-visible:not(.palatina-pointer *
 
 .cardOverlayFab-primary > .MuiSvgIcon-root {
     font-size: 1.6696em;
+}
+
+:is(.cardOverlayContainer > .cardOverlayFab-primary, .listItemImageButton):not(:hover, :active, :focus-visible:not(.palatina-pointer *)) {
+    color: var(--palatina-color-translucent);
 }
 
 .emby-button:not(.paper-icon-button-light, .fab),
@@ -146,4 +150,13 @@ body:has(#indexPage:not(.hide) #homeTab.is-active) .MuiToolbar-root a.MuiButton-
     border-right: 0;
     border-top-right-radius: var(--palatina-radius);
     border-bottom-right-radius: var(--palatina-radius);
+}
+
+.MuiButton-root.MuiButtonBase-root,
+.MuiMenuItem-root.MuiButtonBase-root,
+.MuiMenuItem-root .MuiListItemText-primary,
+.MuiAccordionSummary-root .MuiTypography-root,
+button:is(.raised, .button-submit, .button-delete, .button-cancel),
+:is(.listItem-button, .emby-button.listItem-border) :is(.listItemBodyText, .actionSheetItemAsideText) {
+    font-size: 0.875rem;
 }

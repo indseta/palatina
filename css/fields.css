@@ -1,0 +1,52 @@
+.emby-input,
+.emby-textarea,
+.emby-select {
+    font-size: 0.875rem;
+}
+
+.emby-input,
+.emby-textarea {
+    padding: 0.5em;
+}
+
+.emby-input,
+.emby-textarea,
+.emby-select-withcolor {
+    border-width: 1px;
+    border-color: var(--palatina-color-divider);
+    background: var(--palatina-color-background);
+}
+
+.emby-select-withcolor > option {
+    background: var(--palatina-color-background);
+}
+
+.emby-input:focus,
+.emby-textarea:focus {
+    border-color: var(--palatina-color-divider);
+}
+
+.emby-select-withcolor:focus {
+    border-color: var(--palatina-color-divider) !important;
+}
+
+:is(.emby-input, .emby-textarea, .MuiInputBase-input)::placeholder {
+    color: var(--palatina-color-muted);
+    opacity: 1;
+}
+
+.MuiInputBase-root.MuiInputBase-formControl {
+    font-size: 0.875rem;
+}
+
+.MuiInputBase-root.MuiFilledInput-root,
+.MuiInputBase-root.MuiFilledInput-root:is(:hover, .Mui-focused) {
+    border: 1px solid var(--palatina-color-divider);
+    border-radius: var(--palatina-radius);
+    background-color: var(--palatina-color-background);
+}
+
+.MuiInputBase-root.MuiFilledInput-root::before,
+.MuiInputBase-root.MuiFilledInput-root::after {
+    display: none;
+}
