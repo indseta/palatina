@@ -53,6 +53,7 @@ body:has(#videoOsdPage:not(.hide)) .dialogBackdrop {
 }
 
 body:has(#videoOsdPage:not(.hide)) .actionSheet:not(.actionsheet-fullscreen) {
+    background-color: var(--palatina-color-glass-solid);
     box-shadow: none;
     backdrop-filter: none;
 }
