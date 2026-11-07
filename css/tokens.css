@@ -21,4 +21,7 @@
     --palatina-menu-padding: 6px 16px;
     --palatina-icon-size: 1.25rem;
     --palatina-menu-icon-gap: calc(36px - var(--palatina-icon-size));
+    --palatina-gap: 2.5rem;
+    --palatina-gap-row: 0.5rem;
+    --palatina-gap-section: 1.75rem;
 }

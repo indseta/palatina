@@ -14,8 +14,27 @@
     background: var(--palatina-color-background);
 }
 
+.layout-desktop .detailRibbon {
+    height: auto;
+    margin-top: 0;
+    padding-top: var(--palatina-gap);
+}
+
+.layout-desktop .detailRibbon .itemMiscInfo {
+    margin-bottom: 0 !important;
+}
+
+.layout-desktop .detailRibbon .itemMiscInfo + .itemMiscInfo {
+    margin-top: var(--palatina-gap-row);
+}
+
+.layout-desktop .mainDetailButtons {
+    margin-block: 0;
+}
+
 .detailLogo,
 [dir="rtl"] .detailLogo {
+    top: 12vh;
     right: 0;
     left: 0;
     margin: 0 auto;
@@ -30,4 +49,43 @@
 :is([dir="ltr"], [dir="rtl"]) .detailPagePrimaryContent {
     padding-right: max(env(safe-area-inset-right), 3.3%);
     padding-left: max(env(safe-area-inset-left), 3.3%);
+}
+
+.itemDetailPage :is(.detailPagePrimaryContent, .detailPageSecondaryContainer) {
+    padding-top: 0;
+}
+
+.itemDetailPage :is(.trackSelections, .detailSectionContent, .itemDetailsGroup) {
+    margin: var(--palatina-gap) 0 0;
+}
+
+.itemDetailPage .detailSectionContent > * {
+    margin: var(--palatina-gap-row) 0 0 !important;
+}
+
+.itemDetailPage .detailSectionContent > .overview {
+    margin: var(--palatina-gap) 0 0 !important;
+}
+
+.itemDetailPage .detailSectionContent > .overview-controls {
+    display: block;
+    margin: 0 0 var(--palatina-gap) !important;
+    text-align: end;
+}
+
+.overview > bdi > :first-child {
+    margin-top: 0;
+}
+
+.overview > bdi > :last-child {
+    margin-bottom: 0;
+}
+
+.itemDetailPage :is(.detailsGroupItem, .trackSelections .selectContainer) {
+    margin: var(--palatina-gap-row) 0 0 !important;
+}
+
+.itemDetailPage .detailVerticalSection {
+    margin-top: var(--palatina-gap-section);
+    margin-bottom: calc(var(--palatina-gap-section) * -1);
 }
