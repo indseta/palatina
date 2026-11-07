@@ -4,6 +4,8 @@ html {
 
 :root,
 [data-theme] {
+    --jf-palette-background-default: var(--palatina-color-background);
+    --jf-palette-background-defaultChannel: var(--palatina-color-background-channel);
     --jf-palette-text-secondary: var(--palatina-color-text);
     --jf-palette-primary-main: var(--palatina-color-interactive);
     --jf-palette-primary-light: var(--palatina-color-interactive);

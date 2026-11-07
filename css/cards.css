@@ -2,3 +2,13 @@
 .card .cardText a[href] {
     color: var(--palatina-color-interactive);
 }
+
+.card .itemProgressBar,
+.card .itemLinearProgress {
+    background: rgb(var(--palatina-color-text-channel) / 20%);
+}
+
+.card .itemProgressBarForeground:not(.itemProgressBarForeground-recording),
+.card .itemLinearProgress .MuiLinearProgress-bar {
+    background-color: rgb(var(--palatina-color-text-channel) / 70.2%);
+}
