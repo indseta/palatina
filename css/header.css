@@ -1,3 +1,8 @@
 .MuiToolbar-root .MuiChip-root {
     display: none;
 }
+
+.MuiAppBar-root.MuiAppBar-positionFixed {
+    background-color: var(--palatina-color-background);
+    background-image: none;
+}
