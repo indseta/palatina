@@ -105,6 +105,11 @@ a.button-link[style]:active {
     border-radius: var(--palatina-radius);
 }
 
+.itemsContainer > .listItem.itemAction:hover,
+.itemsContainer > .listItem .listItemBody.itemAction:hover {
+    color: var(--palatina-color-text);
+}
+
 .itemsContainer > .listItem:hover .listItemImage {
     border-start-end-radius: 0;
     border-end-end-radius: 0;
