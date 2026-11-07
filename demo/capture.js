@@ -36,6 +36,7 @@ function snapshot({ map, overlay }) {
             }
             return;
         });
+        clone.querySelectorAll("[data-src='']").forEach((element) => element.removeAttribute("data-src"));
         clone.querySelectorAll("[data-src]").forEach((element) => {
             const url = absolute(element.getAttribute("data-src"));
             if (element.tagName === "IMG") {
@@ -49,7 +50,7 @@ function snapshot({ map, overlay }) {
         });
         clone.querySelectorAll("[data-url]").forEach((element) => element.removeAttribute("data-url"));
         clone.querySelectorAll(".lazy-hidden-children").forEach((element) => element.classList.remove("lazy-hidden-children"));
-        clone.querySelectorAll("img[src]").forEach((image) => {
+        clone.querySelectorAll("img[src]:not([src=''])").forEach((image) => {
             image.setAttribute("src", swap(absolute(image.getAttribute("src"))));
             return;
         });
