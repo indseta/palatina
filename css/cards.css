@@ -49,6 +49,7 @@
     .listItemImage:has(> .listItemImageButton)::after {
         position: absolute;
         inset: 0;
+        border-radius: inherit;
         content: "";
         background-color: rgb(var(--palatina-color-background-channel) / 50%);
         opacity: 0;

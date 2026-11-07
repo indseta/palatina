@@ -115,11 +115,6 @@ a.button-link[style]:active {
     color: var(--palatina-color-text);
 }
 
-.itemsContainer > .listItem:hover .listItemImage {
-    border-start-end-radius: 0;
-    border-end-end-radius: 0;
-}
-
 .listViewUserDataButtons {
     display: none;
 }
