@@ -30,3 +30,23 @@
 .MuiPaper-root.MuiPopover-paper .MuiAccordion-root + .MuiAccordion-root {
     border-top-width: 1px;
 }
+
+.MuiPaper-root.MuiPopover-paper .MuiList-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.MuiPaper-root.MuiPopover-paper .MuiDivider-root {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.actionSheet:not(.actionsheet-fullscreen) .actionSheetContent {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.actionSheet:not(.actionsheet-fullscreen) .actionsheetDivider {
+    margin-top: 0;
+    margin-bottom: 0;
+}
