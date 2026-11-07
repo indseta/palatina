@@ -1,5 +1,9 @@
 :root {
-    --palatina-color-text: #fff;
-    --palatina-color-interactive: #b3b3b3;
+    --palatina-color-text: rgb(var(--palatina-color-text-channel));
+    --palatina-color-text-channel: 255 255 255;
+    --palatina-color-interactive: rgb(var(--palatina-color-interactive-channel));
+    --palatina-color-interactive-channel: 179 179 179;
+    --palatina-color-contrast: rgb(var(--palatina-color-contrast-channel));
+    --palatina-color-contrast-channel: 0 0 0;
     --palatina-radius: 4px;
 }

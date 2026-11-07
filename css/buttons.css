@@ -78,3 +78,7 @@ a.button-link[style]:not(:hover, :active, :focus-visible) {
 .alphaPickerButton {
     border-radius: var(--palatina-radius);
 }
+
+.buttonActive {
+    color: var(--palatina-color-text) !important;
+}

@@ -5,7 +5,28 @@ html {
 :root,
 [data-theme] {
     --jf-palette-text-secondary: var(--palatina-color-text);
+    --jf-palette-primary-main: var(--palatina-color-interactive);
+    --jf-palette-primary-light: var(--palatina-color-interactive);
+    --jf-palette-primary-dark: var(--palatina-color-text);
+    --jf-palette-primary-contrastText: var(--palatina-color-contrast);
+    --jf-palette-primary-mainChannel: var(--palatina-color-interactive-channel);
+    --jf-palette-primary-lightChannel: var(--palatina-color-interactive-channel);
+    --jf-palette-primary-darkChannel: var(--palatina-color-text-channel);
+    --jf-palette-primary-contrastTextChannel: var(--palatina-color-contrast-channel);
     --jf-palette-secondary-main: var(--palatina-color-text);
+    --jf-palette-secondary-light: var(--palatina-color-text);
+    --jf-palette-secondary-dark: var(--palatina-color-text);
+    --jf-palette-secondary-contrastText: var(--palatina-color-contrast);
+    --jf-palette-secondary-mainChannel: var(--palatina-color-text-channel);
+    --jf-palette-secondary-lightChannel: var(--palatina-color-text-channel);
+    --jf-palette-secondary-darkChannel: var(--palatina-color-text-channel);
+    --jf-palette-secondary-contrastTextChannel: var(--palatina-color-contrast-channel);
+    --jf-palette-LinearProgress-primaryBg: rgb(var(--palatina-color-interactive-channel) / 30%);
+    --jf-palette-LinearProgress-secondaryBg: rgb(var(--palatina-color-interactive-channel) / 30%);
+    --jf-palette-Slider-primaryTrack: rgb(var(--palatina-color-interactive-channel) / 30%);
+    --jf-palette-Slider-secondaryTrack: rgb(var(--palatina-color-interactive-channel) / 30%);
+    --jf-palette-Switch-primaryDisabledColor: rgb(var(--palatina-color-interactive-channel) / 30%);
+    --jf-palette-Switch-secondaryDisabledColor: rgb(var(--palatina-color-interactive-channel) / 30%);
     --jf-card-borderRadius: var(--palatina-radius);
     --jf-shape-borderRadius: var(--palatina-radius);
 }
@@ -31,4 +52,48 @@ html {
 .MuiPaper-rounded,
 .MuiChip-root {
     border-radius: var(--palatina-radius);
+}
+
+.mdl-slider {
+    color: var(--palatina-color-interactive);
+}
+
+.mdl-slider::-webkit-slider-thumb {
+    background: var(--palatina-color-interactive);
+}
+
+.mdl-slider::-moz-range-thumb {
+    background: var(--palatina-color-interactive);
+}
+
+.mdl-slider-background-lower,
+.sliderMarker.watched,
+.iconOsdProgressInner,
+.MuiLinearProgress-root .MuiLinearProgress-bar {
+    background-color: var(--palatina-color-interactive);
+}
+
+.mdl-spinner__layer-1,
+.mdl-spinner__layer-2,
+.mdl-spinner__layer-3,
+.mdl-spinner__layer-4 {
+    border-color: var(--palatina-color-interactive);
+}
+
+.listItemIcon:not(.listItemIcon-transparent) {
+    background-color: var(--palatina-color-interactive);
+    color: var(--palatina-color-contrast);
+}
+
+.countIndicator,
+.playedIndicator,
+.fullSyncIndicator,
+.mediaSourceIndicator,
+.checkboxOutline .checkboxIcon {
+    color: var(--palatina-color-contrast);
+}
+
+.MuiAvatar-root.MuiAvatar-colorDefault {
+    background-color: var(--palatina-color-interactive);
+    color: var(--palatina-color-contrast);
 }
