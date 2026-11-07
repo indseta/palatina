@@ -7,6 +7,7 @@
     padding-bottom: max(env(safe-area-inset-bottom), calc(var(--palatina-player-edge) - 0.556em));
     background: linear-gradient(0deg, rgb(var(--palatina-color-background-channel) / 75%), rgb(var(--palatina-color-background-channel) / 0%));
     color: var(--palatina-color-text);
+    will-change: auto;
 }
 
 .MuiToolbar-root.videoOsd-appBar {
