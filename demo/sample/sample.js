@@ -69,21 +69,65 @@ function closeLayer() {
     return;
 }
 
+function snap(offset, size) {
+    const ratio = size ? offset / size : 0;
+    return [0, 0.5, 1].reduce((best, value) => (Math.abs(value - ratio) < Math.abs(best - ratio) ? value : best), 0);
+}
+
+function anchoring(paper, anchor) {
+    const [horizontal, vertical] = (paper.style.transformOrigin || "0px 0px").split(" ").map((value) => parseFloat(value) || 0);
+    const x = snap((parseFloat(paper.style.left) || 0) + horizontal - anchor.x, anchor.width);
+    const y = snap((parseFloat(paper.style.top) || 0) + vertical - anchor.y, anchor.height);
+    return {
+        paper: paper,
+        x: x,
+        y: y,
+        originX: horizontal === 0 ? 0 : x,
+        originY: vertical === 0 ? 0 : y
+    };
+}
+
+function overflow(start, size, limit) {
+    const margin = 16;
+    if (start < margin) {
+        return start - margin;
+    }
+    if (start + size > limit - margin) {
+        return start + size - (limit - margin);
+    }
+    return 0;
+}
+
+function place(entry, trigger) {
+    const box = trigger.getBoundingClientRect();
+    const width = entry.paper.offsetWidth;
+    const height = entry.paper.offsetHeight;
+    const top = box.top + box.height * entry.y - height * entry.originY;
+    const left = box.left + box.width * entry.x - width * entry.originX;
+    const dy = overflow(top, height, window.innerHeight);
+    const dx = overflow(left, width, window.innerWidth);
+    entry.paper.style.top = Math.round(top - dy) + "px";
+    entry.paper.style.left = Math.round(left - dx) + "px";
+    entry.paper.style.transformOrigin = (width * entry.originX + dx) + "px " + (height * entry.originY + dy) + "px";
+    return;
+}
+
+function resized() {
+    if (layer) {
+        layer.papers.forEach((entry) => place(entry, layer.trigger));
+    }
+    return;
+}
+
 function openLayer(overlay, trigger) {
     closeLayer();
     const nodes = overlay.nodes.map(parse);
-    const box = trigger.getBoundingClientRect();
-    const dx = overlay.anchor ? box.left - overlay.anchor.x : 0;
-    const dy = overlay.anchor ? box.top - overlay.anchor.y : 0;
+    const papers = overlay.anchor ? nodes.flatMap((node) => [...node.querySelectorAll(".MuiPopover-paper, .MuiMenu-paper")]).map((paper) => anchoring(paper, overlay.anchor)) : [];
     nodes.forEach((node) => {
-        node.querySelectorAll(".MuiPopover-paper, .MuiMenu-paper").forEach((paper) => {
-            paper.style.left = (parseFloat(paper.style.left) || 0) + dx + "px";
-            paper.style.top = (parseFloat(paper.style.top) || 0) + dy + "px";
-            return;
-        });
         document.body.append(node);
         return;
     });
+    papers.forEach((entry) => place(entry, trigger));
     if (overlay.follow) {
         document.querySelectorAll(overlay.follow.selector).forEach((element, index) => element.setAttribute("data-sample-href", overlay.follow.targets[index] ?? ""));
     }
@@ -106,7 +150,13 @@ function openLayer(overlay, trigger) {
         return [element, name, old];
     });
     document.body.setAttribute("style", overlay.bodyStyle);
-    layer = { overlay: overlay, nodes: nodes, undo: undo };
+    layer = {
+        overlay: overlay,
+        nodes: nodes,
+        undo: undo,
+        papers: papers,
+        trigger: trigger
+    };
     focus(overlay.focus);
     return;
 }
@@ -326,6 +376,7 @@ new MutationObserver(guard).observe(document.documentElement, { attributes: true
 document.addEventListener("click", click, true);
 document.addEventListener("keydown", keydown);
 window.addEventListener("scroll", scrolled, { passive: true });
+window.addEventListener("resize", resized);
 window.addEventListener("hashchange", changed);
 trail.push(location.hash.slice(1) || data.start);
 show(trail[0]);
