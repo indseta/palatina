@@ -7,3 +7,22 @@
     background-image: none;
     backdrop-filter: var(--palatina-glass-blur);
 }
+
+.MuiAppBar-root.MuiAppBar-positionFixed:has(> .MuiToolbar-root + .MuiToolbar-root) {
+    position: absolute;
+    padding-top: var(--palatina-header-height, 48px);
+    background-color: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.MuiAppBar-root.MuiAppBar-positionFixed:has(> .MuiToolbar-root + .MuiToolbar-root) > .MuiToolbar-root:first-child {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--palatina-color-glass);
+    box-shadow: var(--Paper-shadow);
+    backdrop-filter: var(--palatina-glass-blur);
+}
