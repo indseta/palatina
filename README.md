@@ -26,6 +26,7 @@ Each release is a git tag (`v0`, `v1`, ...). Change the number in both places to
 - `css/icons.css` swaps Jellyfin's Material icons (font icons and MUI icons) for Phosphor icons, fill weight (`icons/phosphor`, MIT). Icons without a mapping keep the Material glyph.
 - Headings that are not links or buttons use Source Serif 4 (`--palatina-font-title` in `css/tokens.css`, `fonts/source-serif-4`, OFL).
 - `js/palatina.js` starts the router; sections register with `onView(pageId, handler)`.
+- Section headers above poster rows ("Recently Added in Movies", genre rows) are plain text: `css/buttons.css` hides the arrow and `js/titles.js` removes the link.
 
 ## Demo
 

@@ -1,0 +1,8 @@
+.sectionTitleTextButton {
+    pointer-events: none;
+    cursor: default;
+}
+
+.sectionTitleTextButton > :not(.sectionTitle) {
+    display: none;
+}
