@@ -256,9 +256,10 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] {
-    padding-block: 0.5em;
-    min-width: var(--palatina-library-menu-width);
     justify-content: space-between;
+    min-width: var(--palatina-library-menu-width);
+    height: var(--palatina-control-height);
+    padding-block: 0;
     padding-inline: 0.5em calc(0.4em - 1px);
     border: 1px solid var(--palatina-color-divider);
     background: var(--palatina-color-background);
@@ -268,7 +269,11 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 }
 
 .MuiToolbar-root .MuiButtonGroup-text:has(:is([data-testid="FilterAltIcon"], [data-testid="SortByAlphaIcon"])) {
-    margin-inline-end: -12px;
+    gap: 8px;
+}
+
+.MuiToolbar-root .MuiButtonGroup-contained > .MuiButton-root {
+    height: var(--palatina-control-height);
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] > .MuiButton-endIcon {
@@ -287,6 +292,15 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 .MuiToolbar-root .MuiButtonGroup-text > .MuiButton-root.MuiButtonGroup-grouped {
     min-width: 0;
     padding: 6px 12px;
+}
+
+.MuiToolbar-root .MuiButtonGroup-text:has(:is([data-testid="FilterAltIcon"], [data-testid="SortByAlphaIcon"])) > .MuiButton-root.MuiButtonGroup-grouped {
+    width: var(--palatina-control-height);
+    height: var(--palatina-control-height);
+    padding: 0;
+    border: 1px solid var(--palatina-color-divider);
+    border-radius: var(--palatina-radius);
+    background: var(--palatina-color-background);
 }
 
 .MuiToolbar-root .MuiStack-root > .MuiButtonGroup-root:has([data-testid="NavigateBeforeIcon"]) {
@@ -327,6 +341,14 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
     line-height: 1.5;
 }
 
+.MuiPopover-paper .MuiMenuItem-root.Mui-selected:not(:hover) {
+    background-color: transparent;
+}
+
+.MuiPopover-paper .MuiMenuItem-root.Mui-selected:hover {
+    background-color: var(--jf-palette-action-hover);
+}
+
 #app-user-menu .MuiMenuItem-root:is(:hover, .Mui-focusVisible, .Mui-selected) {
     background-color: transparent;
 }
@@ -361,4 +383,8 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 
 .MuiTouchRipple-ripplePulsate {
     display: none;
+}
+
+#sort-popover .MuiMenuItem-root:has(> .MuiListItemIcon-root > .MuiSvgIcon-root) {
+    color: var(--palatina-color-highlight);
 }

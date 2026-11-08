@@ -22,6 +22,17 @@
     backdrop-filter: var(--palatina-glass-blur);
 }
 
+.MuiPaper-root.MuiPopover-paper,
+.actionSheet:not(.actionsheet-fullscreen) {
+    box-shadow: none;
+}
+
+.palatina-placed {
+    top: var(--palatina-menu-top) !important;
+    left: var(--palatina-menu-left) !important;
+    max-height: var(--palatina-menu-height) !important;
+}
+
 .dialog:not(.dialog-fullscreen, .actionsheet-fullscreen) :is(.formDialogHeader, .formDialogFooter) {
     background-color: transparent;
 }
@@ -87,6 +98,7 @@
 
 .palatina-menu {
     position: fixed;
+    box-sizing: border-box;
     z-index: 1300;
     overflow-y: auto;
     border: 1px solid var(--palatina-color-divider);

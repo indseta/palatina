@@ -1,6 +1,6 @@
-const selector = "select.detailTrackSelect";
-const edge = 16;
-const gap = 4;
+import { place } from "./place.js";
+
+const selector = "select.emby-select:not([multiple])";
 const state = {
     menu: null,
     select: null
@@ -33,17 +33,8 @@ function item(select, option) {
     return row;
 }
 
-function place(menu, select) {
-    const rect = select.getBoundingClientRect();
-    const below = window.innerHeight - rect.bottom - gap - edge;
-    const above = rect.top - gap - edge;
-    const height = menu.scrollHeight;
-    const up = height > below && above > below;
-    menu.style.minWidth = rect.width + "px";
-    menu.style.maxHeight = (up ? above : below) + "px";
-    menu.style.left = Math.max(edge, Math.min(rect.left, window.innerWidth - edge - menu.offsetWidth)) + "px";
-    menu.style.top = (up ? rect.top - gap - Math.min(height, above) : rect.bottom + gap) + "px";
-    return;
+function themed() {
+    return getComputedStyle(document.documentElement).getPropertyValue("--palatina-radius") !== "";
 }
 
 function open(select) {
@@ -51,7 +42,8 @@ function open(select) {
     const menu = document.createElement("div");
     menu.className = "palatina-menu";
     menu.setAttribute("role", "listbox");
-    menu.append(...[...select.options].map((option) => item(select, option)));
+    menu.append(...[...select.options].filter((option) => !option.hidden && !option.disabled).map((option) => item(select, option)));
+    menu.style.minWidth = select.getBoundingClientRect().width + "px";
     document.body.append(menu);
     place(menu, select);
     state.menu = menu;
@@ -61,7 +53,7 @@ function open(select) {
 
 function press(event) {
     const select = event.target.closest?.(selector);
-    if (select && !select.disabled && event.button === 0) {
+    if (select && !select.disabled && event.button === 0 && themed()) {
         event.preventDefault();
         select.focus();
         if (state.select === select) {
