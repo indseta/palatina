@@ -256,9 +256,13 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] {
-    margin-inline-start: -4px;
-    padding: 6px 8px;
-    font-weight: 500;
+    padding-block: 0.5em;
+    padding-inline: 0.5em calc(0.4em - 1px);
+    border: 1px solid var(--palatina-color-divider);
+    background: var(--palatina-color-background);
+    font-size: inherit;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .MuiToolbar-root .MuiButtonGroup-text:has(:is([data-testid="FilterAltIcon"], [data-testid="SortByAlphaIcon"])) {
@@ -266,8 +270,12 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] > .MuiButton-endIcon {
-    order: -1;
-    margin: 0 8px 0 -4px;
+    margin-block: 0;
+    margin-inline: 0.5em 0;
+}
+
+.MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] .MuiSvgIcon-root {
+    font-size: var(--palatina-icon-size) !important;
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] > .MuiTypography-root {
