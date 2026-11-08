@@ -88,7 +88,7 @@ a.button-link[style]:active {
     color: var(--palatina-color-translucent);
 }
 
-:is(.cardOverlayContainer > .cardOverlayFab-primary, .listItemImageButton) .material-icons {
+:is(.cardOverlayContainer > .cardOverlayFab-primary, .listItemImageButton) :is(.material-icons, .MuiSvgIcon-root) {
     font-size: var(--palatina-play-size) !important;
 }
 
