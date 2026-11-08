@@ -257,7 +257,9 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] {
     padding-block: 0.5em;
-    padding-inline: calc(0.4em - 1px) 0.5em;
+    min-width: var(--palatina-library-menu-width);
+    justify-content: space-between;
+    padding-inline: 0.5em calc(0.4em - 1px);
     border: 1px solid var(--palatina-color-divider);
     background: var(--palatina-color-background);
     font-size: inherit;
@@ -270,9 +272,8 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] > .MuiButton-endIcon {
-    order: -1;
     margin-block: 0;
-    margin-inline: 0 0.5em;
+    margin-inline: 0.5em 0;
 }
 
 .MuiToolbar-root .MuiButton-root[aria-controls="library-view-menu"] .MuiSvgIcon-root {

@@ -38,6 +38,11 @@
     border-top-width: 1px;
 }
 
+#library-view-menu .MuiPaper-root.MuiPopover-paper {
+    box-sizing: border-box;
+    min-width: var(--palatina-library-menu-width);
+}
+
 .MuiPaper-root.MuiPopover-paper .MuiList-padding {
     padding-top: 0;
     padding-bottom: 0;

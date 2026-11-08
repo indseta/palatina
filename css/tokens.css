@@ -22,6 +22,7 @@
     --palatina-icon-size: 1.25rem;
     --palatina-play-size: calc(var(--palatina-icon-size) * 2);
     --palatina-menu-icon-gap: calc(36px - var(--palatina-icon-size));
+    --palatina-library-menu-width: 12rem;
     --palatina-gap: 2.5rem;
     --palatina-backdrop-height: 60vh;
     --palatina-gap-row: 0.5rem;
