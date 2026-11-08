@@ -833,7 +833,7 @@
 
 .material-icons.sort_by_alpha,
 .MuiSvgIcon-root[data-testid="SortByAlphaIcon"] {
-    --palatina-icon: url("../icons/fluent/text_sort_ascending_24_filled.svg");
+    --palatina-icon: url("../icons/fluent/arrow_sort_24_filled.svg");
 }
 
 .material-icons.live_tv,
@@ -876,4 +876,21 @@
 
 .material-icons.selectArrow::before {
     mask-size: calc(var(--palatina-icon-size) * var(--palatina-icon-scale, 1));
+}
+
+.selectArrowContainer .selectArrow.material-icons,
+.MuiButton-root[aria-controls="library-view-menu"] .MuiSvgIcon-root[data-testid="ArrowDropDownIcon"],
+.MuiSvgIcon-root.MuiSelect-icon[data-testid="ArrowDropDownIcon"] {
+    --palatina-icon: url("../icons/fluent/chevron_up_down_24_filled.svg");
+    --palatina-icon-scale: 0.999;
+}
+
+#sort-popover .MuiSvgIcon-root[data-testid="ArrowUpwardIcon"] {
+    --palatina-icon: url("../icons/fluent/arrow_sort_up_24_filled.svg");
+    --palatina-icon-scale: 1.25;
+}
+
+#sort-popover .MuiSvgIcon-root[data-testid="ArrowDownwardIcon"] {
+    --palatina-icon: url("../icons/fluent/arrow_sort_down_24_filled.svg");
+    --palatina-icon-scale: 1.251;
 }

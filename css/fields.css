@@ -103,16 +103,43 @@
     font-size: var(--palatina-icon-size);
 }
 
+.selectContainer:not(.selectContainer-inline, .trackSelectionFieldContainer) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.selectContainer:not(.selectContainer-inline, .trackSelectionFieldContainer) > :is(.emby-select, .selectArrowContainer) {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.selectContainer:not(.selectContainer-inline, .trackSelectionFieldContainer) > .selectArrowContainer {
+    position: static;
+    place-self: center end;
+    margin-inline-end: calc(0.5em + 1px - var(--palatina-icon-size) / 12);
+    font-size: 0.875rem;
+    line-height: 0;
+}
+
+.selectContainer:not(.selectContainer-inline, .trackSelectionFieldContainer) > .selectArrowContainer > .selectArrow {
+    margin: 0;
+    font-size: var(--palatina-icon-size);
+}
+
 .emby-select:not(:disabled) {
     cursor: pointer;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .emby-select:not(:disabled):hover + .selectArrowContainer {
+    .emby-select:not(:disabled):hover ~ .selectArrowContainer {
         color: var(--palatina-color-highlight);
     }
 }
 
-.emby-select:not(:disabled):active + .selectArrowContainer {
+.emby-select:not(:disabled):active ~ .selectArrowContainer {
     color: var(--palatina-color-highlight);
+}
+
+.MuiSvgIcon-root.MuiSelect-icon.MuiSelect-iconOpen {
+    transform: none;
 }
