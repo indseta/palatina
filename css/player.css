@@ -77,3 +77,56 @@ body:has(> .videoPlayerContainer-onTop) :is(.MuiAppBar-root, .skinHeader:not(.os
 .endsAtText {
     display: none;
 }
+
+.skip-button-container {
+    bottom: var(--palatina-popup-bottom, 105px);
+    padding-inline: var(--palatina-player-edge);
+}
+
+.skip-button-container > .skip-button {
+    margin: 0 0 0 auto;
+}
+
+#videoOsdPage .upNextContainer {
+    right: var(--palatina-player-edge);
+    bottom: max(env(safe-area-inset-bottom), var(--palatina-player-edge));
+    box-sizing: border-box;
+    width: 22rem;
+    max-width: calc(100% - 2 * var(--palatina-player-edge));
+    margin: 0;
+    padding: 16px;
+    border: 1px solid var(--palatina-color-divider);
+    border-radius: var(--palatina-radius);
+    background-color: var(--palatina-color-glass);
+    color: var(--palatina-color-text);
+    backdrop-filter: var(--palatina-glass-blur);
+    cursor: default;
+}
+
+.upNextContainer .upNextDialog-nextVideoText {
+    margin: 0 !important;
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.upNextContainer .upNextDialog-title {
+    width: auto;
+    margin: 4px 0 0 !important;
+    color: var(--palatina-color-muted);
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.upNextContainer .upNextDialog-mediainfo {
+    color: var(--palatina-color-muted);
+}
+
+.upNextContainer .upNextDialog-buttons {
+    gap: 8px;
+    width: auto;
+    margin-top: 16px !important;
+}
+
+.upNextContainer .upNextDialog-button {
+    margin: 0;
+}

@@ -1,4 +1,6 @@
 import { enableKeyboardDragging, setBufferedRanges, setSliderValue } from "./slider.js";
+import { startSkip } from "./skip.js";
+import { startUpNext } from "./upnext.js";
 
 const skipBack = 10;
 const skipForward = 10;
@@ -54,6 +56,8 @@ export function startPlayer(back) {
     const ending = new Map();
     const timers = { hide: 0, click: 0, fade: 0 };
     const state = { visible: true, mouseDown: false, lastMove: null, lastTouch: 0 };
+    const skip = startSkip(video, seek);
+    const upNext = startUpNext(video, view, () => state.visible, back);
 
     function listen(target, type, handler, settings) {
         target.addEventListener(type, handler, settings);
@@ -117,19 +121,20 @@ export function startPlayer(back) {
 
     function resetIdle() {
         stopHideTimer();
-        if (state.visible && !state.mouseDown && !openedDialog()) {
+        if ((state.visible || upNext.visible()) && !state.mouseDown && !openedDialog()) {
             timers.hide = setTimeout(hideOsd, 3000);
         }
         return;
     }
 
     function showOsd(target) {
+        skip.osd(true);
         fade(true);
         if (header) {
             clearEnd(header);
             header.classList.remove("hide", "osdHeader-hidden");
         }
-        if (!state.visible) {
+        if (!state.visible && !upNext.visible()) {
             state.visible = true;
             clearEnd(bottom);
             bottom.classList.remove("hide", "videoOsdBottom-hidden");
@@ -140,6 +145,7 @@ export function startPlayer(back) {
     }
 
     function hideOsd() {
+        skip.osd(false);
         fade(false);
         if (header) {
             header.classList.add("osdHeader-hidden");
@@ -160,7 +166,7 @@ export function startPlayer(back) {
     function toggleOsd() {
         if (state.visible) {
             hideOsd();
-        } else {
+        } else if (!upNext.visible()) {
             showOsd();
         }
         return;
@@ -237,6 +243,8 @@ export function startPlayer(back) {
         }
         const ranges = Array.from({ length: video.buffered.length }, (_, index) => ({ start: video.buffered.start(index) / total * 100, end: video.buffered.end(index) / total * 100 }));
         setBufferedRanges(position, ranges, percent);
+        skip.update();
+        upNext.update();
         positionText.textContent = runningTime(current);
         positionText.classList.remove("hide");
         durationText.textContent = "-" + runningTime(total - current);
@@ -419,6 +427,8 @@ export function startPlayer(back) {
     resetIdle();
     return () => {
         cleanup.forEach((remove) => remove());
+        skip.stop();
+        upNext.stop();
         Object.values(timers).forEach((timer) => clearTimeout(timer));
         ending.forEach((handler, element) => element.removeEventListener("transitionend", handler));
         video.pause();
