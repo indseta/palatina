@@ -317,6 +317,21 @@ function toggleFavorite(button) {
     return;
 }
 
+function togglePlayed(button) {
+    const played = !button.classList.contains("playstatebutton-played");
+    const icon = button.querySelector(".material-icons");
+    const text = button.querySelector(".button-text");
+    button.classList.toggle("playstatebutton-played", played);
+    icon?.classList.toggle("playstatebutton-icon-played", played);
+    icon?.classList.toggle("playstatebutton-icon-unplayed", !played);
+    button.setAttribute("data-played", String(played));
+    button.title = played ? "Watched" : "Mark played";
+    if (text) {
+        text.innerText = button.title;
+    }
+    return;
+}
+
 function navigate(hash) {
     const name = target(hash);
     if (name) {
@@ -381,6 +396,12 @@ function click(event) {
     if (rating) {
         event.preventDefault();
         toggleFavorite(rating);
+        return;
+    }
+    const playstate = element.closest("[is='emby-playstatebutton']");
+    if (playstate) {
+        event.preventDefault();
+        togglePlayed(playstate);
         return;
     }
     if (current.kind === "player") {

@@ -134,9 +134,14 @@ a.button-link[style]:active {
     color: var(--palatina-color-highlight) !important;
 }
 
+.ratingbutton-icon-withrating,
+.MuiSvgIcon-colorError[data-testid="FavoriteIcon"] {
+    color: var(--palatina-color-favorite);
+}
+
 .playstatebutton-icon-played,
-.ratingbutton-icon-withrating {
-    color: var(--palatina-color-highlight);
+.MuiSvgIcon-colorError[data-testid="CheckIcon"] {
+    color: var(--palatina-color-played);
 }
 
 .itemsContainer > .listItem {
