@@ -94,13 +94,6 @@ html {
     background-color: var(--palatina-color-highlight);
 }
 
-.mdl-spinner__layer-1,
-.mdl-spinner__layer-2,
-.mdl-spinner__layer-3,
-.mdl-spinner__layer-4 {
-    border-color: var(--palatina-color-interactive);
-}
-
 .listItemIcon:not(.listItemIcon-transparent) {
     background-color: var(--palatina-color-interactive);
     color: var(--palatina-color-contrast);

@@ -1,0 +1,36 @@
+.docspinner.mdl-spinner {
+    --palatina-spinner-ring: radial-gradient(farthest-side, transparent calc(100% - var(--palatina-spinner-stroke) - 0.5px), #000 calc(100% - var(--palatina-spinner-stroke) + 0.5px));
+
+    width: var(--palatina-spinner-size);
+    height: var(--palatina-spinner-size);
+    margin: calc(var(--palatina-spinner-size) / -2) 0 0 calc(var(--palatina-spinner-size) / -2);
+    border-radius: 50%;
+    background: conic-gradient(transparent, var(--palatina-color-translucent));
+    -webkit-mask: var(--palatina-spinner-ring);
+    mask: var(--palatina-spinner-ring);
+}
+
+.docspinner.mdl-spinner::after {
+    position: absolute;
+    top: 0;
+    left: calc(50% - var(--palatina-spinner-stroke) / 2);
+    width: var(--palatina-spinner-stroke);
+    height: var(--palatina-spinner-stroke);
+    content: "";
+    border-radius: 50%;
+    background-color: var(--palatina-color-translucent);
+}
+
+.docspinner.mdlSpinnerActive {
+    animation: palatina-spinner 0.9s linear infinite;
+}
+
+.docspinner .mdl-spinner__layer {
+    display: none;
+}
+
+@keyframes palatina-spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}

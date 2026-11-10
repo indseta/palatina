@@ -21,6 +21,8 @@
     --palatina-menu-padding: 6px 16px;
     --palatina-icon-size: 1.25rem;
     --palatina-play-size: calc(var(--palatina-icon-size) * 2);
+    --palatina-spinner-size: var(--palatina-play-size);
+    --palatina-spinner-stroke: 0.1875rem;
     --palatina-menu-icon-gap: calc(36px - var(--palatina-icon-size));
     --palatina-library-menu-width: 12rem;
     --palatina-control-height: 2.55rem;

@@ -254,7 +254,7 @@ function load() {
     document.body.classList.add("hide-scroll");
     document.body.insertBefore(player, document.body.firstChild);
     document.body.appendChild(spinner());
-    loading = setTimeout(() => go("player"), 1000);
+    loading = setTimeout(() => go("player"), 3000);
     return;
 }
 
