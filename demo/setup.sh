@@ -3,7 +3,9 @@ set -eu
 . demo/env.sh
 json="Content-Type: application/json"
 if curl -fs "$DEMO_URL/System/Info/Public" | grep -qi '"StartupWizardCompleted":false'; then
-    curl -fs -X POST "$DEMO_URL/Startup/Configuration" -H "$json" -d '{"UICulture":"en-US","MetadataCountryCode":"US","PreferredMetadataLanguage":"en"}'
+    until curl -fs -X POST "$DEMO_URL/Startup/Configuration" -H "$json" -d '{"UICulture":"en-US","MetadataCountryCode":"US","PreferredMetadataLanguage":"en"}'; do
+        sleep 1
+    done
     curl -fs "$DEMO_URL/Startup/User" >/dev/null
     curl -fs -X POST "$DEMO_URL/Startup/User" -H "$json" -d "{\"Name\":\"$DEMO_USER\",\"Password\":\"$DEMO_PASSWORD\"}"
     curl -fs -X POST "$DEMO_URL/Startup/RemoteAccess" -H "$json" -d '{"EnableRemoteAccess":true}'
@@ -27,7 +29,9 @@ count() {
     return 0
 }
 until [ "$(count Movie)" = "$(grep -c '^movie|' demo/catalog.txt)" ] && [ "$(count Episode)" = "$(( $(grep -c '^series|' demo/catalog.txt) * 5 ))" ]; do
-    curl -fs -X POST "$DEMO_URL/Library/Refresh" -H "$auth"
+    if curl -fs "$DEMO_URL/ScheduledTasks" -H "$auth" | sed 's/},{"Name"/}\n{"Name"/g' | grep '"Key":"RefreshLibrary"' | grep -q '"State":"Idle"'; then
+        curl -fs -X POST "$DEMO_URL/Library/Refresh" -H "$auth"
+    fi
     sleep 5
 done
 DEMO_URL="$DEMO_URL" DEMO_TOKEN="$token" node demo/seed.js

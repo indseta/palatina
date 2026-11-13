@@ -1,0 +1,44 @@
+@property --palatina-edge-start {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 1;
+}
+
+@property --palatina-edge-end {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 1;
+}
+
+.emby-scroller:not([data-horizontal="false"]) {
+    mask-image: linear-gradient(to var(--palatina-scroll-side, right), rgb(0 0 0 / var(--palatina-edge-start)), #000 var(--palatina-scroll-fade), #000 calc(100% - var(--palatina-scroll-fade)), rgb(0 0 0 / var(--palatina-edge-end)));
+    mask-origin: content-box;
+    mask-clip: content-box;
+    mask-repeat: no-repeat;
+    transition: --palatina-edge-start 0.2s, --palatina-edge-end 0.2s;
+}
+
+[dir="rtl"] .emby-scroller {
+    --palatina-scroll-side: left;
+}
+
+.emby-scroller.palatina-scroll-start {
+    --palatina-edge-start: 0;
+}
+
+.emby-scroller.palatina-scroll-end {
+    --palatina-edge-end: 0;
+}
+
+.emby-scroller.palatina-scroll-native {
+    overflow: visible;
+}
+
+.palatina-scroll-native > .scrollSlider {
+    overflow: auto hidden;
+    scrollbar-width: none;
+}
+
+.emby-scrollbuttons {
+    min-width: 0;
+}

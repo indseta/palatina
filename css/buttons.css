@@ -160,6 +160,15 @@ a.button-link[style]:active {
     display: none;
 }
 
+.emby-scrollbuttons-button > .material-icons {
+    min-width: 0;
+    min-height: 0;
+}
+
+.emby-scrollbuttons-button:last-child {
+    margin-inline-end: calc(-0.556em - var(--palatina-icon-size) * 0.226);
+}
+
 .overview-expand.emby-button,
 .sectionTitleContainer .more.raised {
     min-width: 0;

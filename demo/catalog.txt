@@ -8,3 +8,8 @@ movie|Paper Satellites|2025|#232526|#414345|Science Fiction|A teenage radio amat
 movie|Low Tide|2018|#2b5876|#4e4376|Romance|Two strangers stranded on a tidal island until the water goes out again.
 series|Harbor Lights|2024|#000428|#004e92|Drama|A harbor master and a smuggler share a town too small for secrets.
 series|Tidewater|2023|#1f4037|#99f2c8|Drama|A ferry captain keeps the island running, and its oldest secret buried.
+movie|Copper Valley|2022|#614385|#516395|Western|A retired surveyor returns to the mining town he mapped forty years ago.
+movie|Signal and Noise|2024|#0b486b|#f56217|Thriller|A night-shift radio host realizes one caller knows things that have not happened yet.
+movie|Fieldwork|2020|#56ab2f|#a8e063|Comedy|Two rival botanists are forced to share a single tent for a summer survey.
+movie|Starling|2022|#4568dc|#b06ab3|Animation|A young starling refuses to fly south and claims the city rooftops for her own.
+movie|Small Hours|2018|#3e5151|#decba4|Drama|Five strangers in an all-night laundromat on the coldest night of the year.

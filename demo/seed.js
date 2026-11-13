@@ -52,10 +52,16 @@ async function progress(item, percent) {
 const meridian = await find("Movie", "The Quiet Meridian");
 const northbound = await find("Movie", "Northbound");
 const harbor = await find("Movie", "Glass Harbor");
+const copper = await find("Movie", "Copper Valley");
+const signal = await find("Movie", "Signal and Noise");
+const starling = await find("Movie", "Starling");
 const series = await find("Series", "Harbor Lights");
 const episodes = await api("/Items?Recursive=true&IncludeItemTypes=Episode&ParentId=" + series.Id + "&SortBy=ParentIndexNumber,IndexNumber", "GET");
 await progress(meridian, 0.35);
 await progress(northbound, 0.7);
+await progress(copper, 0.5);
+await progress(signal, 0.15);
+await progress(starling, 0.6);
 await api("/UserPlayedItems/" + episodes.Items[0].Id, "POST");
 await progress(episodes.Items[1], 0.2);
 await api("/UserFavoriteItems/" + harbor.Id, "POST");

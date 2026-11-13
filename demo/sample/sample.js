@@ -1,3 +1,4 @@
+import { bindScrollers } from "./scroller.js";
 import { bindSliders } from "./slider.js";
 import { startPlayer } from "./player.js";
 
@@ -8,6 +9,7 @@ let classes = [];
 let current = null;
 let layer = null;
 let stopPlayer = () => null;
+let stopScrollers = () => null;
 let autoplay = false;
 let pending = null;
 let loading = null;
@@ -210,6 +212,8 @@ function show(name) {
     theme.disabled = !screen.custom;
     document.body.replaceChildren(...parse(screen.html).childNodes);
     bindSliders(document.body);
+    stopScrollers();
+    stopScrollers = bindScrollers(document.body);
     window.scrollTo(0, 0);
     window.palatinaReady = true;
     const video = document.querySelector("video");

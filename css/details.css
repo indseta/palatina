@@ -65,6 +65,16 @@
     padding-top: 0;
 }
 
+:is([dir="ltr"], [dir="rtl"]) .detailPageSecondaryContainer {
+    padding-right: max(env(safe-area-inset-right), 3.3%);
+    padding-left: max(env(safe-area-inset-left), 3.3%);
+}
+
+:is([dir="ltr"], [dir="rtl"]) .detailPageSecondaryContainer :is(.emby-scroller, .emby-scrollbuttons) {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .itemDetailPage :is(.trackSelections, .detailSectionContent, .itemDetailsGroup) {
     margin: var(--palatina-gap) 0 0;
 }
