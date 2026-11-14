@@ -1,9 +1,12 @@
+import { serveItems, viewParams } from "./api.js";
+import { hasBackdrop, loadBackdrop } from "./backdrop.js";
 import { bindScrollers } from "./scroller.js";
 import { bindSliders } from "./slider.js";
 import { startPlayer } from "./player.js";
 
 const data = await (await fetch("screens.json")).json();
 const names = Object.keys(data.screens);
+serveItems(data.screens);
 const trail = [];
 let classes = [];
 let current = null;
@@ -198,6 +201,7 @@ function show(name) {
     stopPlayer();
     stopPlayer = () => null;
     const screen = data.screens[name] ?? data.screens[data.start];
+    const kept = hasBackdrop();
     current = screen;
     document.documentElement.classList.remove(...classes);
     classes = screen.htmlClass.split(" ").filter(Boolean);
@@ -211,6 +215,7 @@ function show(name) {
     document.body.setAttribute("style", screen.bodyStyle);
     theme.disabled = !screen.custom;
     document.body.replaceChildren(...parse(screen.html).childNodes);
+    loadBackdrop(kept);
     bindSliders(document.body);
     stopScrollers();
     stopScrollers = bindScrollers(document.body);
@@ -234,7 +239,7 @@ function show(name) {
         begin(screen);
     }
     focus(screen.focus);
-    document.querySelector(".page:not(.hide)")?.dispatchEvent(new CustomEvent("viewshow", { bubbles: true, detail: {} }));
+    document.querySelector(".page:not(.hide)")?.dispatchEvent(new CustomEvent("viewshow", { bubbles: true, detail: { params: viewParams(screen) } }));
     return;
 }
 

@@ -38,7 +38,7 @@
     height: var(--palatina-backdrop-height);
 }
 
-.palatina-details:not(:has(.backgroundContainer.withBackdrop)) .palatina-rendered :is(.itemBackdrop:not([data-src], [style*="url("], .lazy-hidden), .detailLogo) {
+.palatina-bare :is(.itemBackdrop:not([data-src], [style*="url("], .lazy-hidden), .detailLogo) {
     display: none;
 }
 
