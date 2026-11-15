@@ -1,5 +1,6 @@
 import { serveItems, viewParams } from "./api.js";
 import { hasBackdrop, loadBackdrop } from "./backdrop.js";
+import { loadImages } from "./images.js";
 import { bindScrollers } from "./scroller.js";
 import { bindSliders } from "./slider.js";
 import { startPlayer } from "./player.js";
@@ -216,6 +217,7 @@ function show(name) {
     theme.disabled = !screen.custom;
     document.body.replaceChildren(...parse(screen.html).childNodes);
     loadBackdrop(kept);
+    loadImages(document.body);
     bindSliders(document.body);
     stopScrollers();
     stopScrollers = bindScrollers(document.body);

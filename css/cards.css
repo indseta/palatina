@@ -66,3 +66,33 @@
 :is(.defaultCardBackground1, .defaultCardBackground2, .defaultCardBackground3, .defaultCardBackground4, .defaultCardBackground5) {
     background-color: var(--palatina-color-placeholder);
 }
+
+.cardBox:not(.visualCardBox) .cardPadder {
+    background-color: var(--palatina-color-placeholder);
+}
+
+.cardPadder .cardImageIcon {
+    display: none;
+}
+
+.listItemImage.lazy {
+    background-color: var(--palatina-color-placeholder);
+}
+
+.listItemImage.lazy-hidden {
+    opacity: 1;
+}
+
+.listItemImage:is(.lazy-image-fadein, .lazy-image-fadein-fast) {
+    animation-name: palatina-image-in;
+}
+
+@keyframes palatina-image-in {
+    from {
+        box-shadow: inset 0 0 0 100vmax var(--palatina-color-placeholder);
+    }
+
+    to {
+        box-shadow: inset 0 0 0 100vmax transparent;
+    }
+}
