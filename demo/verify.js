@@ -45,6 +45,10 @@ for (const name of Object.keys(data.screens)) {
 }
 for (const overlay of data.overlays) {
     await load(page, overlay.screen);
+    if (overlay.via) {
+        await page.locator(overlay.via).first().click();
+        await page.waitForTimeout(400);
+    }
     await page.locator(overlay.trigger).first().click();
     await page.waitForTimeout(400);
     await page.mouse.move(viewport.width - 1, viewport.height - 1);

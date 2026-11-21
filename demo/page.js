@@ -90,6 +90,10 @@ async function layer(page, assets, spec, specs) {
     const base = specs.find((item) => item.name === spec.screen) ?? specs.find((item) => item.kind === spec.kind);
     await open(page, base, true);
     const before = await baseline(page);
+    if (spec.via) {
+        await page.locator(spec.via).first().click();
+        await page.waitForTimeout(800);
+    }
     const trigger = page.locator(spec.trigger).first();
     if (await trigger.count() === 0 || !await trigger.isVisible()) {
         console.log("missing trigger", spec.name);
@@ -107,6 +111,7 @@ async function layer(page, assets, spec, specs) {
         name: spec.name,
         screen: base.name,
         trigger: spec.trigger,
+        via: spec.via ?? null,
         kinds: spec.kinds ?? null,
         links: spec.links ?? null,
         anchor: box,
@@ -173,7 +178,7 @@ const css = await stylesheet(context.request, assets);
 await browser.close();
 await writeFile(out + "/jellyfin.css", "@charset \"UTF-8\";\n" + onlyTheme(css, screens.home.theme));
 await writeFile(out + "/screens.json", JSON.stringify({ start: "home", screens: screens, overlays: layers }));
-for (const file of ["index.html", "sample.js", "api.js", "backdrop.js", "images.js", "scroller.js", "slider.js", "player.js", "skip.js", "upnext.js", "sample.css", "upnext.css"]) {
+for (const file of ["index.html", "sample.js", "api.js", "backdrop.js", "images.js", "scroller.js", "slider.js", "dialogs.js", "player.js", "skip.js", "upnext.js", "sample.css", "upnext.css"]) {
     await cp("demo/sample/" + file, out + "/" + file);
 }
 await cp("css", out + "/css", { recursive: true });

@@ -55,7 +55,7 @@ function press(event) {
     const select = event.target.closest?.(selector);
     if (select && !select.disabled && event.button === 0 && themed()) {
         event.preventDefault();
-        select.focus();
+        select.focus({ preventScroll: true });
         if (state.select === select) {
             close();
         } else {

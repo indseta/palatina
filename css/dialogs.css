@@ -99,7 +99,7 @@
 .palatina-menu {
     position: fixed;
     box-sizing: border-box;
-    z-index: 1300;
+    z-index: 999999;
     overflow-y: auto;
     border: 1px solid var(--palatina-color-divider);
     border-radius: var(--palatina-radius);

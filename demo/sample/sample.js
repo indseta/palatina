@@ -4,6 +4,7 @@ import { loadImages } from "./images.js";
 import { bindScrollers } from "./scroller.js";
 import { bindSliders } from "./slider.js";
 import { startPlayer } from "./player.js";
+import { bindDialogs, closesDialog, isFormDialog } from "./dialogs.js";
 
 const data = await (await fetch("screens.json")).json();
 const names = Object.keys(data.screens);
@@ -374,9 +375,22 @@ function overlayFor(element) {
 
 function click(event) {
     const element = event.target;
+    if (element.closest(".palatina-menu")) {
+        return;
+    }
     const link = element.closest("[data-sample-href], a[href^='#']");
     const href = link?.getAttribute("data-sample-href") ?? link?.getAttribute("href");
     if (layer && layer.nodes.some((node) => node.contains(element))) {
+        const chained = overlayFor(element);
+        if (chained) {
+            event.preventDefault();
+            event.stopPropagation();
+            openLayer(chained.overlay, chained.trigger);
+            return;
+        }
+        if (isFormDialog(layer.nodes) && !closesDialog(element)) {
+            return;
+        }
         event.preventDefault();
         event.stopPropagation();
         closeLayer();
@@ -446,6 +460,7 @@ function keydown(event) {
 
 new MutationObserver(guard).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 document.addEventListener("click", click, true);
+bindDialogs();
 document.addEventListener("keydown", keydown);
 window.addEventListener("scroll", scrolled, { passive: true });
 window.addEventListener("resize", resized);

@@ -15,5 +15,6 @@ export const overlays = [
     { name: "series-more", kind: "Series", trigger: ".btnMoreCommands", kinds: ["Series"] },
     { name: "season-more", kind: "Season", trigger: ".btnMoreCommands", kinds: ["Season"] },
     { name: "episode-more", kind: "Episode", trigger: ".btnMoreCommands", kinds: ["Episode"] },
+    { name: "refresh-dialog", kind: "Movie", via: ".btnMoreCommands", trigger: ".actionSheetMenuItem[data-id='refresh']" },
     { name: "player-settings", screen: "player", trigger: ".btnVideoOsdSettings", kinds: ["player"] }
 ];
