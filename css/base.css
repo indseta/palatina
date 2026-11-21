@@ -1,5 +1,6 @@
 html {
     color: var(--palatina-color-text);
+    -webkit-tap-highlight-color: transparent;
     font-family: "Noto Sans", "Noto Sans HK", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", sans-serif;
 }
 

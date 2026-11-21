@@ -13,15 +13,27 @@ function offset() {
     return window.innerHeight - line.top + gap;
 }
 
-function place(sheet) {
-    if (!document.querySelector(page) || sheet.classList.contains("actionsheet-fullscreen")) {
-        return;
-    }
+function measure() {
     const bottom = offset();
     if (bottom !== null) {
         document.documentElement.style.setProperty("--palatina-popup-bottom", bottom + "px");
     }
+    return;
+}
+
+function place(sheet) {
+    if (!document.querySelector(page) || sheet.classList.contains("actionsheet-fullscreen")) {
+        return;
+    }
+    measure();
     sheet.classList.add("palatina-osd-popup");
+    return;
+}
+
+function resize() {
+    if (document.querySelector(page)) {
+        requestAnimationFrame(measure);
+    }
     return;
 }
 
@@ -42,5 +54,6 @@ export function start() {
         return;
     });
     observer.observe(document.body, { childList: true });
+    window.addEventListener("resize", resize);
     return;
 }

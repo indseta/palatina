@@ -22,13 +22,31 @@ function clean(body, extension) {
     return Buffer.from(body.toString("utf8").replace(/<!DOCTYPE[^>[]*(\[[^\]]*\])?\s*>/i, ""), "utf8");
 }
 
+const sizes = ["fillWidth", "fillHeight", "maxWidth", "maxHeight", "width", "height", "quality"];
+
+function image(url) {
+    const parsed = new URL(url);
+    if (!parsed.pathname.includes("/Images/")) {
+        return url;
+    }
+    sizes.forEach((name) => parsed.searchParams.delete(name));
+    return parsed.href;
+}
+
 export function createAssets(request, dir) {
     const saved = new Map();
+    const images = new Map();
     async function save(url) {
         if (!saved.has(url)) {
             saved.set(url, download(url));
+            if (!images.has(image(url))) {
+                images.set(image(url), saved.get(url));
+            }
         }
         return saved.get(url);
+    }
+    async function near(url) {
+        return images.get(image(url)) ?? save(url);
     }
     async function download(url) {
         const response = await request.get(url);
@@ -45,5 +63,9 @@ export function createAssets(request, dir) {
         const names = await Promise.all(urls.map((url) => save(new URL(url, base).href)));
         return urls.reduce((result, url, index) => result.replaceAll(url, names[index]), text);
     }
-    return { save: save, css: css };
+    return {
+        save: save,
+        near: near,
+        css: css
+    };
 }

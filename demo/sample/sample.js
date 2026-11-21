@@ -6,7 +6,10 @@ import { bindSliders } from "./slider.js";
 import { startPlayer } from "./player.js";
 import { bindDialogs, closesDialog, isFormDialog } from "./dialogs.js";
 
-const data = await (await fetch("screens.json")).json();
+document.head.append(...document.body.querySelectorAll("meta"));
+const handheld = matchMedia("(max-width: 600px), (max-height: 500px)");
+const all = await (await fetch("screens.json")).json();
+const data = handheld.matches && all.phone ? all.phone : all;
 const names = Object.keys(data.screens);
 serveItems(data.screens);
 const trail = [];
@@ -465,5 +468,6 @@ document.addEventListener("keydown", keydown);
 window.addEventListener("scroll", scrolled, { passive: true });
 window.addEventListener("resize", resized);
 window.addEventListener("hashchange", changed);
+handheld.addEventListener("change", () => location.reload());
 trail.push(location.hash.slice(1) || data.start);
 show(trail[0]);

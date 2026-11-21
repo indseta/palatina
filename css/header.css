@@ -31,3 +31,10 @@
     box-shadow: var(--Paper-shadow);
     backdrop-filter: var(--palatina-glass-blur);
 }
+
+.MuiPaper-root.MuiDrawer-paper {
+    border-inline-end: 1px solid var(--palatina-color-divider);
+    background-color: var(--palatina-color-glass);
+    background-image: none;
+    backdrop-filter: var(--palatina-glass-blur);
+}

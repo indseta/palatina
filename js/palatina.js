@@ -12,6 +12,7 @@ import { start as startSelects } from "./selects.js";
 import { start as startSliders } from "./sliders.js";
 import { start as startTitles } from "./titles.js";
 import { start as startTooltips } from "./tooltips.js";
+import { start as startTouch } from "./touch.js";
 import { start as startWheel } from "./wheel.js";
 
 start();
@@ -28,4 +29,5 @@ startSelects();
 startSliders();
 startTitles();
 startTooltips();
+startTouch();
 startWheel();

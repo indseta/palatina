@@ -6,12 +6,6 @@
     border-radius: var(--palatina-radius) !important;
 }
 
-@media (width <= 80em), (height <= 45em) {
-    .dialog:is(.dialog-fixedSize, .dialog-fullscreen-lowres) {
-        border-radius: 0;
-    }
-}
-
 .MuiPaper-root.MuiPopover-paper,
 .MuiPaper-root.MuiDialog-paper:not(.MuiDialog-paperFullScreen),
 .dialog:not(.dialog-fullscreen, .actionsheet-fullscreen),
@@ -25,6 +19,15 @@
 .MuiPaper-root.MuiPopover-paper,
 .actionSheet:not(.actionsheet-fullscreen) {
     box-shadow: none;
+}
+
+@media (width <= 80em), (height <= 45em) {
+    .dialog:is(.dialog-fixedSize, .dialog-fullscreen-lowres) {
+        border: 0;
+        border-radius: 0;
+        background-color: var(--palatina-color-background);
+        backdrop-filter: none;
+    }
 }
 
 .palatina-placed {

@@ -24,6 +24,10 @@ export function loadBackdrop(kept) {
         return;
     }
     const url = image.style.backgroundImage;
+    document.querySelectorAll(".backdropImage:not(.displayingBackdropImage)").forEach((layer) => {
+        layer.style.backgroundImage = "none";
+        return;
+    });
     background.classList.remove("withBackdrop");
     image.classList.remove("displayingBackdropImage");
     image.style.backgroundImage = "none";

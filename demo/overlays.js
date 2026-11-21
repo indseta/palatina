@@ -1,4 +1,5 @@
 export const overlays = [
+    { name: "drawer", screen: "home", trigger: "header button[aria-label='Open Menu']", devices: ["phone"] },
     { name: "user-menu", screen: "home", trigger: "header button[aria-label='User Menu']", links: { "Sign Out": "#/login" } },
     { name: "syncplay-menu", screen: "home", trigger: "header.MuiAppBar-root button[aria-label='SyncPlay']" },
     { name: "cast-menu", screen: "home", trigger: "header.MuiAppBar-root button[aria-label='Cast to Device']" },

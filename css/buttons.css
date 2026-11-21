@@ -21,7 +21,7 @@
     color: var(--palatina-color-highlight);
 }
 
-a.button-link[style]:not(:hover, :active) {
+a.button-link[style] {
     color: var(--palatina-color-interactive) !important;
 }
 
@@ -49,7 +49,7 @@ a.button-link[style]:active {
     background-color: transparent;
 }
 
-.MuiButtonBase-root:is(.MuiIconButton-root, .MuiButton-text) > .MuiTouchRipple-root {
+.MuiButtonBase-root:is(.MuiIconButton-root, .MuiButton-text, .MuiMenuItem-root, .MuiListItemButton-root) > .MuiTouchRipple-root {
     display: none;
 }
 
@@ -63,13 +63,41 @@ a.button-link[style]:active {
     color: var(--jf-palette-text-secondary);
 }
 
-:is(.fab, .raised, a[data-role="button"]):not(.button-submit, .button-delete, .upNextDialog-button):hover {
+:is(.fab, .raised, a[data-role="button"]):not(.button-submit, .button-delete, .upNextDialog-button):active {
     background: var(--jf-palette-Button-inheritContainedHoverBg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    :is(.fab, .raised, a[data-role="button"]):not(.button-submit, .button-delete, .upNextDialog-button):hover {
+        background: var(--jf-palette-Button-inheritContainedHoverBg);
+    }
+}
+
+@media not all and (hover: hover) and (pointer: fine) {
+    :is(.fab, .raised, a[data-role="button"]):not(.button-submit, .button-delete, .upNextDialog-button):hover:not(:active) {
+        background: var(--jf-palette-Button-inheritContainedBg);
+    }
+
+    .button-submit:hover:not(:active) {
+        background: var(--jf-palette-primary-main);
+    }
+
+    :is(.listItem, .navMenuOption):hover:not(:active) {
+        background-color: transparent;
+    }
 }
 
 .button-submit:focus {
     background: var(--jf-palette-primary-main);
     color: var(--jf-palette-primary-contrastText);
+}
+
+.button-submit:active {
+    background: var(--jf-palette-primary-dark);
+}
+
+:is(.listItem, .navMenuOption):active {
+    background-color: var(--jf-palette-action-hover);
 }
 
 .skip-button-container > .skip-button,
@@ -117,12 +145,22 @@ a.button-link[style]:active {
     transform: none;
 }
 
-:is(.cardOverlayContainer > .cardOverlayFab-primary, .listItemImageButton):not(:hover, :active) {
+:is(.cardOverlayContainer > .cardOverlayFab-primary, .listItemImageButton, .cardScalable > .cardOverlayButton, .cardScalable > a .cardOverlayButton):not(:active) {
     color: var(--palatina-color-translucent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    :is(.cardOverlayContainer > .cardOverlayFab-primary, .listItemImageButton, .cardScalable > .cardOverlayButton, .cardScalable > a .cardOverlayButton):hover {
+        color: var(--palatina-color-highlight);
+    }
 }
 
 :is(.cardOverlayContainer > .cardOverlayFab-primary, .listItemImageButton) :is(.material-icons, .MuiSvgIcon-root) {
     font-size: var(--palatina-play-size) !important;
+}
+
+:is(.cardScalable > .cardOverlayButton, .cardScalable > a .cardOverlayButton) :is(.material-icons.play_arrow, .MuiSvgIcon-root[data-testid="PlayArrowIcon"]) {
+    font-size: var(--palatina-icon-size) !important;
 }
 
 .emby-button:not(.paper-icon-button-light, .fab),
@@ -210,6 +248,21 @@ a.button-link[style]:active {
     display: none;
 }
 
+.cardScalable > .cardOverlayButton-br,
+.cardScalable > a > .cardOverlayButton-br > .cardOverlayButton {
+    padding: calc(var(--palatina-gap-row) - var(--palatina-icon-size) / 12);
+}
+
+:is(.cardScalable > .cardOverlayButton, .cardScalable > a .cardOverlayButton),
+.cardScalable > .cardOverlayButton > .cardOverlayButtonIcon {
+    background-color: transparent !important;
+}
+
+.cardScalable > .cardOverlayButton > .cardOverlayButtonIcon {
+    width: 1em !important;
+    height: 1em !important;
+}
+
 .MuiButtonGroup-root.MuiButtonGroup-contained :is(.MuiButtonGroup-firstButton, .MuiButtonGroup-middleButton) {
     border-color: rgb(var(--palatina-color-contrast-channel) / 25%);
 }
@@ -290,6 +343,11 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
 
 :is(.MuiAppBar-root, .osdHeader) .MuiSvgIcon-root:not(.MuiAvatar-fallback) {
     font-size: var(--palatina-header-icon) !important;
+}
+
+.MuiPaper-root.MuiPopover-paper .MuiMenuItem-root {
+    min-height: 0;
+    padding: var(--palatina-menu-padding);
 }
 
 .MuiPaper-root.MuiPopover-paper .MuiMenuItem-root .MuiListItemText-root {
@@ -387,20 +445,22 @@ button:is(.raised, .button-submit, .button-delete, .button-cancel),
     line-height: 1.5;
 }
 
-.MuiPopover-paper .MuiMenuItem-root.Mui-selected:not(:hover) {
+:is(.MuiPaper-root.MuiPopover-paper .MuiMenuItem-root, .MuiPaper-root.MuiDrawer-paper .MuiListItemButton-root).Mui-selected {
     background-color: transparent;
 }
 
-.MuiPopover-paper .MuiMenuItem-root.Mui-selected:hover {
+@media (hover: hover) and (pointer: fine) {
+    :is(.MuiPaper-root.MuiPopover-paper .MuiMenuItem-root, .MuiPaper-root.MuiDrawer-paper .MuiListItemButton-root):hover {
+        background-color: var(--jf-palette-action-hover);
+    }
+}
+
+:is(.MuiPaper-root.MuiPopover-paper .MuiMenuItem-root, .MuiPaper-root.MuiDrawer-paper .MuiListItemButton-root):active {
     background-color: var(--jf-palette-action-hover);
 }
 
-#app-user-menu .MuiMenuItem-root:is(:hover, .Mui-focusVisible, .Mui-selected) {
+#app-user-menu .MuiMenuItem-root:is(:hover, :active, .Mui-focusVisible, .Mui-selected) {
     background-color: transparent;
-}
-
-#app-user-menu .MuiMenuItem-root > .MuiTouchRipple-root {
-    display: none;
 }
 
 :is(.emby-button, .paper-icon-button-light, .emby-tab-button).show-focus:focus {

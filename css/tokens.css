@@ -34,3 +34,9 @@
     --palatina-gap-section: 1.75rem;
     --palatina-scroll-fade: 4rem;
 }
+
+@media (pointer: coarse) {
+    :root {
+        --palatina-menu-padding: 12px 16px;
+    }
+}

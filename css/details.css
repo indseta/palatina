@@ -61,6 +61,11 @@
     padding-left: max(env(safe-area-inset-left), 3.3%);
 }
 
+.layout-mobile :is([dir="ltr"], [dir="rtl"]) .detailPagePrimaryContent {
+    padding-right: max(env(safe-area-inset-right), 3.3%) !important;
+    padding-left: max(env(safe-area-inset-left), 3.3%) !important;
+}
+
 .itemDetailPage :is(.detailPagePrimaryContent, .detailPageSecondaryContainer) {
     padding-top: 0;
 }

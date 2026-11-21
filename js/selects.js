@@ -3,7 +3,8 @@ import { place } from "./place.js";
 const selector = "select.emby-select:not([multiple])";
 const state = {
     menu: null,
-    select: null
+    select: null,
+    touch: false
 };
 
 function close() {
@@ -51,11 +52,18 @@ function open(select) {
     return;
 }
 
+function pointer(event) {
+    state.touch = event.pointerType === "touch";
+    return;
+}
+
 function press(event) {
     const select = event.target.closest?.(selector);
     if (select && !select.disabled && event.button === 0 && themed()) {
         event.preventDefault();
-        select.focus({ preventScroll: true });
+        if (!state.touch) {
+            select.focus({ preventScroll: true });
+        }
         if (state.select === select) {
             close();
         } else {
@@ -84,6 +92,7 @@ function key(event) {
 }
 
 export function start() {
+    document.addEventListener("pointerdown", pointer, true);
     document.addEventListener("mousedown", press, true);
     document.addEventListener("scroll", scroll, true);
     document.addEventListener("keydown", key, true);
