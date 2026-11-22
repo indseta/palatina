@@ -7,17 +7,19 @@ A Jellyfin 12.4 theme.
 Dashboard > General > Custom CSS, as the first line:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/indseta/palatina@0.2.10/css/palatina.css");
+@import url("https://cdn.jsdelivr.net/gh/indseta/palatina@latest/css/palatina.css");
 ```
 
 JS Injector > Add Script:
 
-- Script URL: `https://cdn.jsdelivr.net/gh/indseta/palatina@0.2.10/js/palatina.js`
+- Script URL: `https://cdn.jsdelivr.net/gh/indseta/palatina@latest/js/palatina.js`
 - Load as module: on
 - Enabled: on
 - Plugin setting "Allow external script URLs": on
 
-Every push to `main` raises `version` in `package.json` (`0.1.0`, `0.1.1`, ...), and CI tags the commit with it once the lint check passes. Change the number in both places to update.
+`@latest` follows the newest release. jsDelivr caches it, so a new release can take up to 12 hours to show up, longer if the browser still holds the old files. To stay on one release, replace `latest` with a version from the [tags](https://github.com/indseta/palatina/tags), such as `0.2.19`, in both URLs.
+
+Every push to `main` raises `version` in `package.json` (`0.1.0`, `0.1.1`, ...), and CI tags the commit with it once the lint check passes.
 
 ## Layout
 
