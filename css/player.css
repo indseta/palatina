@@ -103,6 +103,10 @@ body:has(> .videoPlayerContainer-onTop) :is(.MuiAppBar-root, .skinHeader:not(.os
     cursor: default;
 }
 
+.upNextContainer > .flex-direction-column {
+    min-width: 0;
+}
+
 .upNextContainer .upNextDialog-nextVideoText {
     margin: 0 !important;
     font-size: inherit;
