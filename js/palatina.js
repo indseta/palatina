@@ -13,6 +13,7 @@ import { start as startSliders } from "./sliders.js";
 import { start as startTitles } from "./titles.js";
 import { start as startTooltips } from "./tooltips.js";
 import { start as startTouch } from "./touch.js";
+import { start as startUpNext } from "./upnext.js";
 import { start as startWheel } from "./wheel.js";
 
 start();
@@ -30,4 +31,5 @@ startSliders();
 startTitles();
 startTooltips();
 startTouch();
+startUpNext();
 startWheel();
